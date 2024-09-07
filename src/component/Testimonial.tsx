@@ -1,24 +1,4 @@
 const Testimonial = () => {
-  function UserIcon(props: any) {
-    return (
-      <svg
-        {...props}
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
-      </svg>
-    );
-  }
-
   const testimonials = [
     {
       quote:
@@ -54,7 +34,7 @@ const Testimonial = () => {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
               What Our <span className="text-spantext"> Clients Say</span>
             </h2>
-            <p className="mx-auto max-w-xl text-gray-500 md:text-xl lg:text-base xl:text-xl">
+            <p className="mx-auto max-w-4xl text-gray-500 md:text-lg lg:text-base xl:text-lg">
               A real-time multiplayer TicTacToe game where two players can bet
               ETH and the winner take all. A state channel is created between
               the two players to enable 'Off-Chain'.
