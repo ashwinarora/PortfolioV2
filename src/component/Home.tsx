@@ -14,6 +14,36 @@ const Home = () => {
   return (
     <div>
       <div className="flex min-h-[80vh] flex-col items-center justify-center bg-bgPrimary px-4 py-12 sm:px-6 lg:px-8">
+        <img
+          src="assets/icons/homeleftbg.svg"
+          alt="Small Image 2"
+          className="absolute  right-0 w-[30rem] h-[30rem] top-16 left-0 "
+        />
+        <img
+          src="assets/icons/homerightbg.svg"
+          alt="Small Image 2"
+          className="absolute  w-[30rem] h-[30rem]  right-0 top-16"
+        />
+        <img
+          src="assets/icons/homeringleft.svg"
+          alt="Small Image 2"
+          className="absolute  w-[20rem] h-[10rem]  left-0 bottom-10"
+        />
+        <img
+          src="assets/icons/homebgbox.svg"
+          alt="Small Image 2"
+          className="absolute    right-80 bottom-24 "
+        />
+        <img
+          src="assets/icons/homebgbox1.svg"
+          alt="Small Image 2"
+          className="absolute  top-48   left-80 "
+        />
+        <img
+          src="assets/icons/homeringright.svg"
+          alt="Small Image 2"
+          className="absolute  w-[20rem] h-[10rem]  right-0 bottom-10"
+        />
         <div className="mx-auto max-w-md text-center">
           <div className="relative">
             <button className="text-white rounded-xl border py-2 px-8 relative z-10">

@@ -28,7 +28,17 @@ const Testimonial = () => {
 
   return (
     <div>
-      <section className="w-full testmonila  py-12 md:py-24 lg:py-32">
+      <section className="w-full testmonila relative  py-12 md:py-24 lg:py-32">
+        <img
+          src="assets/icons/testimonialrightbg.svg"
+          alt="Small Image 2"
+          className="absolute  top-16   right-0 "
+        />
+        <img
+          src="assets/icons/testimonialleftbg.svg"
+          alt="Small Image 2"
+          className="absolute  top-52  left-0 "
+        />
         <div className="container mx-auto px-8 md:px-6">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
