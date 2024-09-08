@@ -28,13 +28,13 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="flex m-auto flex-col gap-6 ">
+          <div className="flex m-auto flex-col gap-6 justify-center items-center mt-36">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold flex items-center gap-2">
                 <img src="assets/icons/star.svg" alt="" />
                 <span>About Me</span>
               </h2>
-              <p className="text-muted-foreground max-w-[35rem] text-gray-500">
+              <p className="text-muted-foreground max-w-[35rem]  text-gray-500">
                 I am a Full Stack Developer with expertise in Blockchain. I can
                 realize the vision of your product. I am proficient with both
                 Front-End and Back-End Development. Using React for Front-End

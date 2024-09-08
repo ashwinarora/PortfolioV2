@@ -61,9 +61,7 @@ border: 1px solid transparent;
     position: absolute;
     inset: -0.2rem;
     z-index: -1;
-    /* background: linear-gradient(var(--angle), 
-        #a202b4, rgb(20, 20, 234)); */
-    /* animation: rotate 10s linear infinite; */
+    animation: rotate 1s linear infinite;
 
 /* background: linear-gradient(90deg, rgba(21, 191, 253, 0) 8.19%, rgba(21, 191, 253, 0.7) 70.61%, rgba(21, 191, 253, 0.7) 70.61%, rgba(156, 55, 253, 0.7) 100%); */
 /* background: linear-gradient(293deg, rgb(61 26 106) 8.19%, rgb(22 172 210 / 70%) 70.61%,  rgb(22 172 210 / 70%) 70.61%, rgb(30 49 55) 70.61%, rgb(17 147 186 / 70%) 70.61%, rgba(156, 55, 253, 0.5) 100%);; */
@@ -81,11 +79,11 @@ background-image: linear-gradient(to right, #9000de,#1a85c3 ,#060101,#060101 ,#0
   .moving-border::after {
     filter: blur(10px);
   }
-  /* @keyframes rotate {
+  @keyframes rotate {
     0%     { --angle: 0deg; }
     100%   { --angle: 360deg;
     }
-  } */
+  }
 
 
   .afterhomebg{
@@ -93,3 +91,12 @@ background-image: linear-gradient(to right, #9000de,#1a85c3 ,#060101,#060101 ,#0
     background-image: linear-gradient(119deg, #071653 0%, #04063a 100%);
     
   }
+  .projectbg{
+    background: linear-gradient( #09032a26 15%, #05101426 15%);
+}
+  .projectmainbg{
+    background-color: #071f46;
+background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
+
+}
+  

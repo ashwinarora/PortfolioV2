@@ -30,7 +30,7 @@ const Whyme = () => {
   ];
   return (
     <div>
-      <section className="w-full h-[100vh]  py-12 md:py-24 lg:py-32 bg-black mb-40 md:mb-0 ">
+      <section className=" h-[100vh] w-auto mx-10  py-12 md:py-24 lg:py-32 bg-black mb-40 md:mb-0 ">
         <div className="container relative grid gap-10 px-4 md:grid-cols-2 md:gap-0 md:px-6 ">
           <div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">

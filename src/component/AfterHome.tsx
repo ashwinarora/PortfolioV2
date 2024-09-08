@@ -1,6 +1,6 @@
 const AfterHome = () => {
   return (
-    <div className="flex items-center h-[100vh] justify-center flex-col ">
+    <div className="flex items-center h-[80vh] justify-center flex-col ">
       <div className=" ml-10 mt-10 moving-border w-full">
         <div className=" rounded-lg border-2 border-[#28374e] bg-[#0f0f11] shadow-inner shadow-[#000000] flex items-center justify-center">
           <p className="text-white text-2xl text-center p-6">
