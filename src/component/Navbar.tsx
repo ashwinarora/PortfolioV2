@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        "border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-gray-700 border-b"
+        "border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-gray-700 border-b h-16 p-1 sm:h-24 sm:p-4"
       }
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -27,7 +27,7 @@ const Navbar = () => {
         <button
           onClick={toggleNav}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2  h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-solid-bg"
           aria-expanded={isNavOpen ? "true" : "false"}
         >
@@ -38,9 +38,9 @@ const Navbar = () => {
         {/* Navbar links */}
         <div
           className={`${
-            isNavOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto`}
-          id="navbar-solid-bg"
+            isNavOpen ? "block absolute top-12 right-8" : "hidden"
+          }   md:block md:w-auto`}
+          id="navbar-solid-bg "
         >
           <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 md:mr-16">
             <li>

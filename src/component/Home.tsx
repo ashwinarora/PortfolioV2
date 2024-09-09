@@ -17,32 +17,32 @@ const Home = () => {
         <img
           src="assets/icons/homeleftbg.svg"
           alt="Small Image 2"
-          className="absolute  right-0 w-[30rem] h-[30rem] top-16 left-0 "
+          className="absolute  right-0  w-56 h-56 sm:w-[30rem] sm:h-[30rem] top-24 left-0 "
         />
         <img
           src="assets/icons/homerightbg.svg"
           alt="Small Image 2"
-          className="absolute  w-[30rem] h-[30rem]  right-0 top-16"
+          className="absolute  w-56 h-56 sm:w-[30rem] sm:h-[30rem] right-0 top-24"
         />
         <img
           src="assets/icons/homeringleft.svg"
           alt="Small Image 2"
-          className="absolute  w-[20rem] h-[10rem]  left-0 bottom-10"
+          className="absolute  w-36 h-36 sm:w-[20rem] sm:h-[10rem]  left-0 bottom-10"
         />
         <img
           src="assets/icons/homebgbox.svg"
           alt="Small Image 2"
-          className="absolute    right-80 bottom-24 "
+          className="absolute  right-0  sm:right-80 bottom-24 "
         />
         <img
           src="assets/icons/homebgbox1.svg"
           alt="Small Image 2"
-          className="absolute  top-48   left-80 "
+          className="absolute  top-48   left-12 sm:left-80  "
         />
         <img
           src="assets/icons/homeringright.svg"
           alt="Small Image 2"
-          className="absolute  w-[20rem] h-[10rem]  right-0 bottom-10"
+          className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-10"
         />
         <div className="mx-auto max-w-md text-center">
           <div className="relative">
@@ -67,7 +67,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="mt-8 flex items-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
+        {/* <div className="mt-8 flex items-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
           {items.map((item, index) => (
             <div
               key={index}
@@ -79,6 +79,19 @@ const Home = () => {
             >
               {item.icon && <span>{item.icon}</span>}
               {item.label}
+            </div>
+          ))}
+        </div> */}
+        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className={`text-muted-foreground flex items-center gap-3 px-3 py-2 ${
+                index !== items.length - 1 ? "border-r border-blue-400" : ""
+              }`}
+            >
+              {item.icon && <span className="text-lg">{item.icon}</span>}
+              <span>{item.label}</span>
             </div>
           ))}
         </div>

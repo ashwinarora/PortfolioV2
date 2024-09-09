@@ -15,9 +15,9 @@ const AfterHome = () => {
         alt="Small Image 2"
         className="absolute left-0 top-[68rem] "
       />
-      <span className="flex pl-96 relative">
+      {/* <span className="flex pl-96 relative">
         <img className=" absolute " src="assets/icons/cursor.svg" alt="" />
-      </span>
+      </span> */}
     </div>
   );
 };
