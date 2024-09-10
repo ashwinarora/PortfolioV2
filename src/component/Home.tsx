@@ -17,12 +17,12 @@ const Home = () => {
         <img
           src="assets/icons/homeleftbg.svg"
           alt="Small Image 2"
-          className="absolute  right-0  w-56 h-56 sm:w-[30rem] sm:h-[30rem] top-24 left-0 "
+          className="absolute  right-0  w-56 h-56 sm:w-[30rem] sm:h-[30rem] top-20 left-0 "
         />
         <img
           src="assets/icons/homerightbg.svg"
           alt="Small Image 2"
-          className="absolute  w-56 h-56 sm:w-[30rem] sm:h-[30rem] right-0 top-24"
+          className="absolute  w-56 h-56 sm:w-[30rem] sm:h-[30rem] right-0 top-20"
         />
         <img
           src="assets/icons/homeringleft.svg"
@@ -44,11 +44,13 @@ const Home = () => {
           alt="Small Image 2"
           className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-10"
         />
-        <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center">
+        <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center ">
           <div className="relative">
-            <button className="text-white rounded-full border py-2 px-8 relative z-10 border-gray-800">
-              Hello
-            </button>
+            <div className=" card  example-2">
+              <button className="text-white  rounded-full border py-0 px-8 inner relative z-10 border-gray-800 ">
+                Hello
+              </button>
+            </div>
             <div className="absolute -top-3 -right-3 sm:-top-2 sm:-right-3 w-4 h-4">
               <img src="assets/images/hello.svg" alt="" />
             </div>
@@ -61,27 +63,13 @@ const Home = () => {
           <div className="mt-6 rounded-full">
             <a
               href="#"
-              className="inline-flex items-center bg-blue-400 text-white px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
+              className="inline-flex items-center bg-[#37b0e0] text-white px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
             >
               Hire Me
             </a>
           </div>
         </div>
-        {/* <div className="mt-8 flex items-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`text-muted-foreground flex justify-center items-center gap-3 pr-4 ${
-                index !== items.length - 1
-                  ? "border-r h-12 border-blue-400"
-                  : ""
-              }`}
-            >
-              {item.icon && <span>{item.icon}</span>}
-              {item.label}
-            </div>
-          ))}
-        </div> */}
+
         <div className="mt-8 flex flex-wrap justify-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
           {items.map((item, index) => (
             <div

@@ -42,38 +42,43 @@
     background-image: linear-gradient(73deg, #12346d 0%, #29cae3 100%);
     
 }
-@property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
+
+body {
+  background: #000;
+}
+
+.moving-border {
+  width: fit-content;
+  position: relative;
+  background: #000000;
+  padding: 20px;
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+.moving-border::before,
+.moving-border::after {
+  content: "";
+  position: absolute;
+  inset: -0.2rem;
+  z-index: -1;
+  background: linear-gradient(to right, #9000de, #1a85c3, #060101, #060101, #060101, #1a85c3, #9000de);
+  background-size: 200%; /* Double the size to create the traveling effect */
+  animation: border-travel 2s linear infinite; /* Adds the animation */
+}
+
+.moving-border::after {
+  filter: blur(10px);
+}
+
+@keyframes border-travel {
+  0% {
+    background-position: 0% 50%; /* Start at left */
   }
-  body {
-    background: #000;
+  100% {
+    background-position: 100% 50%; /* Move to right */
   }
-  .moving-border {
-    width: fit-content;
- 
-    position: relative;
-    background:#000000;
-    padding:  20px;
-  }
-  .moving-border::before,
-  .moving-border::after {
-    content: "";
-    position: absolute;
-    inset: -0.2rem;
-    z-index: -1;
-    animation: rotate 1s linear infinite;
-background: linear-gradient(to right, #9000de,#1a85c3 ,#060101,#060101 ,#060101,#1a85c3 ,#9000de);
-  }
-  .moving-border::after {
-    filter: blur(10px);
-  }
-  @keyframes rotate {
-    0%     { --angle: 0deg; }
-    100%   { --angle: 360deg;
-    }
-  }
+}
+
 
 
   .afterhomebg{
@@ -99,4 +104,75 @@ background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
   /* clip-path: polygon(0% 1%, 52% 14%, 100% 1%, 100% 99%, 53% 68%, 0% 99%); */
   clip-path: polygon(0% -2%, 52% 13%, 100% -1%, 100% 100%, 48% 91%, 0% 101%);
 }
+
+
+.card .inner {
+  background: #222;
+  color: #fff;
+}
+.example-1,
+.example-2 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+
+.example-2 .inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  
+}
+
+
+
+
+
+@keyframes rotate1 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.example-2 .inner {
+  margin: 1px;
+  padding: 6px 17px;
+  /* border-radius:10px; */
+}
+
+.example-2::before {
+  content: "";
+  display: block;
+  background: linear-gradient(
+    90deg,
+    #ffffffe6 0%,
+    rgba(102, 102, 102, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  height: 100px;
+  width: 70px;
+  transform: translate(0);
+  position: absolute;
+  animation: rotate1 3s linear forwards infinite;
+  z-index: 0;
+  top: 50%;
+  transform-origin: top center;
+}
+
+
+
+
+
+
+
+
+
 

@@ -19,7 +19,7 @@ const About = () => {
       <section className="w-full py-12 md:py-4 lg:py-4 bg-black text-white  ">
         <div className="flex flex-col sm:flex-row justify-center gap-10">
           <div className="flex flex-col items-center justify-center">
-            <div className="relative rounded-full overflow-hidden w-full max-w-sm ml-16 mx:m-auto ">
+            <div className="relative rounded-full overflow-hidden w-full max-w-sm ml-6 mx:m-auto ">
               <img
                 src="/assets/images/aboutring.svg"
                 alt="Profile"
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-center m-auto px-4 sm:px-8 mt-10 sm:mt-0">
-          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116] p-6 sm:p-10 rounded-lg border border-gray-800">
+          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-0 sm:p-10 rounded-lg border border-gray-800">
             {statistics.map((stat, index) => (
               <div
                 className="flex items-center justify-center  sm:gap-11"

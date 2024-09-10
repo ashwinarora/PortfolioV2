@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav
       className={
-        "border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-gray-700 border-b h-16 p-1 sm:h-24 sm:p-4"
+        "border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-gray-700 border-b h-16 p-1 sm:h-20 sm:p-2"
       }
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -19,34 +19,35 @@ const Navbar = () => {
           <img
             src="assets/icons/logo.svg"
             className="h-8"
-            alt="Flowbite Logo"
+            alt=" Logo"
+            loading="lazy"
           />
         </a>
-
-        {/* Hamburger button */}
         <button
           onClick={toggleNav}
           type="button"
-          className="inline-flex items-center p-2  h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2  h-6 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-solid-bg"
           aria-expanded={isNavOpen ? "true" : "false"}
         >
-          {isNavOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+          {isNavOpen ? <HiX size={20} /> : <HiMenu size={20} />}
           <span className="sr-only">Toggle navigation</span>
         </button>
 
         {/* Navbar links */}
         <div
           className={`${
-            isNavOpen ? "block absolute top-12 right-8" : "hidden"
-          }   md:block md:w-auto`}
+            isNavOpen
+              ? "block absolute top-12 right-8 sm:top-14 sm:right-12"
+              : "hidden"
+          }   md:block md:w-auto  top-12 right-8 `}
           id="navbar-solid-bg "
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 md:mr-16">
+          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-black shadow-2xl border border-rose-800 md:dark:bg-transparent dark:border-gray-700 md:mr-16">
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent text-xl"
+                className="block py-2 px-3 md:p-0 text-white rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500  md:dark:bg-transparent text-xl"
                 aria-current="page"
               >
                 About Me

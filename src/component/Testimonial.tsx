@@ -52,7 +52,7 @@ const Testimonial = () => {
               the two players to enable 'Off-Chain'.
             </p>
           </div>
-          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:mx-44">
+          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 md:mx-28 lg:mx-44">
             {testimonials.map((testimonial, index) => (
               <div key={index}>
                 <Card>
@@ -63,7 +63,7 @@ const Testimonial = () => {
                       alt="img"
                       loading="lazy"
                     />
-                    <p className="text-lg font-medium leading-relaxed text-gray-500">
+                    <p className=" text-sm md:text-base font-medium leading-relaxed text-gray-500">
                       "{testimonial.quote}"
                     </p>
                   </div>

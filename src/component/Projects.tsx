@@ -100,7 +100,7 @@ export default function ProjectShowcase() {
             <h1 className="text-4xl ">
               Our <span className="text-spantext"> Projects </span>
             </h1>
-            <h3 className="text-gray-700 mt-4  md:mx-80">
+            <h3 className="text-gray-700 text-xs md:text-sm mt-4 mx-10 sm:-mx-16 md:mx-4 lg:mx-80">
               A real-time multiplayer TicTacToe game where two players can bet
               ETH and the winner take all. A state channel is created between
               the two players to enable 'Off-Chain'.
@@ -113,15 +113,13 @@ export default function ProjectShowcase() {
               key={index}
               className={`${
                 index === 0
-                  ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row" // Adjust span for large screens
+                  ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                   : "col-span-1 gap-8"
               } projectbg border border-gray-700 rounded-lg overflow-hidden`}
             >
               <div
                 className={`${
-                  index === 0
-                    ? "flex flex-col md:flex-row w-full"
-                    : "flex flex-col"
+                  index === 0 ? "flex flex-col md:flex-row" : "flex flex-col"
                 }`}
               >
                 {/* First half of the first component */}
@@ -135,7 +133,7 @@ export default function ProjectShowcase() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full object-cover "
+                    className="w-full object-cover h- "
                     loading="lazy"
                   />
                 </div>
@@ -144,40 +142,50 @@ export default function ProjectShowcase() {
                 <div
                   className={`${
                     index === 0
-                      ? "flex-1 p-4 flex flex-col"
+                      ? "flex-1 p-2 md:p-2 lg:p-4 flex flex-col"
                       : "p-4 flex flex-col"
                   }`}
                 >
-                  <div className=" sm:text-sm md:text-2xl font-semibold flex justify-between mx-4 mt-3">
-                    <h1>{project.title}</h1>
+                  <div className=" text-xs  md:text-2xl font-semibold flex justify-between mx-4 md:mx-2 mt-3 items-center">
+                    <h1 className="text-xs md:text-sm lg:2xl">
+                      {project.title}
+                    </h1>
                     <button className="flex justify-center items-center gap-1">
-                      <p className="text-spantext">{project?.link}</p>
-                      <i className="text-spantext text-lg mt-1">
+                      <p className="text-spantext text-xs md:text-sm lg:2xl">
+                        {project?.link}
+                      </p>
+                      <i className="text-spantext text-sm md:text-lg mt-0">
                         <IoMdPlayCircle />
                       </i>
                     </button>
                   </div>
                   <div className="p-4">
-                    <p className="text-gray-400 mb-4">{project.description}</p>
+                    <p className="text-gray-400 mb-4 text-xs lg:text-sm">
+                      {project.description}
+                    </p>
                     <div className="mb-4">
-                      <h3 className="font-semibold mb-2 text-gray-300">
+                      <h3 className="font-semibold mb-2  text-sm sm:text-sm md:xl text-gray-300">
                         Tools Used
                       </h3>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 md:gap-2">
                         {project.tools.map((tool: any, i: any) => (
                           <span
                             key={i}
-                            className="px-3 py-1 text-sm rounded-full bg-gray-700 text-blue-300 flex items-center gap-1"
+                            className="px-1 md:px-1 py-1 text-sm rounded-full bg-gray-700 text-blue-300 flex items-center gap-1"
                           >
                             {tool.icon && (
-                              <span className="text-xl bg-[#2f393d] p-1 rounded-full">
+                              <span className="text-xs md:text-sm bg-[#2f393d] p-[6px] rounded-full w-6 h-6 md:w-5 md:h-6">
                                 {tool.icon}
                               </span>
                             )}
                             {tool.Img && (
-                              <img className="w-6 h-6" src={tool.Img} alt="" />
+                              <img
+                                className="w-4 h-4 md:w-5 md:h-6"
+                                src={tool.Img}
+                                alt=""
+                              />
                             )}
-                            {tool.name}
+                            <p className="text-[9px] md:text-xs">{tool.name}</p>
                           </span>
                         ))}
                       </div>
@@ -190,7 +198,7 @@ export default function ProjectShowcase() {
                         {project.features.map((feature, i) => (
                           <span
                             key={i}
-                            className="px-3 py-1 text-sm rounded-full border border-blue-400 text-blue-400"
+                            className="px-1 md:px-2 py-0 text-[11px] md:text-sm rounded-full border border-blue-400 text-blue-400"
                           >
                             {feature}
                           </span>
@@ -199,10 +207,10 @@ export default function ProjectShowcase() {
                     </div>
                   </div>
                   <div className="p-4 flex justify-between">
-                    <button className="px-4 py-2 bg-blue-500 text-white rounded font-semibold hover:bg-blue-600">
+                    <button className=" py-2 bg-blue-500 text-white rounded-full px-6 md:px-12 font-semibold hover:bg-blue-600 text-xs sm:text-sm ">
                       Live Demo
                     </button>
-                    <button className="px-4 py-2 border border-blue-400 text-blue-400 rounded font-semibold hover:bg-blue-400 hover:text-gray-900">
+                    <button className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6 md:px-12 hover:text-gray-900 text-xs sm:text-sm ">
                       View Source
                     </button>
                   </div>
