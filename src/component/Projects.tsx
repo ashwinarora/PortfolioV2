@@ -86,14 +86,14 @@ export default function ProjectShowcase() {
         <img
           src="assets/images/projectleftbg.svg"
           alt="Small Image 2"
-          className="absolute   right-0  "
+          className="absolute   right-12 w-72  "
           loading="lazy"
         />
         <img
           src="assets/images/projectbottombg.svg"
           alt="Small Image 2"
           loading="lazy"
-          className="absolute right-44  bottom-28  "
+          className="absolute right-40  bottom-28  "
         />
         <div className=" font-bold mb-12 text-center">
           <div>
@@ -135,7 +135,7 @@ export default function ProjectShowcase() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full object-cover"
+                    className="w-full object-cover "
                     loading="lazy"
                   />
                 </div>

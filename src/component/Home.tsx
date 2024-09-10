@@ -32,31 +32,31 @@ const Home = () => {
         <img
           src="assets/icons/homebgbox.svg"
           alt="Small Image 2"
-          className="absolute  right-0  sm:right-80 bottom-24 "
+          className="absolute w-[6rem] right-0  sm:right-80 bottom-24 "
         />
         <img
           src="assets/icons/homebgbox1.svg"
           alt="Small Image 2"
-          className="absolute  top-48   left-12 sm:left-80  "
+          className="absolute  top-48  w-[6rem]  left-12 sm:left-96  "
         />
         <img
           src="assets/icons/homeringright.svg"
           alt="Small Image 2"
           className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-10"
         />
-        <div className="mx-auto max-w-md text-center">
+        <div className="mx-auto max-w-lg text-center">
           <div className="relative">
-            <button className="text-white rounded-xl border py-2 px-8 relative z-10">
-              hello
+            <button className="text-white rounded-full border py-2 px-8 relative z-10 border-gray-800">
+              Hello
             </button>
-            <div className="absolute -top-3 right-40 w-4 h-4">
+            <div className="absolute -top-2 right-28 sm:-top-1 sm:right-[10.5rem] w-4 h-4">
               <img src="assets/images/hello.svg" alt="" />
             </div>
           </div>
 
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            I'm <span className="text-cyan-500">Ashwin Arora,</span> Full Stack
-            Developer
+            I'm <span className="text-cyan-500">Ashwin Arora,</span> <br /> Full
+            Stack Application
           </h1>
           <div className="mt-6">
             <a

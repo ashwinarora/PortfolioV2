@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* :root{
+  font-family: ;
+} */
+
 .testimonial-card {
     border: 1px solid transparent;
     /* border-image-source: linear-gradient(232.47deg, rgba(255, 255, 255, 0.1) 3.63%, rgba(5, 16, 20, 0.1) 69.57%);
     border-image-slice: 1;
     border-image-width: 1px; */
-    background:linear-gradient(232.47deg, rgb(10 20 22) 3.63%, rgb(11 26 30) 69.57%);;
+    /* background:linear-gradient(232.47deg, rgb(10 20 22) 3.63%, rgb(11 26 30) 69.57%);; */
+    background: linear-gradient(232.47deg, rgb(12 22 25) 3.63%, rgb(12 22 25) 69.57%);
     padding: 20px;
     color: #fff;
     border-radius: 5px;
@@ -25,12 +31,9 @@
 
 .feature{
     background-color: #152129;
-background: linear-gradient(1deg, #080404 56.92%, rgb(13 46 53) 100%);
-border: 1px solid transparent;
-    border-image-source: linear-gradient(232.47deg, rgba(255, 255, 255, 0.1) 3.63%, rgba(5, 16, 20, 0.1) 69.57%);
-  
-    /* background:linear-gradient(232.47deg, rgb(10 20 22) 3.63%, rgb(11 26 30) 69.57%);; */
-    background: linear-gradient(191deg, rgb(12 38 43) 3.63%, rgb(8 35 43) 69.57%);
+ border: 1px solid rgb(28, 28, 36);
+
+    background: linear-gradient(191deg, rgb(33 83 109 / 67%) 3.63%, rgb(6 10 19) 69.57%);;
 }
 .custom-border{
     background-color: #12346d;
@@ -44,16 +47,13 @@ border: 1px solid transparent;
   }
   body {
     background: #000;
-    /* display: grid; */
-    /* place-items: center; */
-    /* min-height: 100vh; */
   }
   .moving-border {
     width: fit-content;
  
     position: relative;
     background:#000000;
-    padding:  60px 30px;
+    padding:  20px;
   }
   .moving-border::before,
   .moving-border::after {
@@ -62,19 +62,7 @@ border: 1px solid transparent;
     inset: -0.2rem;
     z-index: -1;
     animation: rotate 1s linear infinite;
-
-/* background: linear-gradient(90deg, rgba(21, 191, 253, 0) 8.19%, rgba(21, 191, 253, 0.7) 70.61%, rgba(21, 191, 253, 0.7) 70.61%, rgba(156, 55, 253, 0.7) 100%); */
-/* background: linear-gradient(293deg, rgb(61 26 106) 8.19%, rgb(22 172 210 / 70%) 70.61%,  rgb(22 172 210 / 70%) 70.61%, rgb(30 49 55) 70.61%, rgb(17 147 186 / 70%) 70.61%, rgba(156, 55, 253, 0.5) 100%);; */
-background-color: #9000de;
-background-image: linear-gradient(90deg, #9000de 10%, #1a85c3 10%, #060101 60%);
-background: linear-gradient(90deg, #9000de 10%, #1a85c3 10%, #060101 30%,#060101 10%, #1a85c3 10%, #9000de 10%);
-/* background-image: linear-gradient(to right, #9000de 10%, #1a85c3 10%, #060101 10%), linear-gradient(to left, #9000de 10%, #1a85c3 10%, #060101 10%); */
-background-image: linear-gradient(to right, #9000de,#1a85c3 ,#060101,#060101 ,#060101,#1a85c3 ,#9000de);
-
-
-
-
-
+background: linear-gradient(to right, #9000de,#1a85c3 ,#060101,#060101 ,#060101,#1a85c3 ,#9000de);
   }
   .moving-border::after {
     filter: blur(10px);
@@ -100,3 +88,13 @@ background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
 
 }
   
+
+
+.trapezoid1 {
+  position: relative;
+  padding: 2rem;
+  /* clip-path: polygon(0 31%, 100% -18%, 100% 121%, -34% 48%  ,100% 121%) */
+  /* clip-path: polygon(0% 1%, 52% 14%, 100% 1%, 100% 99%, 53% 68%, 0% 99%); */
+  clip-path: polygon(0% -2%, 52% 13%, 100% -1%, 100% 100%, 48% 91%, 0% 101%);
+}
+

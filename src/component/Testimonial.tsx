@@ -28,21 +28,23 @@ const Testimonial = () => {
 
   return (
     <div>
-      <section className="w-full testmonila relative  py-12 md:py-24 lg:py-32">
+      <section className="w-full testmonila relative py-12 md:py-16 lg:py-24">
         <img
           src="assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"
-          className="absolute  top-16   right-0 "
+          className="absolute top-16 right-3"
+          loading="lazy"
         />
         <img
           src="assets/icons/testimonialleftbg.svg"
           alt="Small Image 2"
-          className="absolute  top-52  left-0 "
+          className="absolute top-52 left-0"
+          loading="lazy"
         />
         <div className="container mx-auto px-8 md:px-6">
           <div className="space-y-4 text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
-              What Our <span className="text-spantext"> Clients Say</span>
+              What Our <span className="text-spantext">Clients Say</span>
             </h2>
             <p className="mx-auto max-w-4xl text-gray-500 md:text-lg lg:text-base xl:text-lg">
               A real-time multiplayer TicTacToe game where two players can bet
@@ -50,20 +52,26 @@ const Testimonial = () => {
               the two players to enable 'Off-Chain'.
             </p>
           </div>
-          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:mx-20">
+          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 lg:mx-44">
             {testimonials.map((testimonial, index) => (
-              <div>
-                <Card key={index}>
+              <div key={index}>
+                <Card>
                   <div className="space-y-4">
-                    <img className="w-6" src={testimonial.icon} alt="" />
+                    <img
+                      className="w-6"
+                      src={testimonial.icon}
+                      alt="img"
+                      loading="lazy"
+                    />
                     <p className="text-lg font-medium leading-relaxed text-gray-500">
                       "{testimonial.quote}"
                     </p>
                   </div>
                 </Card>
-                <div className="flex items-center gap-4 mt-4 ">
+                <img src="assets/icons/msgicon.svg " className="-mt-1 ml-8" />
+                <div className="flex items-center gap-3  ml-3">
                   <div className="rounded-full bg-primary p-1 text-white">
-                    <img className="w-8" src={testimonial.img} alt="" />
+                    <img className="w-10" src={testimonial.img} alt="" />
                   </div>
                   <div>
                     <p className="font-medium text-spantext">
@@ -84,10 +92,11 @@ const Testimonial = () => {
 function Card({ children, className }: any) {
   return (
     <div
-      className={`testimonial-card shadow-lg min-w-fit rounded-xl p-6 ${className}`}
+      className={`testimonial-card shadow-lg min-w-fit rounded-2xl p-6 ${className}`}
     >
       {children}
     </div>
   );
 }
+
 export default Testimonial;
