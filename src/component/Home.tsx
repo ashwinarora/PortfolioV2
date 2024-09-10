@@ -44,12 +44,12 @@ const Home = () => {
           alt="Small Image 2"
           className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-10"
         />
-        <div className="mx-auto max-w-lg text-center">
+        <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center">
           <div className="relative">
             <button className="text-white rounded-full border py-2 px-8 relative z-10 border-gray-800">
               Hello
             </button>
-            <div className="absolute -top-2 right-28 sm:-top-1 sm:right-[10.5rem] w-4 h-4">
+            <div className="absolute -top-3 -right-3 sm:-top-2 sm:-right-3 w-4 h-4">
               <img src="assets/images/hello.svg" alt="" />
             </div>
           </div>
@@ -58,10 +58,10 @@ const Home = () => {
             I'm <span className="text-cyan-500">Ashwin Arora,</span> <br /> Full
             Stack Application
           </h1>
-          <div className="mt-6">
+          <div className="mt-6 rounded-full">
             <a
               href="#"
-              className="inline-flex items-center rounded-md bg-blue-400 text-white px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              className="inline-flex items-center bg-blue-400 text-white px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
             >
               Hire Me
             </a>
