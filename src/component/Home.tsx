@@ -13,36 +13,36 @@ const Home = () => {
 
   return (
     <div>
-      <div className="flex min-h-[80vh] flex-col items-center justify-center bg-bgPrimary px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex min-h-[70vh] sm:min-h-[80vh] flex-col items-center justify-center bg-bgPrimary px-4 py-12 sm:px-6 lg:px-8">
         <img
           src="assets/icons/homeleftbg.svg"
           alt="Small Image 2"
-          className="absolute  right-0  w-56 h-56 sm:w-[30rem] sm:h-[30rem] top-20 left-0 "
+          className="absolute  right-0  w-56 h-56  sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem] top-20 left-0 "
         />
         <img
           src="assets/icons/homerightbg.svg"
           alt="Small Image 2"
-          className="absolute  w-56 h-56 sm:w-[30rem] sm:h-[30rem] right-0 top-20"
+          className="absolute  w-56 h-56 sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem]  right-0 top-20"
         />
         <img
           src="assets/icons/homeringleft.svg"
           alt="Small Image 2"
-          className="absolute  w-36 h-36 sm:w-[20rem] sm:h-[10rem]  left-0 bottom-10"
+          className="absolute  w-36 h-36 sm:w-[20rem] sm:h-[10rem]  left-0 bottom-40 sm:bottom-10"
         />
         <img
           src="assets/icons/homebgbox.svg"
           alt="Small Image 2"
-          className="absolute w-[6rem] right-0  sm:right-80 bottom-24 "
+          className="absolute w-[6rem]  right-10  sm:right-80 bottom-80 sm:bottom-24 "
         />
         <img
           src="assets/icons/homebgbox1.svg"
           alt="Small Image 2"
-          className="absolute  top-48  w-[6rem]  left-12 sm:left-96  "
+          className="absolute  top-48  w-[6rem]  left-16 sm:left-96  "
         />
         <img
           src="assets/icons/homeringright.svg"
           alt="Small Image 2"
-          className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-10"
+          className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-40 sm:bottom-10"
         />
         <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center ">
           <div className="relative">
@@ -56,21 +56,18 @@ const Home = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
             I'm <span className="text-cyan-500">Ashwin Arora,</span> <br /> Full
             Stack Application
           </h1>
           <div className="mt-6 rounded-full">
-            <a
-              href="#"
-              className="inline-flex items-center bg-[#37b0e0] text-white px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full"
-            >
+            <button className="inline-flex items-center bg-[#37b0e0] text-white px-4 py-2 text-sm font-medium   transition-colors  ffocus:ring-offset-2 hover:shadow-2xl hover:border rounded-full cursor-pointer">
               Hire Me
-            </a>
+            </button>
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
+        {/* <div className="mt-8 flex flex-wrap justify-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
           {items.map((item, index) => (
             <div
               key={index}
@@ -82,7 +79,7 @@ const Home = () => {
               <span>{item.label}</span>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

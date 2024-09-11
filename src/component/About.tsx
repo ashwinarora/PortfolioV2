@@ -45,8 +45,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center m-auto px-4 sm:px-8 mt-10 sm:mt-0">
-          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-0 sm:p-10 rounded-lg border border-gray-800">
+        <div className="flex justify-center m-auto   px-0 sm:px-8 mt-10 sm:mt-0">
+          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-2 sm:p-10 rounded-lg border border-gray-800">
             {statistics.map((stat, index) => (
               <div
                 className="flex items-center justify-center  sm:gap-11"

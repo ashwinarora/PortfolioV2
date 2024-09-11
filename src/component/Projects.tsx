@@ -107,7 +107,7 @@ export default function ProjectShowcase() {
             </h3>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:mx-56 shadow-lg ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-20 lg:mx-4 shadow-lg ">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -122,7 +122,6 @@ export default function ProjectShowcase() {
                   index === 0 ? "flex flex-col md:flex-row" : "flex flex-col"
                 }`}
               >
-                {/* First half of the first component */}
                 <div
                   className={`${
                     index === 0
@@ -133,12 +132,10 @@ export default function ProjectShowcase() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full object-cover h- "
+                    className="w-full object-cover  "
                     loading="lazy"
                   />
                 </div>
-
-                {/* Second half of the first component */}
                 <div
                   className={`${
                     index === 0
@@ -207,10 +204,10 @@ export default function ProjectShowcase() {
                     </div>
                   </div>
                   <div className="p-4 flex justify-between">
-                    <button className=" py-2 bg-blue-500 text-white rounded-full px-6 md:px-12 font-semibold hover:bg-blue-600 text-xs sm:text-sm ">
+                    <button className=" py-2 bg-blue-500 text-white rounded-full px-6 sm:px-2 md:px-8 lg:px-6 font-semibold hover:bg-blue-600 text-xs sm:text-sm ">
                       Live Demo
                     </button>
-                    <button className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6 md:px-12 hover:text-gray-900 text-xs sm:text-sm ">
+                    <button className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6   md:px-8 hover:text-gray-900 text-xs sm:text-sm lg:px-6">
                       View Source
                     </button>
                   </div>
