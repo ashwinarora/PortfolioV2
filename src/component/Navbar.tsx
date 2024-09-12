@@ -1,24 +1,35 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+// import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); // Set default active link
 
-  // Navigation links as an array of objects
   const navLinks = [
-    { name: "About Me", href: "#", current: true },
-    { name: "Projects", href: "#", current: false },
-    { name: "Contact Us", href: "#", current: false },
+    { name: "Projects", href: "#project" },
+    { name: "About Me", href: "#about" },
+    { name: "Contact Us", href: "#contact" },
   ];
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const handleLinkClick = (name: any) => {
+    setActiveLink(name); // Update active link state
+  };
+
   return (
-    <nav className="border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-gray-700 border-b p-1 sm:p-2 sticky top-0 z-50">
+    <nav className="border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a
+          href="/#home"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+          onClick={() => {
+            setActiveLink("");
+          }}
+        >
           <img
             src="assets/icons/logo.svg"
             className="h-8"
@@ -52,12 +63,13 @@ const Navbar = () => {
               <li key={index}>
                 <a
                   href={link.href}
+                  onClick={() => handleLinkClick(link.name)}
                   className={`block py-2 px-3 md:p-0 rounded md:bg-transparent text-xl ${
-                    link.current
-                      ? "text-white md:text-blue-700 md:dark:text-blue-500"
+                    activeLink === link.name
+                      ? "text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500"
                       : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:hover:text-blue-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   }`}
-                  aria-current={link.current ? "page" : undefined}
+                  aria-current={activeLink === link.name ? "page" : undefined}
                 >
                   {link.name}
                 </a>

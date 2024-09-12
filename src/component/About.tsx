@@ -17,9 +17,9 @@ const About = () => {
     <div>
       {" "}
       <section className="w-full py-12 md:py-4 lg:py-4 bg-black text-white  ">
-        <div className="flex flex-col sm:flex-row justify-center gap-10">
-          <div className="flex flex-col items-center justify-center">
-            <div className="relative rounded-full overflow-hidden w-full max-w-sm ml-6 mx:m-auto ">
+        <div className="mt-20 flex flex-col sm:flex-row justify-center gap-10">
+          <div className=" flex flex-col items-center justify-center">
+            <div className="relative rounded-full overflow-hidden w-full max-w-sm sm:max-w-md ml-4  mx:m-auto ">
               <img
                 src="/assets/images/aboutring.svg"
                 alt="Profile"
@@ -35,7 +35,7 @@ const About = () => {
                 <img src="assets/icons/star.svg" alt="Star Icon" />
                 <span>About Me</span>
               </h2>
-              <p className="text-gray-500 max-w-md mx-auto text-justify">
+              <p className="text-gray-500 max-w-lg mx-auto text-justify">
                 I am a Full Stack Developer with expertise in Blockchain. I can
                 realize the vision of your product. I am proficient with both
                 Front-End and Back-End Development. Using React for Front-End
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-center m-auto   px-0 sm:px-8 mt-10 sm:mt-0">
-          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-2 sm:p-10 rounded-lg border border-gray-800">
+          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-2 sm:p-6 rounded-lg border border-gray-800">
             {statistics.map((stat, index) => (
               <div
                 className="flex items-center justify-center  sm:gap-11"

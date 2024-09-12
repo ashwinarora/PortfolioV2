@@ -1,6 +1,6 @@
 const AfterHome = () => {
   return (
-    <div className="flex items-center h-[40vh] md:h-[80vh] justify-center flex-col ">
+    <div className=" relative  flex items-center h-[40vh] md:h-[80vh] justify-center flex-col ">
       <div className=" m-8 mb-16 sm:m-12 mt-16 moving-border w-full">
         {/* <div className=" rounded-lg border-2 border-[#28374e] trapezoid1 bg-[#0f0f11] shadow-inner shadow-[#000000] flex items-center justify-center"> */}
         <div className=" rounded-lg border-2 border-[#28374e] trapezoid1 bg-[#10131b]  shadow-[#000000] flex items-center justify-center">
@@ -14,11 +14,13 @@ const AfterHome = () => {
       <img
         src="assets/icons/afterhomebg.svg"
         alt="Small Image 2"
-        className="absolute left-0 top-[68rem] "
+        className="absolute left-0 top-[20rem] "
       />
-      {/* <span className="flex pl-96 relative">
-        <img className=" absolute " src="assets/icons/cursor.svg" alt="" />
-      </span> */}
+      <img
+        className=" absolute -bottom-8 right-12 sm:-bottom-10 sm:right-28 w-[8rem] h-[10rem] md:bottom-24 md:right-44  2xl:bottom-32 2xl:right-80 "
+        src="assets/icons/cursor.svg"
+        alt="cursor"
+      />
     </div>
   );
 };

@@ -1,85 +1,86 @@
-import { SiCircle } from "react-icons/si";
-import { RiDiscordLine } from "react-icons/ri";
-import { FaBrave } from "react-icons/fa6";
+import Typewriter from "typewriter-effect";
 const Home = () => {
-  const items = [
-    { icon: <FaBrave />, label: "Brave" },
-    { icon: <SiCircle />, label: "CIRCLE" },
-    { icon: <RiDiscordLine />, label: "Discord" },
-    { label: "Google" },
-    { label: "Discord" },
-    { icon: <SiCircle />, label: "MAGIC EDEN" },
-  ];
-
   return (
-    <div>
-      <div className="flex min-h-[70vh] sm:min-h-[80vh] flex-col items-center justify-center bg-bgPrimary px-4 py-12 sm:px-6 lg:px-8">
+    <div id="home">
+      <div className="flex min-h-[70vh] sm:min-h-[90vh] flex-col items-center justify-center homebg px-4 py-12 sm:px-6 lg:px-8 relative">
+        {/* Left Background Image */}
         <img
           src="assets/icons/homeleftbg.svg"
-          alt="Small Image 2"
-          className="absolute  right-0  w-56 h-56  sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem] top-20 left-0 "
+          alt="Left Background"
+          className="absolute w-56 h-56 sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem] xl:w-[30rem] xl:h-[20rem] 2xl:w-[32rem] 2xl:h-[30rem] top-0 left-0"
         />
+        {/* Right Background Image */}
         <img
           src="assets/icons/homerightbg.svg"
-          alt="Small Image 2"
-          className="absolute  w-56 h-56 sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem]  right-0 top-20"
+          alt="Right Background"
+          className="absolute w-56 h-56 sm:w-80 sm:h-80 lg:w-[20rem] lg:h-[20rem]  xl:w-[30rem] xl:h-[20rem] 2xl:w-[32rem] 2xl:h-[30rem] right-0 top-0"
         />
+        {/* Left Ring Image */}
         <img
           src="assets/icons/homeringleft.svg"
-          alt="Small Image 2"
-          className="absolute  w-36 h-36 sm:w-[20rem] sm:h-[10rem]  left-0 bottom-40 sm:bottom-10"
+          alt="Left Ring"
+          className="absolute w-36 h-36 sm:w-60 sm:h-60 lg:w-[10rem] lg:h-[10rem] 2xl:w-[20rem] 2xl:h-[ 11rem]  -left-10 bottom-0 sm:bottom-0"
         />
+        {/* Small Box Bottom Right */}
         <img
           src="assets/icons/homebgbox.svg"
-          alt="Small Image 2"
-          className="absolute w-[6rem]  right-10  sm:right-80 bottom-80 sm:bottom-24 "
+          alt="Bottom Box"
+          className="absolute w-[6rem] right-20 bottom-14 sm:right-80  sm:bottom-24 lg:right-[10rem] lg:bottom-[10rem] 2xl:right-96 2xl:bottom-32"
         />
+        {/* Small Box Top Left */}
         <img
           src="assets/icons/homebgbox1.svg"
-          alt="Small Image 2"
-          className="absolute  top-48  w-[6rem]  left-16 sm:left-96  "
+          alt="Top Box"
+          className="absolute w-[6rem] top-32 sm:top-[10rem] 2xl:top-[8rem] left-16 sm:left-96 lg:left-[20rem] 2xl:left-[32rem]"
         />
+        {/* Right Ring Image */}
         <img
           src="assets/icons/homeringright.svg"
-          alt="Small Image 2"
-          className="absolute   w-36 h-36 sm:w-[20rem] sm:h-[10rem] right-0 bottom-40 sm:bottom-10"
+          alt="Right Ring"
+          className="absolute w-36 h-36 sm:w-60 sm:h-60 lg:w-[10rem] lg:h-[10rem] 2xl:w-[20rem] 2xl:h-[11rem] right-0 bottom-0 sm:bottom-0"
         />
-        <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center ">
+        <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center">
           <div className="relative">
-            <div className=" card  example-2">
-              <button className="text-white  rounded-full border py-0 px-8 inner relative z-10 border-gray-800 ">
+            <div className="card example-2">
+              <button className="text-white rounded-full border py-2 px-8 inner relative z-10 border-gray-800">
                 Hello
               </button>
             </div>
             <div className="absolute -top-3 -right-3 sm:-top-2 sm:-right-3 w-4 h-4">
-              <img src="assets/images/hello.svg" alt="" />
+              <img src="assets/images/hello.svg" alt="Hello Icon" />
             </div>
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            I'm <span className="text-cyan-500">Ashwin Arora,</span> <br /> Full
-            Stack Application
+          {/* Main Heading */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">
+            I'm <span className="text-cyan-500">Ashwin Arora,</span> <br />
+            <div className="">
+              <div className="relative   bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "Full Stack",
+                      "React",
+                      "Javascript",
+                      "BlockChain",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    wrapperClassName: "typewriterpara",
+                  }}
+                />
+              </div>
+              <span>Application</span>
+            </div>
           </h1>
-          <div className="mt-6 rounded-full">
-            <button className="inline-flex items-center bg-[#37b0e0] text-white px-4 py-2 text-sm font-medium   transition-colors  ffocus:ring-offset-2 hover:shadow-2xl hover:border rounded-full cursor-pointer">
+
+          {/* Hire Me Button */}
+          <div className="mt-6">
+            <button className="inline-flex items-center bg-[#37b0e0] text-white px-4 py-2 text-sm sm:text-base lg:text-lg font-medium transition-colors focus:ring-offset-2 hover:shadow-2xl hover:border rounded-full cursor-pointer">
               Hire Me
             </button>
           </div>
         </div>
-
-        {/* <div className="mt-8 flex flex-wrap justify-center space-x-4 text-white bg-black border border-[#131229] p-3 rounded-md">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className={`text-muted-foreground flex items-center gap-3 px-3 py-2 ${
-                index !== items.length - 1 ? "border-r border-blue-400" : ""
-              }`}
-            >
-              {item.icon && <span className="text-lg">{item.icon}</span>}
-              <span>{item.label}</span>
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ const Whyme = () => {
   ];
   return (
     <div>
-      <section className=" relative  sm:h-[671px] w-auto mx-4 md:mx-10  py-12 md:py-24 lg:py-32 bg-black mb-40 md:mb-0 ">
+      <section className=" relative  sm:h-[690px] w-auto mx-4 md:mx-10  py-12 md:py-24 lg:py-32 bg-black mb-40 md:mb-0 flex justify-center items-center lg:gap-6 xl:gap-6 ">
         <div className="container relative grid gap-10 px-4 md:grid-cols-2 md:gap-0 md:px-6 ">
           <div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
@@ -50,15 +50,15 @@ const Whyme = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`relative flex justify-center items-center ${
+                  className={`relative flex justify-center items-center sm:-mx-4 ${
                     index % 2 === 0 ? "-top-12 sm:-top-8" : "top-10 sm:top-14 "
                   }`}
                 >
-                  <div className="relative rounded-lg bg-muted p-0 sm:p-8 bg-[#b3b3e21a] text-center z-10 -px-0 sm:px-0 -py-10 sm:-py-0 ">
+                  <div className="relative rounded-lg bg-muted p-0 sm:p-8 bg-[#b3b3e21a] text-center z-10 -px-0 sm:px-0 -py-8 sm:-py-0 sm:mx-6 ">
                     <div className="absolute inset-0 flex items-center justify-center z-0 text-gray-600 text-5xl -mt-28">
                       {feature.id}
                     </div>
-                    <div className="relative z-10 p-3">
+                    <div className="relative z-10 p-2">
                       <h3 className=" text-base sm:text-lg font-semibold text-white">
                         {feature.title}
                       </h3>
@@ -74,7 +74,7 @@ const Whyme = () => {
           <img
             src="assets/icons/whymebgimg.svg"
             alt="Small Image 2"
-            className="absolute sm:left-6 -bottom-40 w-32  left-0 sm:-bottom-48 sm:w-44"
+            className="absolute sm:-left-6 -bottom-40 w-32  left-0 sm:-bottom-24 sm:w-32"
             loading="lazy"
           />
         </div>

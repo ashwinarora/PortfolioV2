@@ -13,13 +13,27 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
-      <AfterHome />
-      <Project />
-      <Whyme />
-      <Testimonial />
-      <About />
-      <ContactUs />
+      <div id="home">
+        <Home />
+      </div>
+      <div id="afterhome">
+        <AfterHome />
+      </div>
+      <div id="project">
+        <Project />
+      </div>
+      <div id="whyme">
+        <Whyme />
+      </div>
+      <div id="testimonial">
+        <Testimonial />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="contact">
+        <ContactUs />
+      </div>
       <Footer />
     </>
   );
