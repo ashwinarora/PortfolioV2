@@ -8,7 +8,7 @@ import Navbar from "./component/Navbar";
 import Project from "./component/Projects";
 import Testimonial from "./component/Testimonial";
 import Whyme from "./component/Whyme";
-import { ThemeProvider } from "./Themecontext";
+import { ThemeProvider } from "./component/ThemeContext";
 
 function App() {
   return (

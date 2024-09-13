@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { ThemeContext } from "../Themecontext";
+import { ThemeContext } from "./ThemeContext";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

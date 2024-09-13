@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Typewriter from "typewriter-effect";
-import { ThemeContext } from "../Themecontext";
+import { ThemeContext } from "./ThemeContext";
 const Home = () => {
   const themeContext = useContext(ThemeContext);
 
