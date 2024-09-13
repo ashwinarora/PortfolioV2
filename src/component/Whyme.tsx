@@ -28,10 +28,10 @@ const Whyme = () => {
   ];
   return (
     <div>
-      <section className=" relative  sm:h-[690px] w-auto mx-4 md:mx-10  py-12 md:py-24 lg:py-32 bg-black mb-40 md:mb-0 flex justify-center items-center lg:gap-6 xl:gap-6 ">
+      <section className=" relative h-[900px]  sm:h-[690px] w-auto mx-0 md:mx-0  py-12 md:py-24 lg:py-32 bg-white dark:bg-black -mb-1 md:mb-0 flex justify-center items-center lg:gap-6 xl:gap-6 ">
         <div className="container relative grid gap-10 px-4 md:grid-cols-2 md:gap-0 md:px-6 ">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-black dark:text-white">
               Why Hire Me For Your <br />{" "}
               <span className="text-spantext"> Next Project ?</span>
             </h2>
@@ -74,7 +74,7 @@ const Whyme = () => {
           <img
             src="assets/icons/whymebgimg.svg"
             alt="Small Image 2"
-            className="absolute sm:-left-6 -bottom-40 w-32  left-0 sm:-bottom-24 sm:w-32"
+            className="absolute sm:-left-6 2xl:left-10 -bottom-28 w-28  left-0 sm:-bottom-24 sm:w-32"
             loading="lazy"
           />
         </div>

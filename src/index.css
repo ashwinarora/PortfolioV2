@@ -31,16 +31,15 @@ html {
     background-image: linear-gradient(73deg, #12346d 0%, #29cae3 100%);
     
 }
-body {
-  background: #000;
-}
+
 
 .moving-border {
   width: fit-content;
   position: relative;
   background: #000000;
-  padding: 20px;
-  border-radius: 10px; /* Optional: adds rounded corners */
+  z-index: 1;
+  padding: 5px;
+  border-radius: 10px; 
 }
 
 .moving-border::before,
@@ -50,9 +49,7 @@ body {
   inset: -0.2rem;
   z-index: -1;
   background: linear-gradient(to right, #9000de, #1a85c3, #060101, #060101, #060101, #1a85c3, #9000de);
-  background-size: 100%; /* Double the size to create the traveling effect */
-  /* animation: border-travel 2s linear infinite;  */
-  /* Adds the animation */
+  background-size: 100%; 
 }
 
 .moving-border::after {
@@ -68,8 +65,6 @@ body {
   }
 }
 
-
-
   .afterhomebg{
     background-color: #071653;
     background-image: linear-gradient(119deg, #071653 0%, #04063a 100%);
@@ -78,10 +73,14 @@ body {
   .projectbg{
     background: linear-gradient( #09032a26 15%, #05101426 15%);
 }
-  .projectmainbg{
-    background-color: #071f46;
-background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
+  
+.bg-projectmainbg-custom {
+  background-color: #071f46;
+  background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
+}
 
+.lightbg{
+  background-color: white;
 }
   
 
@@ -116,6 +115,9 @@ background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
 }
 .customCursor{
   color: white;
+}
+.customCursorlg{
+  color: black;
 }
 
 
@@ -163,11 +165,6 @@ background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
 
 
 
-.homebg{
-  background-color: #041b27;
-  background-image: linear-gradient(197deg, #010101 0%, #040c0f 100%);
-
-}
 
 
 

@@ -16,7 +16,7 @@ const About = () => {
   return (
     <div>
       {" "}
-      <section className="w-full py-12 md:py-4 lg:py-4 bg-black text-white  ">
+      <section className="w-full py-12 md:py-4 lg:py-4 bg:white dark:bg-black  text-white dark:text-black  ">
         <div className="mt-20 flex flex-col sm:flex-row justify-center gap-10">
           <div className=" flex flex-col items-center justify-center">
             <div className="relative rounded-full overflow-hidden w-full max-w-sm sm:max-w-md ml-4  mx:m-auto ">
@@ -33,7 +33,7 @@ const About = () => {
             <div className="text-center space-y-4 mx-10 sm:mx-0">
               <h2 className="text-3xl font-bold flex   gap-2 -mt-4">
                 <img src="assets/icons/star.svg" alt="Star Icon" />
-                <span>About Me</span>
+                <span className="text-black dark:text-white "> About Me</span>
               </h2>
               <p className="text-gray-500 max-w-lg mx-auto text-justify">
                 I am a Full Stack Developer with expertise in Blockchain. I can
@@ -59,7 +59,9 @@ const About = () => {
                     </div>
                   </div>
 
-                  <p className="text-lg sm:text-xl font-bold">{stat.value}</p>
+                  <p className="text-lg sm:text-xl font-bold dark:text-white">
+                    {stat.value}
+                  </p>
                   <p className="text-xs sm:text-sm text-gray-600">
                     {stat.label}
                   </p>

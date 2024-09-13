@@ -2,9 +2,8 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactUs() {
   return (
-    <div className="min-h-screen bg-bgPrimary flex items-center justify-center p-4">
+    <div className="min-h-screen bg:white dark:bg-black flex items-center justify-center p-4">
       <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-bgcontact p-8 rounded-lg">
-        {/* Left Section: Contact Information */}
         <div className="space-y-6 bg-[#0c171c] backdrop-blur-md p-6 px-1 sm:px-6 rounded-lg">
           <h2 className=" text-2xl sm:text-3xl font-bold text-white">
             Get In Touch <span className="text-[#00bfff]">With Us</span>
@@ -44,7 +43,6 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* Right Section: Contact Form */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-white">Contact Us</h2>
           <div className="space-y-4">

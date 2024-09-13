@@ -28,7 +28,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      <section className="w-full testmonila relative py-12 md:py-16 lg:py-24">
+      <section className="w-full bg-lightmode dark:bg-testmonila relative py-12 md:py-16 lg:py-24">
         <img
           src="assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"
@@ -43,7 +43,7 @@ const Testimonial = () => {
         />
         <div className="container mx-auto px-8 md:px-6">
           <div className="space-y-4 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-black dark:text-white">
               What Our <span className="text-spantext">Clients Say</span>
             </h2>
             <p className="mx-auto max-w-4xl text-gray-500 md:text-lg lg:text-base xl:text-lg">
