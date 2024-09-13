@@ -55,22 +55,26 @@ const Home = () => {
           <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white">
             I'm <span className="text-cyan-500">Ashwin Arora,</span> <br />
             <div className="">
-              <div className="relative   bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "Full Stack",
-                      "React",
-                      "Javascript",
-                      "BlockChain",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    wrapperClassName: "typewriterpara",
-                  }}
-                />
+              <div className="relative bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text ">
+                <h1 className="">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        `<span> Full Stack </span> <span style="color:white;">Application </span>`,
+                        `React <span style="color:white;">Application </span>`,
+                        `Javascript <span style="color:white;">Application </span>`,
+                        `BlockChain <span style="color:white;">Application </span>`,
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      wrapperClassName: "typewriterpara",
+                      cursorClassName: "customCursor", // Apply custom cursor class
+                    }}
+                  />
+                </h1>
               </div>
-              <span>Application</span>
+
+              {/* <span>Application</span> */}
             </div>
           </h1>
 

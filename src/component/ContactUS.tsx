@@ -67,7 +67,7 @@ export default function ContactUs() {
                 id="email"
                 type="email"
                 placeholder="Enter Your Email"
-                className="w-full p-2 bg-[#0d1117] border border-[#30363d] text-white rounded-md"
+                className="w-full p-2 bg-[#091419] border border-[#30363d] text-white rounded-md"
               />
             </div>
             <div className="space-y-2">
@@ -77,14 +77,14 @@ export default function ContactUs() {
               <textarea
                 id="message"
                 placeholder="Enter Your Message"
-                className="w-full p-2 bg-[#0d1117] border border-[#30363d] text-white rounded-md min-h-[100px]"
+                className="w-full p-2 bg-[#091419] border border-[#30363d] text-white rounded-md min-h-[100px]"
               />
             </div>
             <div className="flex justify-between">
-              <button className=" px-3 text-xs sm:text-sm md:px-9 py-2 bg-[#00bfff] text-white rounded-full">
+              <button className="px-8 sm:px-24 text-xs sm:text-sm md:px-12 py-2 bg-[#00bfff] text-white rounded-full">
                 Live Demo
               </button>
-              <button className="px-2 py-2 text-xs sm:text-sm   border border-[#00bfff] text-[#00bfff] rounded-full">
+              <button className=" px-6 sm:px-20 py-2 md:px-8 text-xs sm:text-sm   border border-[#00bfff] text-[#00bfff] rounded-full">
                 Schedule a Meeting
               </button>
             </div>
