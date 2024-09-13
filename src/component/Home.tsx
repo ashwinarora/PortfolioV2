@@ -13,7 +13,7 @@ const Home = () => {
         <img
           src="assets/icons/homerightbg.svg"
           alt="Right Background"
-          className="absolute w-56 h-56 sm:w-80 sm:h-80 lg:w-[20rem] lg:h-[20rem]  xl:w-[30rem] xl:h-[20rem] 2xl:w-[32rem] 2xl:h-[30rem] right-0 top-0"
+          className="absolute w-56 h-56 sm:w-80 sm:h-80 lg:w-[30rem] lg:h-[30rem]  xl:w-[30rem] xl:h-[20rem] 2xl:w-[32rem] 2xl:h-[30rem] right-0 top-0"
         />
         {/* Left Ring Image */}
         <img
