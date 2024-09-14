@@ -1,9 +1,3 @@
-import { SiSocketdotio } from "react-icons/si";
-import { SiEthers } from "react-icons/si";
-import { IoLogoFigma } from "react-icons/io5";
-import { DiBootstrap } from "react-icons/di";
-import { LuBoxes } from "react-icons/lu";
-import { BsBox } from "react-icons/bs";
 import { IoMdPlayCircle } from "react-icons/io";
 import { useEffect, useState } from "react";
 const projects = [
@@ -13,14 +7,15 @@ const projects = [
     description:
       "A real-time multiplayer TicTacToe game where two players bet in ETH and the winner takes all. A state channel is created between the two players to enable Off-Chain exchange of messages. These messages are signed by the player's private key.",
     images: ["assets/images/project1.svg"],
+
     tools: [
-      { name: "Socket.io", icon: <SiSocketdotio />, Img: null },
-      { name: "Ethers.js", icon: <SiEthers />, Img: null },
-      { name: "Node", icon: <LuBoxes />, Img: null },
-      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
-      { name: "Figma", icon: <IoLogoFigma />, Img: null },
-      { name: "Bootstrap", icon: <DiBootstrap />, Img: null },
-      { name: "Solidity", icon: <BsBox />, Img: null },
+      { name: "Socket.io", Img: "assets/icons/socket.svg" },
+      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
+      { name: "Node", Img: "assets/icons/node.svg" },
+      { name: "Express", Img: "assets/icons/express.svg" },
+      { name: "Figma", Img: "assets/icons/figma.svg" },
+      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
+      { name: "Solidity", Img: "assets/icons/solidity.svg" },
     ],
     features: [
       "Multiplayer",
@@ -41,13 +36,13 @@ const projects = [
       "assets/images/project2.svg",
     ],
     tools: [
-      { name: "Socket.io", icon: <SiSocketdotio />, Img: null },
-      { name: "Ethers.js", icon: <SiEthers />, Img: null },
-      { name: "Node", icon: <LuBoxes />, Img: null },
-      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
-      { name: "Figma", icon: <IoLogoFigma />, Img: null },
-      { name: "Bootstrap", icon: <DiBootstrap />, Img: null },
-      { name: "Solidity", icon: <BsBox />, Img: null },
+      { name: "Socket.io", Img: "assets/icons/socket.svg" },
+      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
+      { name: "Node", Img: "assets/icons/node.svg" },
+      { name: "Express", Img: "assets/icons/express.svg" },
+      { name: "Figma", Img: "assets/icons/figma.svg" },
+      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
+      { name: "Solidity", Img: "assets/icons/solidity.svg" },
     ],
     features: [
       "Follow/Unfollow",
@@ -69,13 +64,13 @@ const projects = [
       "assets/images/project3.svg",
     ],
     tools: [
-      { name: "Socket.io", icon: <SiSocketdotio />, Img: null },
-      { name: "Ethers.js", icon: <SiEthers />, Img: null },
-      { name: "Node", icon: <LuBoxes />, Img: null },
-      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
-      { name: "Figma", icon: <IoLogoFigma />, Img: null },
-      { name: "Bootstrap", icon: <DiBootstrap />, Img: null },
-      { name: "Solidity", icon: <BsBox />, Img: null },
+      { name: "Socket.io", Img: "assets/icons/socket.svg" },
+      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
+      { name: "Node", Img: "assets/icons/node.svg" },
+      { name: "Express", Img: "assets/icons/express.svg" },
+      { name: "Figma", Img: "assets/icons/figma.svg" },
+      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
+      { name: "Solidity", Img: "assets/icons/solidity.svg" },
     ],
     features: [
       "Multiplayer",
@@ -127,12 +122,12 @@ export default function ProjectShowcase() {
   };
   return (
     <div>
-      <div className="relative bg-lightmode  dark:bg-projectmainbg text-gray-100 py-12 ">
+      <div className="relative bg-white  dark:bg-projectmainbg text-gray-100 py-12 ">
         <div className="container mx-auto px-4 ">
           <img
             src="assets/images/projectleftbg.svg"
             alt="Small Image 2"
-            className="absolute   right-12 w-72  "
+            className="absolute   right-12 w-72 mix-blend-difference dark:mix-blend-normal "
             loading="lazy"
           />
           <img
@@ -143,17 +138,17 @@ export default function ProjectShowcase() {
           />
           <div className=" mt-12 font-bold mb-12 text-center">
             <div>
-              <h1 className="text-4xl ">
+              <h1 className="text-4xl  text-black dark:text-white">
                 Our <span className="text-spantext"> Projects </span>
               </h1>
-              <h3 className="text-gray-700 text-xs md:text-sm mt-4 mx-10 sm:-mx-16 md:mx-4 2xl:mx-80">
+              <h3 className="text-gray-700 text-xs md:text-sm mt-4 mx-10 sm:-mx-0 md:mx-4 2xl:mx-80">
                 A real-time multiplayer TicTacToe game where two players can bet
                 ETH and the winner take all. A state channel is created between
                 the two players to enable 'Off-Chain'.
               </h3>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-20 lg:mx-16 2xl:mx-28 shadow-lg ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-28 dark:shadow-lg ">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -161,7 +156,7 @@ export default function ProjectShowcase() {
                   index === 0
                     ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                     : "col-span-1 gap-8"
-                } projectbg border border-gray-700 rounded-lg overflow-hidden`}
+                } bg-white dark:bg-projectbg border border-gray-700 rounded-lg shadow-lg overflow-hidden`}
               >
                 <div
                   className={`${
@@ -171,9 +166,9 @@ export default function ProjectShowcase() {
                   <div
                     className={`${
                       index === 0
-                        ? "relative flex-1 bg-[#243c41a1] pt-6 mx-4 rounded-md"
-                        : "relative pt-6 mt-2 mx-4 bg-[#243c41a1] rounded-md"
-                    }`}
+                        ? "relative flex-1 pt-6 mx-4 rounded-md"
+                        : "relative pt-6 mt-2 mx-4 rounded-md"
+                    } bg-gray-200 dark:bg-[#243c41a1] `}
                   >
                     <img
                       src={project.images[currentImageIndex[index]]}
@@ -206,25 +201,25 @@ export default function ProjectShowcase() {
                         : "p-4 flex flex-col"
                     }`}
                   >
-                    <div className=" text-xs  md:text-2xl font-semibold flex justify-between mx-4 md:mx-2 mt-3 items-center">
-                      <h1 className="text-xs md:text-sm lg:2xl text-black dark:text-white">
+                    <div className=" text-xs  md:text-2xl font-semibold flex justify-between mx-4 md:mx-2 mt-3 items-center 2xl:mx-4">
+                      <h1 className="text-xs md:text-sm lg:text-xl 2xl:text-2xl text-black dark:text-white">
                         {project.title}
                       </h1>
                       <button className="flex justify-center items-center gap-1">
-                        <p className="text-spantext text-xs md:text-sm lg:2xl">
+                        <p className="text-spantext text-xs md:text-sm lg:text-xl 2xl:text-2xl">
                           {project?.link}
                         </p>
-                        <i className="text-spantext text-sm md:text-lg mt-0">
+                        <i className="text-spantext text-sm md:text-lg lg:text-xl mt-0">
                           <IoMdPlayCircle />
                         </i>
                       </button>
                     </div>
                     <div className="p-4">
-                      <p className="text-gray-400 mb-4 text-xs lg:text-sm">
+                      <p className="text-gray-800 dark:text-gray-400 mb-4 text-xs lg:text-sm">
                         {project.description}
                       </p>
                       <div className="mb-4">
-                        <h3 className="font-semibold mb-2  text-sm sm:text-sm md:xl text-gray-300">
+                        <h3 className="font-semibold mb-2  text-sm  md:lg lg:text-xl text-black dark:text-white">
                           Tools Used
                         </h3>
                         <div className="flex flex-wrap gap-1 md:gap-2">
@@ -233,19 +228,15 @@ export default function ProjectShowcase() {
                               key={i}
                               className="px-1 md:px-1 py-1 text-sm rounded-full bg-gray-700 text-blue-300 flex items-center gap-1"
                             >
-                              {tool.icon && (
-                                <span className="text-xs md:text-sm bg-[#2f393d] p-[6px] rounded-full w-6 h-6 md:w-5 md:h-6">
-                                  {tool.icon}
-                                </span>
-                              )}
                               {tool.Img && (
                                 <img
                                   className="w-4 h-4 md:w-5 md:h-6"
                                   src={tool.Img}
-                                  alt=""
+                                  alt="icons"
+                                  loading="lazy"
                                 />
                               )}
-                              <p className="text-[9px] md:text-xs">
+                              <p className="text-[9px] md:text-xs lg:pr-2">
                                 {tool.name}
                               </p>
                             </span>
@@ -253,7 +244,7 @@ export default function ProjectShowcase() {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-2 text-gray-300">
+                        <h3 className="font-semibold mb-2 text-black dark:text-white  text-sm  md:lg lg:text-xl">
                           Features
                         </h3>
                         <div className="flex flex-wrap gap-2">

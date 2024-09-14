@@ -52,7 +52,7 @@ const Testimonial = () => {
               the two players to enable 'Off-Chain'.
             </p>
           </div>
-          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 md:mx-28 lg:mx-44 ">
+          <div className="grid gap-6 pt-8 sm:grid-cols-2 lg:grid-cols-3 md:mx-28 lg:mx-16 2xl:mx-44 ">
             {testimonials.map((testimonial, index) => (
               <div key={index}>
                 <Card>
@@ -68,10 +68,13 @@ const Testimonial = () => {
                     </p>
                   </div>
                 </Card>
-                <img src="assets/icons/msgicon.svg " className="-mt-1 ml-8" />
+                <img
+                  src="assets/icons/msgicon.svg "
+                  className="-mt-1 ml-8 mix-blend-color-dodge dark:mix-blend-normal"
+                />
                 <div className="flex items-center gap-3  ml-3">
                   <div className="rounded-full bg-primary p-1 text-white">
-                    <img className="w-10" src={testimonial.img} alt="" />
+                    <img className="w-10 " src={testimonial.img} alt="" />
                   </div>
                   <div>
                     <p className="font-medium text-spantext">
@@ -92,7 +95,7 @@ const Testimonial = () => {
 function Card({ children, className }: any) {
   return (
     <div
-      className={`testimonial-card shadow-lg min-w-fit rounded-full p-6 ${className}`}
+      className={` border border-transparent p-6 text-white  bg-white dark:bg-testimonialcard  rounded-lg dark:shadow-lg min-w-fit   ${className}`}
     >
       {children}
     </div>

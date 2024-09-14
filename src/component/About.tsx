@@ -17,25 +17,30 @@ const About = () => {
     <div>
       {" "}
       <section className="w-full py-12 md:py-4 lg:py-4 bg:white dark:bg-black  text-white dark:text-black  ">
-        <div className="mt-20 flex flex-col sm:flex-row justify-center gap-10">
+        <div className="mt-20 flex flex-col sm:flex-row justify-center md:gap-5 2xl:gap-10">
           <div className=" flex flex-col items-center justify-center">
-            <div className="relative rounded-full overflow-hidden w-full max-w-sm sm:max-w-md ml-4  mx:m-auto ">
+            <div className="relative rounded-full overflow-hidden w-full max-w-sm sm:max-w-md m-[inherit] ml-4 mx:m-auto ">
               <img
                 src="/assets/images/aboutring.svg"
                 alt="Profile"
-                className="object-cover w-full h-auto"
+                className="object-cover w-full h-auto "
                 style={{ aspectRatio: "1 / 1" }}
                 loading="lazy"
               />
             </div>
           </div>
-          <div className="flex flex-col gap-0 justify-center items-center">
+          <div className="flex flex-col gap-0 justify-center items-center 2xl:-mt-16">
             <div className="text-center space-y-4 mx-10 sm:mx-0">
               <h2 className="text-3xl font-bold flex   gap-2 -mt-4">
-                <img src="assets/icons/star.svg" alt="Star Icon" />
+                <img
+                  className="invert dark:invert-0"
+                  src="assets/icons/star.svg"
+                  alt="Star Icon"
+                  loading="lazy"
+                />
                 <span className="text-black dark:text-white "> About Me</span>
               </h2>
-              <p className="text-gray-500 max-w-lg mx-auto text-justify">
+              <p className="text-gray-500 max-w-lg mx-auto text-justify text-sm md:text-lg 2xl:text-xl">
                 I am a Full Stack Developer with expertise in Blockchain. I can
                 realize the vision of your product. I am proficient with both
                 Front-End and Back-End Development. Using React for Front-End
@@ -46,7 +51,7 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-center m-auto   px-0 sm:px-8 mt-10 sm:mt-0">
-          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-[#061116]  p-2 sm:p-6 rounded-lg border border-gray-800">
+          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-white dark:bg-[#061116]  p-2 sm:p-6 rounded-lg border border-gray-800">
             {statistics.map((stat, index) => (
               <div
                 className="flex items-center justify-center  sm:gap-11"
@@ -54,12 +59,12 @@ const About = () => {
               >
                 <div className="text-center mx-2 sm:mx-4">
                   <div className="flex items-center justify-center">
-                    <div className="text-white rounded-full w-12 h-12 flex items-center justify-center">
+                    <div className=" text-black dark:text-white  rounded-full w-12 h-12 flex items-center justify-center">
                       <img src={stat.icon} alt="" />
                     </div>
                   </div>
 
-                  <p className="text-lg sm:text-xl font-bold dark:text-white">
+                  <p className="text-lg sm:text-xl font-bold text-black dark:text-white">
                     {stat.value}
                   </p>
                   <p className="text-xs sm:text-sm text-gray-600">

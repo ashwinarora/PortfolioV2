@@ -45,24 +45,24 @@ const Whyme = () => {
             </p>
           </div>
 
-          <div className=" feature rounded-lg px-2 sm:-px-10">
+          <div className="  bg-feturelg  dark:bg-feature rounded-lg px-2 sm:-px-10">
             <div className="grid grid-cols-2 gap-4 w-full  mt-10 sm:mt-0">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`relative flex justify-center items-center sm:-mx-4 ${
+                  className={`relative flex justify-center items-center sm:-mx-4 2xl:-mx-10 ${
                     index % 2 === 0 ? "-top-12 sm:-top-8" : "top-10 sm:top-14 "
-                  }`}
+                  } `}
                 >
-                  <div className="relative rounded-lg bg-muted p-0 sm:p-8 bg-[#b3b3e21a] text-center z-10 -px-0 sm:px-0 -py-8 sm:-py-0 sm:mx-6 ">
-                    <div className="absolute inset-0 flex items-center justify-center z-0 text-gray-600 text-5xl -mt-28">
+                  <div className="relative rounded-lg bg-muted p-0 sm:p-8 border   shadow-lg  bg-white dark:bg-[#14202b]  dark:border-gray-800 text-center z-10 -px-0 sm:px-0 -py-8 sm:-py-0 sm:mx-6 2xl:mx-12">
+                    <div className="absolute inset-0 flex items-center justify-center z-0 text-gray-400 dark:text-gray-600 text-5xl -mt-28 2xl:-mt-28">
                       {feature.id}
                     </div>
                     <div className="relative z-10 p-2">
-                      <h3 className=" text-base sm:text-lg font-semibold text-white">
+                      <h3 className=" text-base sm:text-lg font-semibold  text-black dark:text-white">
                         {feature.title}
                       </h3>
-                      <p className=" text-muted-foreground text-gray-400">
+                      <p className=" text-muted-foreground text-gray-800 dark:text-gray-400 text-sm sm:text-md">
                         {feature.description}
                       </p>
                     </div>

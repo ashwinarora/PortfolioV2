@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { ThemeContext } from "./ThemeContext";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
 
   if (!themeContext) return null;
   return (
-    <nav className="border-gray-200 bg-gray-50 dark:bg-bgPrimary dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
+    <nav className="border-gray-350 bg-gray-50 dark:bg-bgPrimary  dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="/#home"
@@ -62,7 +63,7 @@ const Navbar = () => {
           } md:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-black shadow-2xl border border-rose-800 md:dark:bg-transparent dark:border-gray-700 md:mr-0">
+          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-black shadow-2xl border border-gray-600  md:dark:bg-transparent dark:border-gray-700 md:mr-0">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <a
@@ -79,9 +80,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-
-            <label className="inline-flex items-center cursor-pointer float-end">
-              {/* <FaSun className="text-yellow-500 dark:text-gray-500 mr-2" /> */}
+            <label className="inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
                 value="dark"
@@ -89,10 +88,16 @@ const Navbar = () => {
                 onChange={themeContext.toggleTheme}
                 checked={themeContext.theme === "dark"}
               />
-              <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
-              {/* <FaMoon className="text-gray-700 dark:text-yellow-400 ml-2" /> */}
-              <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-                {themeContext.theme === "light" ? "Light Mode" : "Dark Mode"}
+              <span
+                className={`${
+                  isNavOpen ? "ml-3 mb-2" : ""
+                } text-xl font-medium text-gray-900 dark:text-gray-300 `}
+              >
+                {themeContext.theme === "light" ? (
+                  <FaSun className="text-yellow-500 transition-transform duration-300 hover:scale-110 " />
+                ) : (
+                  <FaMoon className="text-gray-700 dark:text-white transition-transform duration-300 hover:scale-110" />
+                )}
               </span>
             </label>
           </ul>
