@@ -1,3 +1,5 @@
+import { FaLinkedin } from "react-icons/fa6";
+import { BsGithub } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
@@ -18,30 +20,46 @@ const Footer = () => {
                 ASHWIN ARORA
               </p>
             </a>
-            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <ul className="flex flex-wrap items-center mb-6 text-md font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
+                <a href="#about" className="hover:underline me-4 md:me-6">
                   About Me
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline me-4 md:me-6">
+                <a href="#project" className="hover:underline me-4 md:me-6">
                   Project
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#contact" className="hover:underline">
                   Contact Us
                 </a>
               </li>
             </ul>
 
-            <div className="flex h-8 w-20 gap-2 items-center justify-center">
-              <a href="#">
-                <img src="assets/icons/linkdin.svg" alt="" />
+            <div className="flex h-8 w-20 gap34 items-center justify-center -mt-3 sm:mt-0">
+              <a
+                className="mr-4 hover:scale-110 transition  transform duration-200 "
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/ashwin-arora/"
+                target="_blank"
+              >
+                {/* <img src="assets/icons/linkdin.svg" alt="" /> */}
+                <i className="text-black text-3xl   dark:text-white ">
+                  <FaLinkedin />
+                </i>
               </a>
-              <a href="#">
-                <img src="assets/icons/facebook.svg" alt="" />
+              <a
+                href="https://github.com/ashwinarora/"
+                rel="noreferrer"
+                target="_blank"
+                className="hover:scale-110 transition transform duration-200 "
+              >
+                {/* <img src="assets/icons/facebook.svg" alt="" /> */}
+                <i className="text-black text-3xl dark:text-white">
+                  <BsGithub />
+                </i>
               </a>
             </div>
           </div>
@@ -49,17 +67,9 @@ const Footer = () => {
           <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             <div className="flex justify-between">
               <p>Ashwini Arora Portfolio ©  </p>
-              <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                  <a href="#" className="hover:underline me-4 md:me-6">
-                    Project
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Contact Us
-                  </a>
-                </li>
+              <ul className="flex flex-wrap items-center mb-6  text-xs sm:text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 gap-1 sm:gap-3">
+                <li>Privacy Policy</li>
+                <li>Terms Of Service</li>
               </ul>
             </div>
           </span>

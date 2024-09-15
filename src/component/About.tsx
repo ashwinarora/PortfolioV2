@@ -16,7 +16,7 @@ const About = () => {
   return (
     <div>
       {" "}
-      <section className="w-full py-12 md:py-4 lg:py-4 bg:white dark:bg-black  text-white dark:text-black  ">
+      <section className="w-full py-12 md:py-4 lg:py-4 bg-lightmode dark:bg-black  text-white dark:text-black  ">
         <div className="mt-20 flex flex-col sm:flex-row justify-center md:gap-5 2xl:gap-10">
           <div className=" flex flex-col items-center justify-center">
             <div className="relative rounded-full overflow-hidden w-full max-w-sm sm:max-w-md m-[inherit] ml-4 mx:m-auto ">
@@ -50,8 +50,8 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center m-auto   px-0 sm:px-8 mt-10 sm:mt-0">
-          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-white dark:bg-[#061116]  p-2 sm:p-6 rounded-lg border border-gray-800">
+        <div className="flex justify-center m-auto   px-2 sm:px-8 mt-10 sm:mt-0">
+          <div className="flex flex-wrap  sm:flex-row justify-center lg:gap-28  items-center bg-lightmode dark:bg-[#061116]  p-2 sm:p-6 rounded-lg border border-gray-800 ">
             {statistics.map((stat, index) => (
               <div
                 className="flex items-center justify-center  sm:gap-11"

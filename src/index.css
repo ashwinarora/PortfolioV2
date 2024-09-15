@@ -5,7 +5,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  background-color: #000000;
+
 }
 
 /* .testimonial-card {
@@ -34,28 +36,56 @@ html {
 }
 
 
-.moving-border {
+.moving-border, .moving-border1 {
   width: fit-content;
   position: relative;
   background: #000000;
   z-index: 1;
   padding: 1px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .moving-border::before,
-.moving-border::after {
+.moving-border::after,
+.moving-border1::before,
+.moving-border1::after {
   content: "";
   position: absolute;
   inset: -0.2rem;
   z-index: -1;
+}
+
+.moving-border::before {
   background: linear-gradient(to right, #9000de, #1a85c3, #060101, #060101, #060101, #1a85c3, #9000de);
-  background-size: 100%; 
+  background-size: 100%;
+}
+
+.moving-border1::before {
+  background: linear-gradient(to right, #9000de, #1a85c3, #f0f0f0, #f0f0f0, #f0f0f0, #1a85c3, #9000de);
+  background-size: 100%;
 }
 
 .moving-border::after {
   filter: blur(10px);
 }
+
+.moving-border1::after {
+  filter: blur(10px);
+}
+
+
+.dark .moving-border {
+  background: #10131b;
+}
+
+.dark .moving-border::before {
+  background: linear-gradient(to right, #9000de, #1a85c3, #10131b, #10131b, #10131b, #1a85c3, #9000de);
+}
+
+.dark .moving-border1::before {
+  background: linear-gradient(to right, #9000de, #1a85c3, #000, #000, #000, #1a85c3, #9000de);
+}
+
 
 @keyframes border-travel {
   0% {
