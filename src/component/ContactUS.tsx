@@ -2,18 +2,18 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function ContactUs() {
   return (
-    <div className="min-h-screen bg:white dark:bg-black  flex items-center justify-center p-4">
-      <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 bg-white border border-gray-700 dark:border-[#242424]  dark:bg-bgcontact p-8 rounded-lg">
+    <div className="min-h-screen bg-lightmode dark:bg-black  flex items-center justify-center p-4">
+      <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8  border border-gray-700 dark:border-[#242424]  dark:bg-bgcontact p-8 rounded-lg">
         <div className="space-y-6 bg-white  dark:bg-[#0c171c]  backdrop-blur-md p-6 px-1 sm:px-6 rounded-lg shadow-md dark:shadow-2xl">
-          <h2 className=" text-2xl sm:text-3xl font-bold text-black dark:text-white">
+          <h2 className=" text-2xl px-1 sm:text-3xl font-bold text-black dark:text-white">
             Get In Touch <span className="text-[#00bfff]">With Us</span>
           </h2>
-          <p className="text-gray-400">
+          <p className="text-gray-400 px-2">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
             of using.
           </p>
-          <div className="space-y-4">
+          <div className="space-y-4 px-2">
             <div className="flex items-center space-x-4">
               <div className="p-2 bg-[#00bfff] rounded-full">
                 <FaPhone className="text-white w-6 h-6" />

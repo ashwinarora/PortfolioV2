@@ -1,21 +1,70 @@
 import { IoMdPlayCircle } from "react-icons/io";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { FiExternalLink } from "react-icons/fi";
+import { FaCode } from "react-icons/fa6";
+import { MdFormatStrikethrough } from "react-icons/md";
+import { DiMaterializecss } from "react-icons/di";
+import { FaReact } from "react-icons/fa";
+import { DiMongodb } from "react-icons/di";
+import { SiJsonwebtokens } from "react-icons/si";
+import { FiSettings } from "react-icons/fi";
+import ReactPlayer from "react-player";
+import { DiNodejsSmall } from "react-icons/di";
+import { ImTree } from "react-icons/im";
+import { SiAxios } from "react-icons/si";
 const projects = [
   {
     title: "Ethereum TicTacToe",
     link: "view video",
     description:
       "A real-time multiplayer TicTacToe game where two players bet in ETH and the winner takes all. A state channel is created between the two players to enable Off-Chain exchange of messages. These messages are signed by the player's private key.",
-    images: ["assets/images/project1.svg"],
-
+    images: [
+      "assets/projects/et1.jpg",
+      "assets/projects/et2.jpg",
+      "assets/projects/et3.jpg",
+      "assets/projects/et4.jpg",
+      "assets/projects/et5.jpg",
+    ],
+    youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+    videoId: "UmSzmoAK5jM",
+    timestamps: [
+      {
+        name: "Intro",
+        timestamp: 0,
+      },
+      {
+        name: "Initial Account Balance",
+        timestamp: 5,
+      },
+      {
+        name: "New Game Created",
+        timestamp: 13,
+      },
+      {
+        name: "Game Joined",
+        timestamp: 26,
+      },
+      {
+        name: "Game Play Started",
+        timestamp: 44,
+      },
+      {
+        name: "Game Ended",
+        timestamp: 73,
+      },
+      {
+        name: "Final Account Balance",
+        timestamp: 79,
+      },
+    ],
     tools: [
-      { name: "Socket.io", Img: "assets/icons/socket.svg" },
-      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
-      { name: "Node", Img: "assets/icons/node.svg" },
-      { name: "Express", Img: "assets/icons/express.svg" },
-      { name: "Figma", Img: "assets/icons/figma.svg" },
-      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
-      { name: "Solidity", Img: "assets/icons/solidity.svg" },
+      { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
+      { name: "Ethers.js", icon: null, Img: "assets/icons/ether.svg" },
+      { name: "Node", icon: null, Img: "assets/icons/node.svg" },
+      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+      { name: "DOM", icon: <ImTree />, Img: null },
+      { name: "Bootstrap", icon: null, Img: "assets/icons/bootstrap.svg" },
+      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
     ],
     features: [
       "Multiplayer",
@@ -24,6 +73,8 @@ const projects = [
       "State Channel",
       "Off-Chain Gameplay",
     ],
+    liveDemo: "https://www.ethtictactoe.com/",
+    github: "https://github.com/ashwinarora/ethereum-tictactoe",
   },
   {
     title: "Social Network",
@@ -31,18 +82,65 @@ const projects = [
     description:
       "A full-fledged social networking platform. Allowing users to follow, post images, comment, like etc. A complete implementation of MERN stack with JWT authentication.A full-fledged social networking platform.",
     images: [
-      "assets/images/project2.svg",
-      "assets/images/project3.svg",
-      "assets/images/project2.svg",
+      "assets/projects/sn-01.jpg",
+      "assets/projects/sn-02.jpg",
+      "assets/projects/sn-03.jpg",
+      "assets/projects/sn-04.jpg",
+      "assets/projects/sn-05.jpg",
+    ],
+    youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+    videoId: "yrIb_unPfec",
+    timestamps: [
+      {
+        name: "Sign Up/Sign In",
+        timestamp: 0,
+      },
+      {
+        name: "Sign In Success",
+        timestamp: 18,
+      },
+      {
+        name: "Follow/Unfollow",
+        timestamp: 39,
+      },
+      {
+        name: "Like and Comment",
+        timestamp: 48,
+      },
+      {
+        name: "New Post",
+        timestamp: 56,
+      },
+      {
+        name: "Update Profile Image",
+        timestamp: 74,
+      },
+      {
+        name: "Delete Post",
+        timestamp: 81,
+      },
+      {
+        name: "Password Reset",
+        timestamp: 88,
+      },
     ],
     tools: [
-      { name: "Socket.io", Img: "assets/icons/socket.svg" },
-      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
-      { name: "Node", Img: "assets/icons/node.svg" },
-      { name: "Express", Img: "assets/icons/express.svg" },
-      { name: "Figma", Img: "assets/icons/figma.svg" },
-      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
-      { name: "Solidity", Img: "assets/icons/solidity.svg" },
+      { name: "React", icon: <FaReact />, Img: null },
+      { name: "MongoDB", icon: <DiMongodb />, Img: null },
+      {
+        name: "JWT Authentication",
+        icon: <SiJsonwebtokens />,
+        Img: null,
+      },
+      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+      { name: "Fetch Api", icon: <FiSettings />, Img: null },
+      {
+        name: "Nodemailer",
+        icon: <DiNodejsSmall />,
+        Img: null,
+      },
+      { name: "MaterializeCSS", icon: <DiMaterializecss />, Img: null },
+      { name: "REST", icon: <FiSettings />, Img: null },
     ],
     features: [
       "Follow/Unfollow",
@@ -52,6 +150,8 @@ const projects = [
       "Image Upload",
       "Search",
     ],
+    liveDemo: "https://socialnetwork-ashwin.herokuapp.com/",
+    github: "https://github.com/ashwinarora/mern-social-network",
   },
   {
     title: "Ethereum Housie",
@@ -59,18 +159,49 @@ const projects = [
     description:
       "A real-time multiplayer game inspired by Bingo. There is no limit to the number of players per game. Each player pays in ETH to purchase a ticket and then select 15 numbers(1-90). The server broadcasts random numbers one by one to the players.",
     images: [
-      "assets/images/project3.svg",
-      "assets/images/project2.svg",
-      "assets/images/project3.svg",
+      "assets/projects/hr1.jpg",
+      "assets/projects/hr2.jpg",
+      "assets/projects/hr3.jpg",
+      "assets/projects/hr4.jpg",
+      "assets/projects/hr5.jpg",
+    ],
+    youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+    videoId: "aN0AKmAdPjs",
+    timestamps: [
+      {
+        name: "Game Setup",
+        timestamp: 0,
+      },
+      {
+        name: "Ticket Setup",
+        timestamp: 10,
+      },
+      {
+        name: "Ticket Purchase",
+        timestamp: 22,
+      },
+      {
+        name: "Game Started",
+        timestamp: 80,
+      },
+      {
+        name: "Game Ended",
+        timestamp: 136,
+      },
     ],
     tools: [
-      { name: "Socket.io", Img: "assets/icons/socket.svg" },
-      { name: "Ethers.js", Img: "assets/icons/ether.svg" },
-      { name: "Node", Img: "assets/icons/node.svg" },
-      { name: "Express", Img: "assets/icons/express.svg" },
-      { name: "Figma", Img: "assets/icons/figma.svg" },
-      { name: "Bootstrap", Img: "assets/icons/bootstrap.svg" },
-      { name: "Solidity", Img: "assets/icons/solidity.svg" },
+      { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
+      { name: "Web3.js", icon: null, Img: "assets/icons/ether.svg" },
+      { name: "React", icon: <FaReact />, Img: null },
+      { name: "Node", icon: null, Img: "assets/icons/node.svg" },
+      { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+      { name: "Axios", icon: <SiAxios />, Img: null },
+      {
+        name: "Infura",
+        icon: <MdFormatStrikethrough />,
+        Img: null,
+      },
+      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
     ],
     features: [
       "Multiplayer",
@@ -80,14 +211,71 @@ const projects = [
       "No Player Limit",
       "Monitor Game",
     ],
+
+    liveDemo: "https://www.eth-housie.com/",
+    github: "https://github.com/ashwinarora/ethereum-housie",
   },
 ];
+
+const VideoModal = ({ videoId, timestamps, onClose }: any) => {
+  const [currentTime, setCurrentTime] = useState(0);
+  const playerRef = useRef<ReactPlayer>(null);
+
+  const handleTimestampClick = (time: any) => {
+    setCurrentTime(time);
+    if (playerRef.current) {
+      playerRef.current.seekTo(time);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative w-[90%] max-w-3xl">
+        <button
+          className="absolute top-2 right-2 text-gray-800 dark:text-gray-100"
+          onClick={onClose}
+        >
+          &#x2716; {/* Close button */}
+        </button>
+        <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-md mb-4">
+          <ReactPlayer
+            ref={playerRef}
+            url={`https://www.youtube.com/embed/${videoId}?start=${currentTime}`}
+            playing={true}
+            controls={true}
+            width="100%"
+            height="100%"
+            className="absolute top-0 left-0"
+          />
+        </div>
+        <div>
+          <h2 className="text-lg font-bold text-black dark:text-white mb-2">
+            Timestamps
+          </h2>
+          <ul className="flex gap-1 flex-wrap">
+            {timestamps.map((stamp: any, index: any) => (
+              <li
+                key={index}
+                className="cursor-pointer text-white bg-blue-600 hover:underline text-xs px-4 border flex rounded-full"
+                onClick={() => handleTimestampClick(stamp.timestamp)}
+              >
+                {stamp.name} -{" "}
+                {new Date(stamp.timestamp * 1000).toISOString().substr(14, 5)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function ProjectShowcase() {
   const [currentImageIndex, setCurrentImageIndex] = useState(
     new Array(projects.length).fill(0)
   );
-
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
   const handleNextImage = (index: number) => {
     setCurrentImageIndex((prev) =>
       prev.map((imgIndex, idx) =>
@@ -97,7 +285,15 @@ export default function ProjectShowcase() {
       )
     );
   };
+  const handleViewVideo = (project: any) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
 
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+  };
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prev) =>
@@ -122,12 +318,12 @@ export default function ProjectShowcase() {
   };
   return (
     <div>
-      <div className="relative bg-white  dark:bg-projectmainbg text-gray-100 py-12 ">
+      <div className="relative bg-lightmode  dark:bg-projectmainbg text-gray-100 py-12 ">
         <div className="container mx-auto px-4 ">
           <img
             src="assets/images/projectleftbg.svg"
             alt="Small Image 2"
-            className="absolute   right-12 w-72 mix-blend-difference dark:mix-blend-normal "
+            className="absolute   right-12 w-72 2xl:right-2 2xl:top-0  mix-blend-difference dark:mix-blend-normal "
             loading="lazy"
           />
           <img
@@ -148,7 +344,7 @@ export default function ProjectShowcase() {
               </h3>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-28 dark:shadow-lg ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-32 dark:shadow-lg  ">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -156,7 +352,7 @@ export default function ProjectShowcase() {
                   index === 0
                     ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                     : "col-span-1 gap-8"
-                } bg-white dark:bg-projectbg border border-gray-700 rounded-lg shadow-lg overflow-hidden`}
+                } bg-white dark:bg-projectbg border border-gray-700 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-500`}
               >
                 <div
                   className={`${
@@ -178,6 +374,25 @@ export default function ProjectShowcase() {
                       }  w-full object-cover`}
                       loading="lazy"
                     />
+                    <div className="flex justify-center absolute left-[40%] bottom-2">
+                      {project.images.map((_, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          className={`w-3 h-3 mx-1 rounded-full cursor-pointer ${
+                            currentImageIndex[index] === imgIndex
+                              ? "bg-blue-500"
+                              : "bg-gray-400"
+                          }`}
+                          onClick={() =>
+                            setCurrentImageIndex((prev) =>
+                              prev.map((img, idx) =>
+                                idx === index ? imgIndex : img
+                              )
+                            )
+                          }
+                        ></div>
+                      ))}
+                    </div>
                     <button
                       onClick={() => handlePreviousImage(index)}
                       className="absolute top-1/2 left-4 transform -translate-y-1/2  bg-black  bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75 -mx-3"
@@ -206,9 +421,14 @@ export default function ProjectShowcase() {
                         {project.title}
                       </h1>
                       <button className="flex justify-center items-center gap-1">
-                        <p className="text-spantext text-xs md:text-sm lg:text-xl 2xl:text-2xl">
+                        <a
+                          // href={project.youtube}
+                          target="_parent"
+                          className="text-spantext text-xs md:text-sm lg:text-xl 2xl:text-2xl z-50"
+                          onClick={() => handleViewVideo(project)}
+                        >
                           {project?.link}
-                        </p>
+                        </a>
                         <i className="text-spantext text-sm md:text-lg lg:text-xl mt-0">
                           <IoMdPlayCircle />
                         </i>
@@ -226,8 +446,15 @@ export default function ProjectShowcase() {
                           {project.tools.map((tool: any, i: any) => (
                             <span
                               key={i}
-                              className="px-1 md:px-1 py-1 text-sm rounded-full bg-gray-700 text-blue-300 flex items-center gap-1"
+                              className="px-1 md:px-1 py-1 text-sm rounded-full bg-lightmode text-black  dark:bg-gray-700 dark:text-blue-300 flex items-center gap-1"
                             >
+                              {tool.icon && (
+                                <div className="bg-[#2f393d] p-2 w-5 h-5 rounded-full flex justify-center items-center">
+                                  <i className="text-xs text-white ">
+                                    {tool.icon}
+                                  </i>
+                                </div>
+                              )}
                               {tool.Img && (
                                 <img
                                   className="w-4 h-4 md:w-5 md:h-6"
@@ -260,12 +487,26 @@ export default function ProjectShowcase() {
                       </div>
                     </div>
                     <div className="p-4 flex justify-between">
-                      <button className=" py-2 bg-blue-500 text-white rounded-full px-6 sm:px-2 md:px-8 lg:px-6 font-semibold hover:bg-blue-600 text-xs sm:text-sm ">
-                        Live Demo
-                      </button>
-                      <button className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6   md:px-8 hover:text-gray-900 text-xs sm:text-sm lg:px-6">
-                        View Source
-                      </button>
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        className=" flex justify-center items-center gap-2 py-2 bg-blue-500 text-white rounded-full px-6 sm:px-2 md:px-8 lg:px-6 font-semibold hover:bg-blue-600 text-xs sm:text-sm cursor-pointer "
+                      >
+                        <p> Live Demo</p>
+                        <span className="text-white">
+                          <FiExternalLink />
+                        </span>
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6   md:px-8 hover:text-gray-900 text-xs sm:text-sm lg:px-6 flex items-center gap-2 cursor-pointer"
+                      >
+                        <p> View Source</p>
+                        <span>
+                          <FaCode />
+                        </span>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -273,6 +514,15 @@ export default function ProjectShowcase() {
             ))}
           </div>
         </div>
+        {showModal && selectedProject && (
+          <VideoModal
+            // @ts-ignore
+            videoId={selectedProject.videoId}
+            // @ts-ignore
+            timestamps={selectedProject.timestamps}
+            onClose={closeModal}
+          />
+        )}
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const Navbar = () => {
   if (!themeContext) return null;
   return (
     <nav className="border-gray-350 bg-gray-50 dark:bg-bgPrimary  dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-14">
         <a
           href="/#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -94,9 +94,9 @@ const Navbar = () => {
                 } text-xl font-medium text-gray-900 dark:text-gray-300 `}
               >
                 {themeContext.theme === "light" ? (
-                  <FaSun className="text-yellow-500 transition-transform duration-300 hover:scale-110 " />
+                  <FaMoon className="text-gray-600 dark:text-white transition-transform duration-300 hover:scale-150 " />
                 ) : (
-                  <FaMoon className="text-gray-700 dark:text-white transition-transform duration-300 hover:scale-110" />
+                  <FaSun className="text-white transition-transform duration-300 hover:scale-150 " />
                 )}
               </span>
             </label>

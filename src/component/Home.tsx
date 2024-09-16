@@ -7,7 +7,7 @@ const Home = () => {
   if (!themeContext) return null;
   return (
     <div id="home">
-      <div className="flex min-h-[70vh] sm:min-h-[90vh] flex-col items-center justify-center  bg-white dark:bg-homebg px-4 py-12 sm:px-6 lg:px-8 relative">
+      <div className="flex min-h-[70vh] sm:min-h-[90vh] flex-col items-center justify-center  bg-homebglight dark:bg-homebg px-4 py-12 sm:px-6 lg:px-8 relative">
         {/* Left Background Image */}
         <img
           src="assets/icons/homeleftbg.svg"

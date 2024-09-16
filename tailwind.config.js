@@ -22,6 +22,7 @@ export default {
           "linear-gradient(216deg, rgb(14 35 47) 0%, rgb(12 22 25) 96.57%)",
         projectbg: "linear-gradient(#0a1622 15%, #0a1527 15%);",
         feturelg: "linear-gradient(60deg, #ecf9ff 30%, #08a3da54 71%)",
+        homebglight: " linear-gradient(60deg, #f0f0f0 30%, #f0f0f0 71%)",
       },
     },
   },
