@@ -28,7 +28,7 @@ const Testimonial = () => {
 
   return (
     <div>
-      <section className="w-full bg-lightmode dark:bg-testmonila relative py-12 md:py-16 lg:py-24">
+      <section className="w-full bg-lightbg dark:bg-testmonila relative py-12 md:py-16 lg:py-24">
         <img
           src="assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"

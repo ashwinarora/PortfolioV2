@@ -25,7 +25,7 @@ const Navbar = () => {
   if (!themeContext) return null;
   return (
     <nav className="border-gray-350 bg-gray-50 dark:bg-bgPrimary  dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
-      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-14">
+      <div className=" flex flex-wrap items-center justify-between mx-auto p-4 md:px-20">
         <a
           href="/#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"

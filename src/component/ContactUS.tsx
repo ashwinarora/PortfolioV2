@@ -3,7 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 export default function ContactUs() {
   return (
     <div className="min-h-screen bg-lightmode dark:bg-black  flex items-center justify-center p-4">
-      <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8  border border-gray-700 dark:border-[#242424]  dark:bg-bgcontact p-8 rounded-lg">
+      <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8  border border-gray-300 dark:border-black  dark:bg-bgcontact p-8 rounded-lg">
         <div className="space-y-6 bg-white  dark:bg-[#0c171c]  backdrop-blur-md p-6 px-1 sm:px-6 rounded-lg shadow-md dark:shadow-2xl">
           <h2 className=" text-2xl px-1 sm:text-3xl font-bold text-black dark:text-white">
             Get In Touch <span className="text-[#00bfff]">With Us</span>
@@ -39,7 +39,7 @@ export default function ContactUs() {
               <img
                 src="assets/icons/contactbg.svg"
                 alt="Small Image 2"
-                className="absolute bottom-0 right-0 w-28 h-40 -z-30 mix-blend-difference dark:invert-0"
+                className="absolute bottom-0 right-0 w-28 h-40 -z-30 mix-blend-difference dark:mix-blend-normal"
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function ContactUs() {
                 id="name"
                 type="text"
                 placeholder="Enter Your Name"
-                className="w-full p-2 dark:bg-[#091419] border border-[#30363d] text-white rounded-md"
+                className="w-full p-2 dark:bg-[#091419] border  border-gray-300 dark:border-[#162025] text-white rounded-md"
               />
             </div>
             <div className="space-y-2">
@@ -75,7 +75,7 @@ export default function ContactUs() {
                 id="email"
                 type="email"
                 placeholder="Enter Your Email"
-                className="w-full p-2 dark:bg-[#091419] border border-[#30363d]  text-black dark:text-white rounded-md"
+                className="w-full p-2 dark:bg-[#091419] border  border-gray-300 dark:border-[#162025]  text-black dark:text-white rounded-md"
               />
             </div>
             <div className="space-y-2">
@@ -88,7 +88,7 @@ export default function ContactUs() {
               <textarea
                 id="message"
                 placeholder="Enter Your Message"
-                className="w-full p-2 dark:bg-[#091419] border border-[#30363d] text-white rounded-md min-h-[100px]"
+                className="w-full p-2 dark:bg-[#091419] border border-gray-300 dark:border-[#162025] text-white rounded-md min-h-[100px]"
               />
             </div>
             <div className="flex justify-between">

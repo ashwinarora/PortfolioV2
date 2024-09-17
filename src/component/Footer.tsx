@@ -64,11 +64,12 @@ const Footer = () => {
             </div>
           </div>
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 " />
-          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="block text-xs text-gray-500 sm:text-center dark:text-gray-400">
             <div className="flex justify-between">
               <p>Ashwini Arora Portfolio ©  </p>
-              <ul className="flex flex-wrap items-center mb-6  text-xs sm:text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 gap-1 sm:gap-3">
+              <ul className="flex flex-wrap items-center mb-6  text-xs sm:text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 gap-1 sm:gap-3 justify-center">
                 <li>Privacy Policy</li>
+                <span className="text-gray-600  text-xl bg-gray-300 dark:bg-[#192127] rounded-full p-1"></span>
                 <li>Terms Of Service</li>
               </ul>
             </div>
