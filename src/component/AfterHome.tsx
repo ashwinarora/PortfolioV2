@@ -15,7 +15,7 @@ const AfterHome = () => {
       <img
         src="assets/icons/afterhomebg.svg"
         alt="Small Image 2"
-        className="absolute left-12 top-[22rem] mix-blend-difference"
+        className="absolute left-12 top-[22rem] mix-blend-difference dark:mix-blend-exclusion"
       />
       <img
         className=" absolute -bottom-8 right-12 sm:-bottom-10 sm:right-28 w-[8rem] h-[10rem] md:bottom-24 md:right-44  2xl:bottom-32 2xl:right-80  z-10"

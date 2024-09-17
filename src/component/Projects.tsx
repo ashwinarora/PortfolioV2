@@ -12,6 +12,8 @@ import ReactPlayer from "react-player";
 import { DiNodejsSmall } from "react-icons/di";
 import { ImTree } from "react-icons/im";
 import { SiAxios } from "react-icons/si";
+import { FaEthereum } from "react-icons/fa";
+import { SiSolidity } from "react-icons/si";
 const projects = [
   {
     title: "Ethereum TicTacToe",
@@ -59,12 +61,12 @@ const projects = [
     ],
     tools: [
       { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
-      { name: "Ethers.js", icon: null, Img: "assets/icons/ether.svg" },
+      { name: "Ethers.js", icon: <FaEthereum />, Img: null },
       { name: "Node", icon: null, Img: "assets/icons/node.svg" },
       { name: "Express", icon: null, Img: "assets/icons/express.svg" },
       { name: "DOM", icon: <ImTree />, Img: null },
       { name: "Bootstrap", icon: null, Img: "assets/icons/bootstrap.svg" },
-      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
+      { name: "Solidity", icon: <SiSolidity />, Img: null },
     ],
     features: [
       "Multiplayer",
@@ -201,7 +203,7 @@ const projects = [
         icon: <MdFormatStrikethrough />,
         Img: null,
       },
-      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
+      { name: "Solidity", icon: <SiSolidity />, Img: null },
     ],
     features: [
       "Multiplayer",
@@ -230,7 +232,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-6xl">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-4xl">
         <button
           className="absolute top-2 right-2 text-gray-800 dark:text-gray-100"
           onClick={onClose}
@@ -252,7 +254,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
           <h2 className="text-lg font-bold text-black dark:text-white mb-2">
             Timestamps
           </h2>
-          <ul className="flex gap-1 flex-wrap">
+          <ul className="flex gap-4 flex-wrap">
             {timestamps.map((stamp: any, index: any) => (
               <li
                 key={index}
@@ -352,7 +354,7 @@ export default function ProjectShowcase() {
                   index === 0
                     ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                     : "col-span-1 gap-8"
-                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-500`}
+                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-200`}
               >
                 <div
                   className={`${
