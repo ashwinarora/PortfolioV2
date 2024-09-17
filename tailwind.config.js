@@ -14,15 +14,17 @@ export default {
         lightmode: "#f0f0f0",
       },
       backgroundImage: {
-        projectmainbg: " linear-gradient(1deg, #0a1527 80%, #0a1622 0%);",
-        testmonila: "linear-gradient(1deg, #080404 56.92%, rgb(13 46 53) 100%)",
+        projectmainbg: " linear-gradient(181deg, #09151d, #061116, #000);",
+        testmonila: "linear-gradient(0deg, #000000, #07131b)",
         homebg: "linear-gradient(197deg, #010101 0%, #040c0f 100%);",
-        feature: "linear-gradient(195deg, rgb(8 21 32) 0%, rgb(5 10 19) 50%);",
+        feature:
+          "linear-gradient(175deg, rgb(8 19 30), rgb(6 10 18), #05070d);",
         testimonialcard:
           "linear-gradient(216deg, rgb(14 35 47) 0%, rgb(12 22 25) 96.57%)",
-        projectbg: "linear-gradient(#0a1622 15%, #0a1527 15%);",
+        projectbg: "linear-gradient(217deg, #14202b, #07101a);",
         feturelg: "linear-gradient(60deg, #ecf9ff 30%, #08a3da54 71%)",
         homebglight: " linear-gradient(60deg, #f0f0f0 30%, #f0f0f0 71%)",
+        lightbg: " linear-gradient(60deg, #f0f0f0 30%, #f0f0f0 71%)",
       },
     },
   },

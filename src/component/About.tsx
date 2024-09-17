@@ -40,7 +40,7 @@ const About = () => {
                 />
                 <span className="text-black dark:text-white "> About Me</span>
               </h2>
-              <p className="text-gray-500 max-w-lg mx-auto text-justify text-sm md:text-lg 2xl:text-xl">
+              <p className="text-gray-500 max-w-lg mx-auto text-justify text-sm md:text-lg 2xl:text-lg">
                 I am a Full Stack Developer with expertise in Blockchain. I can
                 realize the vision of your product. I am proficient with both
                 Front-End and Back-End Development. Using React for Front-End

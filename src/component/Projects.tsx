@@ -230,7 +230,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative w-[90%] max-w-3xl">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-6xl">
         <button
           className="absolute top-2 right-2 text-gray-800 dark:text-gray-100"
           onClick={onClose}
@@ -256,7 +256,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
             {timestamps.map((stamp: any, index: any) => (
               <li
                 key={index}
-                className="cursor-pointer text-white bg-blue-600 hover:underline text-xs px-4 border flex rounded-full"
+                className="cursor-pointer text-white bg-blue-600 hover:underline text-xs lg:text-lg px-4 border flex rounded-full"
                 onClick={() => handleTimestampClick(stamp.timestamp)}
               >
                 {stamp.name} -{" "}
@@ -318,7 +318,7 @@ export default function ProjectShowcase() {
   };
   return (
     <div>
-      <div className="relative bg-lightmode  dark:bg-projectmainbg text-gray-100 py-12 ">
+      <div className="relative bg-lightbg  dark:bg-projectmainbg text-gray-100 py-12 ">
         <div className="container mx-auto px-4 ">
           <img
             src="assets/images/projectleftbg.svg"
@@ -330,7 +330,7 @@ export default function ProjectShowcase() {
             src="assets/images/projectbottombg.svg"
             alt="Small Image 2"
             loading="lazy"
-            className="absolute right-40  bottom-28  "
+            className="absolute right-40  bottom-28 z-10  "
           />
           <div className=" mt-12 font-bold mb-12 text-center">
             <div>
@@ -344,7 +344,7 @@ export default function ProjectShowcase() {
               </h3>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-32 dark:shadow-lg  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-36 dark:shadow-lg  ">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -352,7 +352,7 @@ export default function ProjectShowcase() {
                   index === 0
                     ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                     : "col-span-1 gap-8"
-                } bg-white dark:bg-projectbg border border-gray-700 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-500`}
+                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-500`}
               >
                 <div
                   className={`${
@@ -364,14 +364,14 @@ export default function ProjectShowcase() {
                       index === 0
                         ? "relative flex-1 pt-6 mx-4 rounded-md"
                         : "relative pt-6 mt-2 mx-4 rounded-md"
-                    } bg-gray-200 dark:bg-[#243c41a1] `}
+                    } bg-gray-200 dark:bg-[#222e35] `}
                   >
                     <img
                       src={project.images[currentImageIndex[index]]}
                       alt={project.title}
                       className={`${
-                        index === 0 ? "2xl:h-[22rem]" : "2xl:h-[20rem]"
-                      }  w-full object-cover`}
+                        index === 0 ? "h-[100%]" : "2xl:h-[20rem]"
+                      }  w-full  px-4`}
                       loading="lazy"
                     />
                     <div className="flex justify-center absolute left-[40%] bottom-2">
@@ -402,7 +402,7 @@ export default function ProjectShowcase() {
                     </button>
                     <button
                       onClick={() => handleNextImage(index)}
-                      className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75 -mx-3"
+                      className="absolute top-1/2 right-4 transform -translate-y-1/2 text-2xl bg-opacity-50 text-white  bg-black rounded-full p-2 hover:bg-opacity-75 -mx-3"
                       style={{ zIndex: 1 }}
                     >
                       &#8250;

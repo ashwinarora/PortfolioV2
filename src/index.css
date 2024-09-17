@@ -20,9 +20,14 @@ html {
 
 .testmonila{
     background-color: #051219;
-    background: linear-gradient(180deg, rgba(54, 176, 224, 0.09) 56.92%, rgba(54, 176, 224, 0) 100%);
+    /* background: linear-gradient(180deg, rgba(54, 176, 224, 0.09) 56.92%, rgba(54, 176, 224, 0) 100%); */
     background: linear-gradient(1deg, #080404 56.92%, rgb(13 46 53) 100%);
 }
+
+.lightmode{
+  background: #f0f0f0;
+}
+
 
 /* .feature{
     background-color: #152129;
@@ -56,7 +61,7 @@ html {
 }
 
 .moving-border::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #060101, #060101, #060101, #1a85c3, #9000de);
+  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
   background-size: 100%;
 }
 
@@ -79,11 +84,11 @@ html {
 }
 
 .dark .moving-border::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #10131b, #10131b, #10131b, #1a85c3, #9000de);
+  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
 }
 
 .dark .moving-border1::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #000, #000, #000, #1a85c3, #9000de);
+  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
 }
 
 
@@ -151,10 +156,6 @@ html {
 }
 
 
-
-
-
-
 @keyframes rotate1 {
   from {
     transform: rotate(0);
@@ -198,3 +199,52 @@ html {
 
 
 
+
+@media screen and (max-width: 600px) {
+  .dark-mode {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
+
+@keyframes expand-circle {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width:100%;
+    height:100vh;
+    opacity: 1;
+  }
+}
+
+.animate-expand-circle {
+  animation: expand-circle 0.6s ease-out forwards;
+}
+
+@keyframes splashEffect {
+  0% {
+    transform: translate(100%, -100%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  pointer-events: none;
+  z-index: 0;
+  animation: splashEffect 0.8s ease-out forwards;
+}
