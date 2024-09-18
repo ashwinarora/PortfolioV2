@@ -47,7 +47,7 @@ const Home = () => {
         <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center">
           <div className="relative">
             <div className="card example-2">
-              <button className="text-black dark:text-white rounded-full border py-2 px-8 inner relative z-10 border-gray-800">
+              <button className="text-black dark:text-white bg-white dark:bg-gray-800 rounded-full  py-2 px-8 inner relative z-10 shadow-lg">
                 Hello
               </button>
             </div>
