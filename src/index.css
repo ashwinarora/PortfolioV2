@@ -211,7 +211,9 @@ html {
   color: rgb(21, 91, 213) !important;
 }
 
-
+.swiper-pagination-bullet{
+  background: white !important;
+}
 
 
 @media screen and (max-width: 600px) {
