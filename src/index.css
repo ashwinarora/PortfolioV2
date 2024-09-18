@@ -207,8 +207,9 @@ html {
 }
 
 
-
-
+.swiper-button-prev, .swiper-button-next{
+  color: rgb(21, 91, 213) !important;
+}
 
 
 
@@ -222,42 +223,4 @@ html {
 
 
 
-@keyframes expand-circle {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    width:100%;
-    height:100vh;
-    opacity: 1;
-  }
-}
 
-.animate-expand-circle {
-  animation: expand-circle 0.6s ease-out forwards;
-}
-
-@keyframes splashEffect {
-  0% {
-    transform: translate(100%, -100%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 50%) scale(1.5);
-    opacity: 0;
-  }
-}
-
-.splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  pointer-events: none;
-  z-index: 0;
-  animation: splashEffect 0.8s ease-out forwards;
-}
