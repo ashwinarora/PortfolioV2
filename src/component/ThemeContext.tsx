@@ -6,7 +6,7 @@ type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {

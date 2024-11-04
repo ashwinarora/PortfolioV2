@@ -239,15 +239,15 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-4xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+      <div className="relative max-w-4xl rounded-lg bg-white p-6 dark:bg-gray-800">
         <button
-          className="absolute top-2 right-2 text-gray-800 dark:text-gray-100"
+          className="absolute right-2 top-2 text-gray-800 dark:text-gray-100"
           onClick={onClose}
         >
           &#x2716; {/* Close button */}
         </button>
-        <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-md mb-4">
+        <div className="relative mb-4 h-0 overflow-hidden rounded-md pb-[56.25%]">
           <ReactPlayer
             ref={playerRef}
             url={`https://www.youtube.com/embed/${videoId}?start=${currentTime}`}
@@ -255,18 +255,18 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
             controls={true}
             width="100%"
             height="100%"
-            className="absolute top-0 left-0"
+            className="absolute left-0 top-0"
           />
         </div>
         <div>
-          <h2 className="text-lg font-bold text-black dark:text-white mb-2">
+          <h2 className="mb-2 text-lg font-bold text-black dark:text-white">
             Timestamps
           </h2>
-          <ul className="flex gap-4 flex-wrap">
+          <ul className="flex flex-wrap gap-4">
             {timestamps.map((stamp: any, index: any) => (
               <li
                 key={index}
-                className="cursor-pointer text-white bg-blue-600 hover:underline text-xs lg:text-lg px-4 border flex rounded-full"
+                className="flex cursor-pointer rounded-full border bg-blue-600 px-4 text-xs text-white hover:underline lg:text-lg"
                 onClick={() => handleTimestampClick(stamp.timestamp)}
               >
                 {stamp.name} -{" "}
@@ -296,41 +296,41 @@ export default function ProjectShowcase() {
 
   return (
     <div>
-      <div className="relative bg-lightbg  dark:bg-projectmainbg text-gray-100 py-12 ">
-        <div className="container mx-auto px-4 ">
+      <div className="relative bg-lightbg py-12 text-gray-100 dark:bg-projectmainbg">
+        <div className="container mx-auto px-4">
           <img
             src="assets/images/projectleftbg.svg"
             alt="Small Image 2"
-            className="absolute   right-12 w-72 2xl:right-2 2xl:top-0  mix-blend-difference dark:mix-blend-normal "
+            className="absolute right-12 w-72 mix-blend-difference dark:mix-blend-normal 2xl:right-2 2xl:top-0"
             loading="lazy"
           />
           <img
             src="assets/images/projectbottombg.svg"
             alt="Small Image 2"
             loading="lazy"
-            className="absolute right-40  bottom-28 z-10  "
+            className="absolute bottom-28 right-40 z-10"
           />
-          <div className=" mt-12 font-bold mb-12 text-center">
+          <div className="mb-12 mt-12 text-center font-bold">
             <div>
-              <h1 className="text-4xl  text-black dark:text-white">
+              <h1 className="text-4xl text-black dark:text-white">
                 Our <span className="text-spantext"> Projects </span>
               </h1>
-              <h3 className="text-gray-700 text-xs md:text-sm mt-4 mx-10 sm:-mx-0 md:mx-4 2xl:mx-80">
+              <h3 className="mx-10 mt-4 text-xs text-gray-700 sm:-mx-0 md:mx-4 md:text-sm 2xl:mx-80">
                 A real-time multiplayer TicTacToe game where two players can bet
                 ETH and the winner take all. A state channel is created between
                 the two players to enable 'Off-Chain'.
               </h3>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mx-0 sm:mx-20 md:-mx-4 lg:mx-16 2xl:mx-36 dark:shadow-lg  ">
+          <div className="mx-0 grid grid-cols-1 gap-8 dark:shadow-lg sm:mx-20 md:-mx-4 md:grid-cols-2 lg:mx-16 lg:grid-cols-2 2xl:mx-36">
             {projects.map((project, index) => (
               <div
                 key={index}
                 className={`${
                   index === 0
-                    ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
+                    ? "flex flex-col md:col-span-2 md:flex-row lg:col-span-2"
                     : "col-span-1 gap-8"
-                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-200`}
+                } transform overflow-hidden rounded-lg border border-gray-900 bg-white shadow-lg duration-200 hover:scale-105 dark:bg-projectbg`}
               >
                 <div
                   className={`${
@@ -340,8 +340,8 @@ export default function ProjectShowcase() {
                   <div
                     className={`${
                       index === 0
-                        ? "relative w-auto md:w-0 md:my-10 flex-1 pt-6 mx-4 rounded-md"
-                        : "relative pt-6 mt-2 mx-4 rounded-md"
+                        ? "relative mx-4 w-auto flex-1 rounded-md pt-6 md:my-10 md:w-0"
+                        : "relative mx-4 mt-2 rounded-md pt-6"
                     } bg-gray-200 dark:bg-[#222e35]`}
                   >
                     <Swiper
@@ -367,8 +367,8 @@ export default function ProjectShowcase() {
                             alt={project.title}
                             className={`w-full px-4 ${
                               index === 0
-                                ? "h-auto md:h-[20rem] 2xl:h-[22rem] "
-                                : "2xl:h-[20rem] "
+                                ? "h-auto md:h-[20rem] 2xl:h-[22rem]"
+                                : "2xl:h-[20rem]"
                             }`}
                             loading="lazy"
                           />
@@ -380,52 +380,52 @@ export default function ProjectShowcase() {
                   <div
                     className={`${
                       index === 0
-                        ? "flex-1 p-2 md:p-2 lg:p-4 flex flex-col"
-                        : "p-4 flex flex-col"
+                        ? "flex flex-1 flex-col p-2 md:p-2 lg:p-4"
+                        : "flex flex-col p-4"
                     }`}
                   >
-                    <div className=" text-xs  md:text-2xl font-semibold flex justify-between mx-4 md:mx-2 mt-3 items-center 2xl:mx-4">
-                      <h1 className="text-xs md:text-sm lg:text-xl 2xl:text-2xl text-black dark:text-white">
+                    <div className="mx-4 mt-3 flex items-center justify-between text-xs font-semibold md:mx-2 md:text-2xl 2xl:mx-4">
+                      <h1 className="text-xs text-black dark:text-white md:text-sm lg:text-xl 2xl:text-2xl">
                         {project.title}
                       </h1>
-                      <button className="flex justify-center items-center gap-1">
+                      <button className="flex items-center justify-center gap-1">
                         <a
                           // href={project.youtube}
                           target="_parent"
-                          className="text-spantext text-xs md:text-sm lg:text-xl 2xl:text-2xl z-50"
+                          className="z-50 text-xs text-spantext md:text-sm lg:text-xl 2xl:text-2xl"
                           onClick={() => handleViewVideo(project)}
                         >
                           {project?.link}
                         </a>
-                        <i className="text-spantext text-sm md:text-lg lg:text-xl mt-0">
+                        <i className="mt-0 text-sm text-spantext md:text-lg lg:text-xl">
                           <IoMdPlayCircle />
                         </i>
                       </button>
                     </div>
                     <div className="p-4">
-                      <p className="text-gray-800 dark:text-gray-400 mb-4 text-xs lg:text-sm">
+                      <p className="mb-4 text-xs text-gray-800 dark:text-gray-400 lg:text-sm">
                         {project.description}
                       </p>
                       <div className="mb-4">
-                        <h3 className="font-semibold mb-2  text-sm  md:lg lg:text-xl text-black dark:text-white">
+                        <h3 className="md:lg mb-2 text-sm font-semibold text-black dark:text-white lg:text-xl">
                           Tools Used
                         </h3>
                         <div className="flex flex-wrap gap-1 md:gap-2">
                           {project.tools.map((tool: any, i: any) => (
                             <span
                               key={i}
-                              className="px-1 md:px-1 py-1 text-sm rounded-full bg-lightmode text-black  dark:bg-gray-700 dark:text-blue-300 flex items-center gap-1"
+                              className="flex items-center gap-1 rounded-full bg-lightmode px-1 py-1 text-sm text-black dark:bg-gray-700 dark:text-blue-300 md:px-1"
                             >
                               {tool.icon && (
-                                <div className="bg-[#2f393d] p-2 w-5 h-5 rounded-full flex justify-center items-center">
-                                  <i className="text-xs text-white ">
+                                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#2f393d] p-2">
+                                  <i className="text-xs text-white">
                                     {tool.icon}
                                   </i>
                                 </div>
                               )}
                               {tool.Img && (
                                 <img
-                                  className="w-4 h-4 md:w-5 md:h-6"
+                                  className="h-4 w-4 md:h-6 md:w-5"
                                   src={tool.Img}
                                   alt="icons"
                                   loading="lazy"
@@ -439,14 +439,14 @@ export default function ProjectShowcase() {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-2 text-black dark:text-white  text-sm  md:lg lg:text-xl">
+                        <h3 className="md:lg mb-2 text-sm font-semibold text-black dark:text-white lg:text-xl">
                           Features
                         </h3>
                         <div className="flex flex-wrap gap-2">
                           {project.features.map((feature, i) => (
                             <span
                               key={i}
-                              className="px-1 md:px-2 py-0 text-[11px] md:text-sm rounded-full border border-blue-400 text-blue-400"
+                              className="rounded-full border border-blue-400 px-1 py-0 text-[11px] text-blue-400 md:px-2 md:text-sm"
                             >
                               {feature}
                             </span>
@@ -454,11 +454,11 @@ export default function ProjectShowcase() {
                         </div>
                       </div>
                     </div>
-                    <div className="p-4 flex justify-between">
+                    <div className="flex justify-between p-4">
                       <a
                         href={project.liveDemo}
                         target="_blank"
-                        className=" flex justify-center items-center gap-2 py-2 bg-blue-500 text-white rounded-full px-6 sm:px-2 md:px-8 lg:px-6 font-semibold hover:bg-blue-600 text-xs sm:text-sm cursor-pointer "
+                        className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-blue-500 px-6 py-2 text-xs font-semibold text-white hover:bg-blue-600 sm:px-2 sm:text-sm md:px-8 lg:px-6"
                       >
                         <p> Live Demo</p>
                         <span className="text-white">
@@ -468,7 +468,7 @@ export default function ProjectShowcase() {
                       <a
                         href={project.github}
                         target="_blank"
-                        className=" py-2 border border-blue-400 text-blue-400  font-semibold hover:bg-blue-400 rounded-full px-6   md:px-8 hover:text-gray-900 text-xs sm:text-sm lg:px-6 flex items-center gap-2 cursor-pointer"
+                        className="flex cursor-pointer items-center gap-2 rounded-full border border-blue-400 px-6 py-2 text-xs font-semibold text-blue-400 hover:bg-blue-400 hover:text-gray-900 sm:text-sm md:px-8 lg:px-6"
                       >
                         <p> View Source</p>
                         <span>

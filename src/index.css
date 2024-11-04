@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   scroll-behavior: smooth;
   /* overflow-x: hidden; */
   background-color: #000000;
-
 }
 
 /* .testimonial-card {
@@ -18,30 +16,28 @@ html {
     border-radius: 5px;
 } */
 
-.testmonila{
-    background-color: #051219;
-    /* background: linear-gradient(180deg, rgba(54, 176, 224, 0.09) 56.92%, rgba(54, 176, 224, 0) 100%); */
-    background: linear-gradient(1deg, #080404 56.92%, rgb(13 46 53) 100%);
+.testmonila {
+  background-color: #051219;
+  /* background: linear-gradient(180deg, rgba(54, 176, 224, 0.09) 56.92%, rgba(54, 176, 224, 0) 100%); */
+  background: linear-gradient(1deg, #080404 56.92%, rgb(13 46 53) 100%);
 }
 
-.lightmode{
+.lightmode {
   background: #f0f0f0;
 }
-
 
 /* .feature{
     background-color: #152129;
    border: 1px solid rgb(28, 28, 36);
     background: linear-gradient(191deg, rgb(33 83 109 / 67%) 3.63%, rgb(6 10 19) 69.57%);
 } */
-.custom-border{
-    background-color: #12346d;
-    background-image: linear-gradient(73deg, #12346d 0%, #29cae3 100%);
-    
+.custom-border {
+  background-color: #12346d;
+  background-image: linear-gradient(73deg, #12346d 0%, #29cae3 100%);
 }
 
-
-.moving-border, .moving-border1 {
+.moving-border,
+.moving-border1 {
   width: fit-content;
   position: relative;
   background: #000000;
@@ -61,12 +57,30 @@ html {
 }
 
 .moving-border::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
+  background: linear-gradient(
+    to right,
+    #9000de,
+    #1a85c3,
+    #050811,
+    #050811,
+    #050811,
+    #1a85c3,
+    #9000de
+  );
   background-size: 100%;
 }
 
 .moving-border1::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #f0f0f0, #f0f0f0, #f0f0f0, #1a85c3, #9000de);
+  background: linear-gradient(
+    to right,
+    #9000de,
+    #1a85c3,
+    #f0f0f0,
+    #f0f0f0,
+    #f0f0f0,
+    #1a85c3,
+    #9000de
+  );
   background-size: 100%;
 }
 
@@ -78,19 +92,35 @@ html {
   filter: blur(10px);
 }
 
-
 .dark .moving-border {
   background: #10131b;
 }
 
 .dark .moving-border::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
+  background: linear-gradient(
+    to right,
+    #9000de,
+    #1a85c3,
+    #050811,
+    #050811,
+    #050811,
+    #1a85c3,
+    #9000de
+  );
 }
 
 .dark .moving-border1::before {
-  background: linear-gradient(to right, #9000de, #1a85c3, #050811, #050811, #050811, #1a85c3, #9000de);
+  background: linear-gradient(
+    to right,
+    #9000de,
+    #1a85c3,
+    #050811,
+    #050811,
+    #050811,
+    #1a85c3,
+    #9000de
+  );
 }
-
 
 @keyframes border-travel {
   0% {
@@ -101,25 +131,22 @@ html {
   }
 }
 
-  .afterhomebg{
-    background-color: #071653;
-    background-image: linear-gradient(119deg, #071653 0%, #04063a 100%);
-    
-  }
-  .projectbg{
-    background: linear-gradient( #09032a26 15%, #05101426 15%);
+.afterhomebg {
+  background-color: #071653;
+  background-image: linear-gradient(119deg, #071653 0%, #04063a 100%);
 }
-  
+.projectbg {
+  background: linear-gradient(#09032a26 15%, #05101426 15%);
+}
+
 .bg-projectmainbg-custom {
   background-color: #071f46;
   background-image: linear-gradient(357deg, #091322 9%, #041215bd 0%);
 }
 
-.lightbg{
+.lightbg {
   background-color: white;
 }
-  
-
 
 .trapezoid1 {
   position: relative;
@@ -127,15 +154,12 @@ html {
   clip-path: polygon(0% -2%, 52% 13%, 100% -1%, 100% 100%, 48% 91%, 0% 101%);
 }
 
-
-
-.customCursor{
+.customCursor {
   color: white;
 }
-.customCursorlg{
+.customCursorlg {
   color: black;
 }
-
 
 @keyframes rotate1 {
   from {
@@ -180,12 +204,7 @@ html {
 .example-2::before {
   content: "";
   display: block;
-  background: linear-gradient(
-    90deg,
-    rgba(16, 12, 12, 0.75) ,
-  
-    #ffffffe6 
-  );
+  background: linear-gradient(90deg, rgba(16, 12, 12, 0.75), #ffffffe6);
   height: 100px;
   width: 70px;
   transform: translate(0);
@@ -199,22 +218,20 @@ html {
 .dark .example-2::before {
   background: linear-gradient(
     90deg,
-
     #ffffffe6 0%,
     rgba(102, 102, 102, 0.75) 50%,
     rgba(255, 255, 255, 0) 100%
   );
 }
 
-
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   color: rgb(21, 91, 213) !important;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   background: white !important;
 }
-
 
 @media screen and (max-width: 600px) {
   .dark-mode {
@@ -222,7 +239,3 @@ html {
     height: 100vh;
   }
 }
-
-
-
-

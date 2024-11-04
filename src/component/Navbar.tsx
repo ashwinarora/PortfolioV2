@@ -46,11 +46,11 @@ const Navbar = () => {
     <nav
       className={`${
         isScrolled
-          ? "bg-white/30 backdrop-blur-sm dark:bg-bgPrimary/30 border-b border-gray-300 dark:border-gray-800"
-          : "bg-gray-50 dark:bg-bgPrimary border-b border-gray-350 dark:border-[#181818]"
-      } p-1 sm:p-2 sticky top-0 z-50 transition-all duration-300`}
+          ? "border-b border-gray-300 bg-white/30 backdrop-blur-sm dark:border-gray-800 dark:bg-bgPrimary/30"
+          : "border-gray-350 border-b bg-gray-50 dark:border-[#181818] dark:bg-bgPrimary"
+      } sticky top-0 z-50 p-1 transition-all duration-300 sm:p-2`}
     >
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4 md:px-20">
+      <div className="mx-auto flex flex-wrap items-center justify-between p-4 md:px-20">
         <a
           href="/#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -64,7 +64,7 @@ const Navbar = () => {
             alt="Logo"
             loading="lazy"
           />
-          <p className="text-black dark:text-white font-semibold text-xl">
+          <p className="text-xl font-semibold text-black dark:text-white">
             ASHWIN ARORA
           </p>
         </a>
@@ -72,7 +72,7 @@ const Navbar = () => {
         <button
           onClick={toggleNav}
           type="button"
-          className="inline-flex items-center p-2 h-6 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex h-6 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
           aria-controls="navbar-solid-bg"
           aria-expanded={isNavOpen ? "true" : "false"}
         >
@@ -83,21 +83,21 @@ const Navbar = () => {
         <div
           className={`${
             isNavOpen
-              ? "block absolute top-12 right-8 sm:top-14 sm:right-12"
+              ? "absolute right-8 top-12 block sm:right-12 sm:top-14"
               : "hidden"
           } md:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-black shadow-2xl border border-gray-600  md:dark:bg-transparent dark:border-gray-700 md:mr-0">
+          <ul className="mt-4 flex flex-col rounded-lg border border-gray-600 bg-gray-50 font-medium shadow-2xl dark:border-gray-700 dark:bg-black md:mr-0 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent rtl:space-x-reverse">
             {navLinks.map((link, index) => (
               <li key={index}>
                 <a
                   href={link.href}
                   onClick={() => handleLinkClick(link.name)}
-                  className={`block py-2 px-3 md:p-0 rounded md:bg-transparent text-sm 2xl:text-xl ${
+                  className={`block rounded px-3 py-2 text-sm md:bg-transparent md:p-0 2xl:text-xl ${
                     activeLink === link.name
-                      ? "text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500"
-                      : "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent dark:text-white md:hover:text-blue-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500 text-sm"
+                      ? "bg-blue-700 text-white md:text-blue-700 md:dark:text-blue-500"
+                      : "text-sm text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   }`}
                   aria-current={activeLink === link.name ? "page" : undefined}
                 >
@@ -105,21 +105,21 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <label className="inline-flex items-center cursor-pointer">
+            <label className="inline-flex cursor-pointer items-center">
               <input
                 type="checkbox"
                 value="dark"
-                className="sr-only peer"
+                className="peer sr-only"
                 onChange={themeContext.toggleTheme}
                 checked={themeContext.theme === "dark"}
               />
               <span
                 className={`${
-                  isNavOpen ? "ml-3 mb-2" : ""
-                } text-xl font-medium text-gray-900 dark:text-gray-300 `}
+                  isNavOpen ? "mb-2 ml-3" : ""
+                } text-xl font-medium text-gray-900 dark:text-gray-300`}
               >
                 {themeContext.theme === "light" ? (
-                  <FaMoon className="text-gray-600 dark:text-white transition-transform duration-300 hover:scale-125 active:scale-90" />
+                  <FaMoon className="text-gray-600 transition-transform duration-300 hover:scale-125 active:scale-90 dark:text-white" />
                 ) : (
                   <FaSun className="text-white transition-transform duration-300 hover:scale-125 active:scale-90" />
                 )}
