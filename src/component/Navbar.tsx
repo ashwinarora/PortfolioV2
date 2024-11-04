@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { ThemeContext } from "./ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
@@ -6,12 +6,29 @@ import { FaMoon, FaSun } from "react-icons/fa";
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: "Projects", href: "#project" },
     { name: "About Me", href: "#about" },
     { name: "Contact Us", href: "#contact" },
   ];
+
+  // Handle scroll effect for navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -20,12 +37,20 @@ const Navbar = () => {
   const handleLinkClick = (name: any) => {
     setActiveLink(name);
   };
+
   const themeContext = useContext(ThemeContext);
 
   if (!themeContext) return null;
+
   return (
-    <nav className="border-gray-350 bg-gray-50 dark:bg-bgPrimary  dark:border-[#181818] border-b p-1 sm:p-2 sticky top-0 z-50">
-      <div className=" flex flex-wrap items-center justify-between mx-auto p-4 md:px-20">
+    <nav
+      className={`${
+        isScrolled
+          ? "bg-white/30 backdrop-blur-sm dark:bg-bgPrimary/30 border-b border-gray-300 dark:border-gray-800"
+          : "bg-gray-50 dark:bg-bgPrimary border-b border-gray-350 dark:border-[#181818]"
+      } p-1 sm:p-2 sticky top-0 z-50 transition-all duration-300`}
+    >
+      <div className="flex flex-wrap items-center justify-between mx-auto p-4 md:px-20">
         <a
           href="/#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -94,9 +119,9 @@ const Navbar = () => {
                 } text-xl font-medium text-gray-900 dark:text-gray-300 `}
               >
                 {themeContext.theme === "light" ? (
-                  <FaMoon className="text-gray-600 dark:text-white transition-transform duration-300 hover:scale-150 " />
+                  <FaMoon className="text-gray-600 dark:text-white transition-transform duration-300 hover:scale-125 active:scale-90" />
                 ) : (
-                  <FaSun className="text-white transition-transform duration-300 hover:scale-150 " />
+                  <FaSun className="text-white transition-transform duration-300 hover:scale-125 active:scale-90" />
                 )}
               </span>
             </label>

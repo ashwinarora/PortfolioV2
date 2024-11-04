@@ -128,26 +128,7 @@ html {
 }
 
 
-.card .inner {
-  background: #222;
-  color: #fff;
-}
-.example-2 {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-}
 
-
-.example-2 .inner {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  
-}
 .customCursor{
   color: white;
 }
@@ -166,20 +147,44 @@ html {
   }
 }
 
-.example-2 .inner {
-  margin: 1px;
-  padding: 6px 17px;
-
+/* Card Base Styles */
+.card .inner {
+  background: #f9fafb; /* Default Light Background */
+  color: #222; /* Default Light Text Color */
 }
 
+.dark .card .inner {
+  background: #222; /* Dark Mode Background */
+  color: #fff; /* Dark Mode Text Color */
+}
+
+/* Example-2 Styles */
+.example-2 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.example-2 .inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 1px;
+  padding: 6px 17px;
+}
+
+/* Gradient Animation */
 .example-2::before {
   content: "";
   display: block;
   background: linear-gradient(
     90deg,
-    #ffffffe6 0%,
-    rgba(102, 102, 102, 0.75) 50%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(16, 12, 12, 0.75) ,
+  
+    #ffffffe6 
   );
   height: 100px;
   width: 70px;
@@ -191,13 +196,24 @@ html {
   transform-origin: top center;
 }
 
+.dark .example-2::before {
+  background: linear-gradient(
+    90deg,
+
+    #ffffffe6 0%,
+    rgba(102, 102, 102, 0.75) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
 
 
+.swiper-button-prev, .swiper-button-next{
+  color: rgb(21, 91, 213) !important;
+}
 
-
-
-
-
+.swiper-pagination-bullet{
+  background: white !important;
+}
 
 
 @media screen and (max-width: 600px) {
@@ -209,42 +225,4 @@ html {
 
 
 
-@keyframes expand-circle {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    width:100%;
-    height:100vh;
-    opacity: 1;
-  }
-}
 
-.animate-expand-circle {
-  animation: expand-circle 0.6s ease-out forwards;
-}
-
-@keyframes splashEffect {
-  0% {
-    transform: translate(100%, -100%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 50%) scale(1.5);
-    opacity: 0;
-  }
-}
-
-.splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  pointer-events: none;
-  z-index: 0;
-  animation: splashEffect 0.8s ease-out forwards;
-}

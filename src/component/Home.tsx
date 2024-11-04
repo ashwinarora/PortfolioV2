@@ -7,7 +7,7 @@ const Home = () => {
   if (!themeContext) return null;
   return (
     <div id="home">
-      <div className="flex min-h-[70vh] sm:min-h-[90vh] flex-col items-center justify-center  bg-homebglight dark:bg-homebg px-4 py-12 sm:px-6 lg:px-8 relative">
+      <div className="flex min-h-[70vh] sm:min-h-[96vh] flex-col items-center justify-center  bg-homebglight dark:bg-homebg px-4 py-12 sm:px-6 lg:px-8 relative">
         {/* Left Background Image */}
         <img
           src="assets/icons/homeleftbg.svg"
@@ -47,7 +47,7 @@ const Home = () => {
         <div className="mx-auto flex flex-col justify-center items-center gap-4 text-center">
           <div className="relative">
             <div className="card example-2">
-              <button className="text-black dark:text-white rounded-full border py-2 px-8 inner relative z-10 border-gray-800">
+              <button className="text-black dark:text-white bg-white dark:bg-gray-800 rounded-full  py-2 px-8 inner relative z-10 shadow-lg">
                 Hello
               </button>
             </div>

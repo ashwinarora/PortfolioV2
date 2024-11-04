@@ -40,13 +40,12 @@ const Footer = () => {
 
             <div className="flex h-8 w-20 gap34 items-center justify-center -mt-3 sm:mt-0">
               <a
-                className="mr-4 hover:scale-110 transition  transform duration-200 "
+                className="mr-4 hover:scale-110 transition transform duration-200 active:scale-90"
                 rel="noreferrer"
                 href="https://www.linkedin.com/in/ashwin-arora/"
                 target="_blank"
               >
-                {/* <img src="assets/icons/linkdin.svg" alt="" /> */}
-                <i className="text-black text-3xl   dark:text-white ">
+                <i className="text-black text-3xl dark:text-white">
                   <FaLinkedin />
                 </i>
               </a>
@@ -54,9 +53,8 @@ const Footer = () => {
                 href="https://github.com/ashwinarora/"
                 rel="noreferrer"
                 target="_blank"
-                className="hover:scale-110 transition transform duration-200 "
+                className="hover:scale-110 transition transform duration-200 active:scale-90"
               >
-                {/* <img src="assets/icons/facebook.svg" alt="" /> */}
                 <i className="text-black text-3xl dark:text-white">
                   <BsGithub />
                 </i>

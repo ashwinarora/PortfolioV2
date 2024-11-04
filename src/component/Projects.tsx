@@ -1,5 +1,5 @@
 import { IoMdPlayCircle } from "react-icons/io";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaCode } from "react-icons/fa6";
 import { MdFormatStrikethrough } from "react-icons/md";
@@ -12,6 +12,16 @@ import ReactPlayer from "react-player";
 import { DiNodejsSmall } from "react-icons/di";
 import { ImTree } from "react-icons/im";
 import { SiAxios } from "react-icons/si";
+import { FaEthereum } from "react-icons/fa";
+import { SiSolidity } from "react-icons/si";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const projects = [
   {
     title: "Ethereum TicTacToe",
@@ -59,12 +69,12 @@ const projects = [
     ],
     tools: [
       { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
-      { name: "Ethers.js", icon: null, Img: "assets/icons/ether.svg" },
+      { name: "Ethers.js", icon: <FaEthereum />, Img: null },
       { name: "Node", icon: null, Img: "assets/icons/node.svg" },
       { name: "Express", icon: null, Img: "assets/icons/express.svg" },
       { name: "DOM", icon: <ImTree />, Img: null },
       { name: "Bootstrap", icon: null, Img: "assets/icons/bootstrap.svg" },
-      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
+      { name: "Solidity", icon: <SiSolidity />, Img: null },
     ],
     features: [
       "Multiplayer",
@@ -201,7 +211,7 @@ const projects = [
         icon: <MdFormatStrikethrough />,
         Img: null,
       },
-      { name: "Solidity", icon: null, Img: "assets/icons/solidity.svg" },
+      { name: "Solidity", icon: <SiSolidity />, Img: null },
     ],
     features: [
       "Multiplayer",
@@ -230,7 +240,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-6xl">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg relative  max-w-4xl">
         <button
           className="absolute top-2 right-2 text-gray-800 dark:text-gray-100"
           onClick={onClose}
@@ -252,7 +262,7 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
           <h2 className="text-lg font-bold text-black dark:text-white mb-2">
             Timestamps
           </h2>
-          <ul className="flex gap-1 flex-wrap">
+          <ul className="flex gap-4 flex-wrap">
             {timestamps.map((stamp: any, index: any) => (
               <li
                 key={index}
@@ -271,20 +281,9 @@ const VideoModal = ({ videoId, timestamps, onClose }: any) => {
 };
 
 export default function ProjectShowcase() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(
-    new Array(projects.length).fill(0)
-  );
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-  const handleNextImage = (index: number) => {
-    setCurrentImageIndex((prev) =>
-      prev.map((imgIndex, idx) =>
-        idx === index
-          ? (imgIndex + 1) % projects[index].images.length
-          : imgIndex
-      )
-    );
-  };
+
   const handleViewVideo = (project: any) => {
     setSelectedProject(project);
     setShowModal(true);
@@ -294,28 +293,7 @@ export default function ProjectShowcase() {
     setShowModal(false);
     setSelectedProject(null);
   };
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prev) =>
-        prev.map(
-          (imgIndex, index) => (imgIndex + 1) % projects[index].images.length
-        )
-      );
-    }, 2000);
 
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const handlePreviousImage = (index: number) => {
-    setCurrentImageIndex((prev) =>
-      prev.map((imgIndex, idx) =>
-        idx === index
-          ? (imgIndex - 1 + projects[index].images.length) %
-            projects[index].images.length
-          : imgIndex
-      )
-    );
-  };
   return (
     <div>
       <div className="relative bg-lightbg  dark:bg-projectmainbg text-gray-100 py-12 ">
@@ -352,7 +330,7 @@ export default function ProjectShowcase() {
                   index === 0
                     ? "flex flex-col md:col-span-2 lg:col-span-2 md:flex-row"
                     : "col-span-1 gap-8"
-                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-500`}
+                } bg-white dark:bg-projectbg border border-gray-900 rounded-lg shadow-lg overflow-hidden hover:scale-105  transform duration-200`}
               >
                 <div
                   className={`${
@@ -362,51 +340,41 @@ export default function ProjectShowcase() {
                   <div
                     className={`${
                       index === 0
-                        ? "relative flex-1 pt-6 mx-4 rounded-md"
+                        ? "relative w-auto md:w-0 md:my-10 flex-1 pt-6 mx-4 rounded-md"
                         : "relative pt-6 mt-2 mx-4 rounded-md"
-                    } bg-gray-200 dark:bg-[#222e35] `}
+                    } bg-gray-200 dark:bg-[#222e35]`}
                   >
-                    <img
-                      src={project.images[currentImageIndex[index]]}
-                      alt={project.title}
-                      className={`${
-                        index === 0 ? "h-[100%]" : "2xl:h-[20rem]"
-                      }  w-full  px-4`}
-                      loading="lazy"
-                    />
-                    <div className="flex justify-center absolute left-[40%] bottom-2">
-                      {project.images.map((_, imgIndex) => (
-                        <div
-                          key={imgIndex}
-                          className={`w-3 h-3 mx-1 rounded-full cursor-pointer ${
-                            currentImageIndex[index] === imgIndex
-                              ? "bg-blue-500"
-                              : "bg-gray-400"
-                          }`}
-                          onClick={() =>
-                            setCurrentImageIndex((prev) =>
-                              prev.map((img, idx) =>
-                                idx === index ? imgIndex : img
-                              )
-                            )
-                          }
-                        ></div>
+                    <Swiper
+                      slidesPerView={1}
+                      spaceBetween={30}
+                      loop={true}
+                      centeredSlides={true}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Autoplay, Pagination, Navigation]}
+                      className="mySwiper"
+                    >
+                      {project.images.map((image, imgIndex) => (
+                        <SwiperSlide key={imgIndex}>
+                          <img
+                            src={image}
+                            alt={project.title}
+                            className={`w-full px-4 ${
+                              index === 0
+                                ? "h-auto md:h-[20rem] 2xl:h-[22rem] "
+                                : "2xl:h-[20rem] "
+                            }`}
+                            loading="lazy"
+                          />
+                        </SwiperSlide>
                       ))}
-                    </div>
-                    <button
-                      onClick={() => handlePreviousImage(index)}
-                      className="absolute top-1/2 left-4 transform -translate-y-1/2  bg-black  bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75 -mx-3"
-                      style={{ zIndex: 1 }}
-                    >
-                      &#8249;
-                    </button>
-                    <button
-                      onClick={() => handleNextImage(index)}
-                      className="absolute top-1/2 right-4 transform -translate-y-1/2 text-2xl bg-opacity-50 text-white  bg-black rounded-full p-2 hover:bg-opacity-75 -mx-3"
-                      style={{ zIndex: 1 }}
-                    >
-                      &#8250;
-                    </button>
+                    </Swiper>
                   </div>
 
                   <div
