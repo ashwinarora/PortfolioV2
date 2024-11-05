@@ -8,6 +8,11 @@ html {
   background-color: #000000;
 }
 
+/* debug border */
+.db {
+  @apply border border-solid border-red-600;
+}
+
 /* .testimonial-card {
     border: 1px solid transparent;
     background: linear-gradient(232.47deg, rgb(12 22 25) 3.63%, rgb(12 22 25) 69.57%);

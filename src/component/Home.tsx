@@ -44,7 +44,7 @@ const Home = () => {
           alt="Right Ring"
           className="absolute bottom-0 right-0 h-36 w-36 sm:bottom-0 sm:h-60 sm:w-60 lg:h-[10rem] lg:w-[10rem] 2xl:h-[11rem] 2xl:w-[20rem]"
         />
-        <div className="mx-auto flex flex-col items-center justify-center gap-4 text-center">
+        <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 text-center">
           <div className="relative">
             <div className="card example-2">
               <button className="inner relative z-10 rounded-full bg-white px-8 py-2 text-black shadow-lg dark:bg-gray-800 dark:text-white">
@@ -56,18 +56,38 @@ const Home = () => {
             </div>
           </div>
 
-          <h1 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            I'm <span className="text-cyan-500">Ashwin Arora,</span> <br />
-            <div className="">
-              <div className="relative bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
-                <h1 className="">
+          <h1 className="w-full text-3xl font-bold tracking-tight text-black dark:text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            I'm{" "}
+            <span className="bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
+              Ashwin Arora
+            </span>{" "}
+            <br />
+            <div className="relative mx-auto grid w-full grid-cols-[1fr_1fr] text-left dark:text-white">
+              <div className="flex flex-row-reverse">
+                <div className="
+                  w-[95%] 
+                  min-[400px]:w-[85%]
+                  min-[470px]:w-[70%]
+                  min-[550px]:w-[60%]
+                  min-[640px]:w-[90%]
+                  min-[700px]:w-[80%]
+                  min-[800px]:w-[70%]
+                  min-[900px]:w-[60%]
+                  min-[1024px]:w-[70%]
+                  min-[1110px]:w-[60%]
+                  min-[1280px]:w-[70%]
+                  min-[1340px]:w-[60%]
+                  min-[1440px]:w-[55%]
+                  min-[1500px]:w-[50%]
+                  min-[1550px]:w-[48%]
+                ">
                   <Typewriter
                     options={{
                       strings: [
-                        `<span> Full Stack </span> <span className="text-black">Application </span>`,
-                        `React <span className="text-black">Application </span>`,
-                        `Javascript <span className="text-black"">Application </span>`,
-                        `BlockChain <span className="text-black">Application </span>`,
+                        `Full Stack`,
+                        `BlockChain`,
+                        `React`,
+                        `Javascript`,
                       ],
                       autoStart: true,
                       loop: true,
@@ -79,8 +99,9 @@ const Home = () => {
                       }  `,
                     }}
                   />
-                </h1>
+                </div>
               </div>
+              <div className="">Developer</div>
             </div>
           </h1>
 
