@@ -19,13 +19,13 @@ export default function Contact() {
             —let's make something incredible happen.
           </p>
           <div className="space-y-4 px-2">
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaPhone className="h-6 w-6 text-white" />
               </div>
               <p className="text-black dark:text-white">+91 12345 67890</p>
-            </div>
-            <div className="flex items-center space-x-4">
+            </div> */}
+            <div className="flex items-center gap-x-4">
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaEnvelope className="h-6 w-6 text-white" />
               </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                 />
               </p>
             </div>
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaMapMarkerAlt className="h-6 w-6 text-white" />
               </div>
@@ -57,7 +57,7 @@ export default function Contact() {
                 alt="Small Image 2"
                 className="absolute bottom-0 right-0 -z-30 h-40 w-28 mix-blend-difference dark:mix-blend-normal"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
