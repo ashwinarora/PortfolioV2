@@ -1,4 +1,4 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaRegCopy } from "react-icons/fa";
+import { FaEnvelope, FaRegCopy } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 
 export default function Contact() {
