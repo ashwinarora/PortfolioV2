@@ -12,7 +12,10 @@ export default function Contact() {
           <p className="px-1 text-gray-400">
             Whether you want to discuss a project idea or need a developer to
             bring your vision to life, I'm just a message away.
-            <span className="italic font-bold"> I guarantee a response within 24 hours</span>
+            <span className="font-bold italic">
+              {" "}
+              I guarantee a response within 24 hours
+            </span>
             —let's make something incredible happen.
           </p>
           <div className="space-y-4 px-2">
@@ -26,10 +29,15 @@ export default function Contact() {
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaEnvelope className="h-6 w-6 text-white" />
               </div>
-              <p className="flex justify-start  items-center gap-x-3 text-black dark:text-white">
-                contact@ashwinarora.com
+              <p className="flex items-center justify-start gap-x-3 text-black dark:text-white">
+                <a
+                  href="mailto:contact@ashwinarora.com"
+                  className="hover:underline"
+                >
+                  contact@ashwinarora.com
+                </a>
                 <FaRegCopy
-                  className="hover:scale-125 cursor-pointer active:scale-90"
+                  className="cursor-pointer hover:scale-125 active:scale-90"
                   onClick={() => {
                     navigator.clipboard.writeText("contact@ashwinarora.com");
                   }}
