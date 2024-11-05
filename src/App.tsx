@@ -1,7 +1,7 @@
 import "./App.css";
 import About from "./component/About";
 import AfterHome from "./component/AfterHome";
-import ContactUs from "./component/ContactUS";
+import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
@@ -33,7 +33,7 @@ function App() {
         <About />
       </div>
       <div id="contact">
-        <ContactUs />
+        <Contact />
       </div>
       <Footer />
     </ThemeProvider>

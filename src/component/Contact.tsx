@@ -1,6 +1,7 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaRegCopy } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 
-export default function ContactUs() {
+export default function Contact() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-lightmode p-4 dark:bg-black">
       <div className="grid w-full max-w-5xl grid-cols-1 gap-8 rounded-lg border border-gray-300 p-8 dark:border-black dark:bg-bgcontact md:grid-cols-2">
@@ -8,10 +9,11 @@ export default function ContactUs() {
           <h2 className="px-1 text-2xl font-bold text-black dark:text-white sm:text-3xl">
             Get In Touch <span className="text-[#00bfff]">With Me</span>
           </h2>
-          <p className="px-2 text-gray-400">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using.
+          <p className="px-1 text-gray-400">
+            Whether you want to discuss a project idea or need a developer to
+            bring your vision to life, I'm just a message away.
+            <span className="italic font-bold"> I guarantee a response within 24 hours</span>
+            —let's make something incredible happen.
           </p>
           <div className="space-y-4 px-2">
             <div className="flex items-center space-x-4">
@@ -24,8 +26,14 @@ export default function ContactUs() {
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaEnvelope className="h-6 w-6 text-white" />
               </div>
-              <p className="text-black dark:text-white">
-                ashwinarora@gmail.com
+              <p className="flex justify-start  items-center gap-x-3 text-black dark:text-white">
+                contact@ashwinarora.com
+                <FaRegCopy
+                  className="hover:scale-125 cursor-pointer active:scale-90"
+                  onClick={() => {
+                    navigator.clipboard.writeText("contact@ashwinarora.com");
+                  }}
+                />
               </p>
             </div>
             <div className="flex items-center space-x-4">
@@ -47,7 +55,7 @@ export default function ContactUs() {
 
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-black dark:text-white">
-            Contact Us
+            Contact
           </h2>
           <div className="space-y-4">
             <div className="space-y-2">
@@ -92,16 +100,9 @@ export default function ContactUs() {
               />
             </div>
             <div className="flex justify-between space-x-2 font-semibold">
-              <button className="w-full flex flex-row-reverse justify-center items-center gap-x-4 rounded-full bg-[#00bfff] py-3 text-white hover:bg-[#008acb] sm:text-sm md:text-base">
+              <button className="flex w-full flex-row-reverse items-center justify-center gap-x-4 rounded-full bg-[#00bfff] py-3 text-white hover:bg-[#008acb] sm:text-sm md:text-base">
                 <div className="">Send Message</div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-6"
-                >
-                  <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
-                </svg>
+                <IoIosSend className="size-6" />
               </button>
               <button className="flex w-full flex-row-reverse items-center justify-center gap-x-2 rounded-full border border-[#00bfff] px-0 py-3 text-[#00bfff] hover:bg-[#4da8e0] hover:text-white sm:px-4 sm:text-sm md:text-base">
                 <div className=" ">Schedule a Meeting</div>

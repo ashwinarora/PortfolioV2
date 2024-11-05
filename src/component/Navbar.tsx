@@ -11,7 +11,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Projects", href: "#project" },
     { name: "About Me", href: "#about" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Contact", href: "#contact" },
   ];
 
   // Handle scroll effect for navbar background
