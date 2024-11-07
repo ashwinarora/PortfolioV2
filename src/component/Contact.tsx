@@ -26,24 +26,24 @@ export default function Contact() {
             </span>
             —let's make something incredible happen.
           </p>
-          <div className="space-y-4 px-2 text-lg">
-            <div className="flex items-center gap-x-4">
-              <div className="rounded-full bg-[#00bfff] p-2">
+          <div className="flex flex-col px-2 text-lg">
+            <div className="flex items-center gap-x-4 -mt-2 mb-2">
+              <div className="rounded-full bg-[#00bfff] p-2 hidden sm:block">
                 <FaEnvelope className="h-6 w-6 text-white" />
               </div>
-              <p className="flex items-center justify-start gap-x-3 text-black dark:text-white">
+              <p className="flex items-center justify-start gap-x-3 text-black dark:text-white overflow-auto">
                 <a href={"mailto:" + contactEmail} className="hover:underline">
                   {contactEmail}
                 </a>
                 <FaRegCopy
-                  className="cursor-pointer hover:scale-125 active:scale-90"
+                  className="cursor-pointer hover:scale-125 active:scale-90 hidden sm:block"
                   onClick={() => {
                     navigator.clipboard.writeText(contactEmail);
                   }}
                 />
               </p>
             </div>
-            <div className="mr-4 flex flex-wrap items-center justify-between gap-x-8">
+            <div className="mr-4 flex flex-wrap items-center justify-between ">
               <div className="flex items-center gap-x-4">
                 <div className="rounded-full p-2 hover:scale-125">
                   <a href={linkedIn} target="_blank" rel="noopener noreferrer">
@@ -66,7 +66,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row items-center my-96 justify-between">
+            <div className="flex flex-row items-center my-8 justify-between">
               <hr className="w-4/12 border-gray-200 dark:border-gray-700" />
               <div className="w-4/12 text-center text-sm text-neutral-300">
                 Or simply
