@@ -1,5 +1,13 @@
-import { FaEnvelope, FaRegCopy } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaRegCopy,
+  FaTelegramPlane,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
+import { contactEmail, github, linkedIn, telegram } from "./constants";
+import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -18,25 +26,61 @@ export default function Contact() {
             </span>
             —let's make something incredible happen.
           </p>
-          <div className="space-y-4 px-2">
+          <div className="space-y-4 px-2 text-lg">
             <div className="flex items-center gap-x-4">
               <div className="rounded-full bg-[#00bfff] p-2">
                 <FaEnvelope className="h-6 w-6 text-white" />
               </div>
               <p className="flex items-center justify-start gap-x-3 text-black dark:text-white">
-                <a
-                  href="mailto:contact@ashwinarora.com"
-                  className="hover:underline"
-                >
-                  contact@ashwinarora.com
+                <a href={"mailto:" + contactEmail} className="hover:underline">
+                  {contactEmail}
                 </a>
                 <FaRegCopy
                   className="cursor-pointer hover:scale-125 active:scale-90"
                   onClick={() => {
-                    navigator.clipboard.writeText("contact@ashwinarora.com");
+                    navigator.clipboard.writeText(contactEmail);
                   }}
                 />
               </p>
+            </div>
+            <div className="mr-4 flex flex-wrap items-center justify-between gap-x-8">
+              <div className="flex items-center gap-x-4">
+                <div className="rounded-full p-2 hover:scale-125">
+                  <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin className="h-6 w-6 dark:text-white" />
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-x-4">
+                <div className="rounded-full p-2 hover:scale-125">
+                  <a href={telegram} target="_blank" rel="noopener noreferrer">
+                    <FaTelegramPlane className="h-6 w-6 dark:text-white" />
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-x-4">
+                <div className="rounded-full p-2 hover:scale-125">
+                  <a href={github} target="_blank" rel="noopener noreferrer">
+                    <FaGithub className="h-6 w-6 dark:text-white" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-center my-96 justify-between">
+              <hr className="w-4/12 border-gray-200 dark:border-gray-700" />
+              <div className="w-4/12 text-center text-sm text-neutral-300">
+                Or simply
+              </div>
+              <hr className="w-4/12 border-gray-200 dark:border-gray-700" />
+            </div>
+            <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-full border dark:border-slate-800 p-[2.3px]">
+              <div className="absolute inset-0 h-full w-full animate-rotate rounded-full bg-[conic-gradient(#00bfff_30deg,transparent_360deg)]"></div>
+              <div className="relative z-20 flex w-full rounded-full bg-white dark:bg-[#0c171c]">
+                <a className="flex w-full flex-row-reverse items-center justify-center gap-x-2 rounded-full px-0 py-3 text-[#00bfff] hover:bg-[#4da8e0] hover:text-white sm:px-4 sm:text-sm md:text-base">
+                  <div>Schedule a Meeting</div>
+                  <BsFillTelephoneOutboundFill className="size-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -91,26 +135,6 @@ export default function Contact() {
               <button className="flex w-full flex-row-reverse items-center justify-center gap-x-4 rounded-full bg-[#00bfff] py-3 text-white hover:bg-[#008acb] sm:text-sm md:text-base">
                 <div className="">Send Message</div>
                 <IoIosSend className="size-6" />
-              </button>
-              <button className="flex w-full flex-row-reverse items-center justify-center gap-x-2 rounded-full border border-[#00bfff] px-0 py-3 text-[#00bfff] hover:bg-[#4da8e0] hover:text-white sm:px-4 sm:text-sm md:text-base">
-                <div className=" ">Schedule a Meeting</div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-6"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M15 3.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V5.56l-4.72 4.72a.75.75 0 1 1-1.06-1.06l4.72-4.72h-2.69a.75.75 0 0 1-.75-.75Z"
-                    clipRule="evenodd"
-                  />
-                  <path
-                    fillRule="evenodd"
-                    d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
               </button>
             </div>
           </div>

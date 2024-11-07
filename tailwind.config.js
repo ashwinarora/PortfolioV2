@@ -27,6 +27,15 @@ export default {
         lightbg: " linear-gradient(60deg, #f0f0f0 30%, #f0f0f0 71%)",
       },
     },
+    animation: {
+      rotate: "rotate 10s linear infinite",
+    },
+    keyframes: {
+      rotate: {
+        "0%": { transform: "rotate(0deg) scale(10)" },
+        "100%": { transform: "rotate(-360deg) scale(10)" },
+      },
+    },
   },
   plugins: [],
 };
