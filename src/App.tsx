@@ -7,7 +7,7 @@ import Navbar from "./component/Navbar";
 import Project from "./component/Projects";
 import Testimonial from "./component/Testimonial";
 import Whyme from "./component/Whyme";
-import { ThemeProvider } from "./component/ThemeContext";
+import { ThemeProvider } from "./component/Context/ThemeContext";
 import ContactContainer from "./component/Contact/ContactContainer";
 
 function App() {

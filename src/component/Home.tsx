@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Typewriter from "typewriter-effect";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "./Context/ThemeContext";
 const Home = () => {
   const themeContext = useContext(ThemeContext);
 
@@ -107,9 +107,9 @@ const Home = () => {
 
           {/* Hire Me Button */}
           <div className="mt-6">
-            <button className="inline-flex cursor-pointer items-center rounded-full bg-[#37b0e0] px-4 py-2 text-sm font-medium text-white transition-colors hover:border hover:shadow-2xl focus:ring-offset-2 sm:text-base lg:text-lg">
+            <a href="#contact" className="inline-flex cursor-pointer items-center rounded-full bg-[#37b0e0] px-4 py-2 text-sm font-medium text-white transition-colors hover:border hover:shadow-2xl focus:ring-offset-2 sm:text-base lg:text-lg">
               Hire Me
-            </button>
+            </a>
           </div>
         </div>
       </div>

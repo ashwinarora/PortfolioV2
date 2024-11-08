@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "./Context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 
 const Navbar = () => {
