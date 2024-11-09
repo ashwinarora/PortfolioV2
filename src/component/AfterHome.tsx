@@ -43,11 +43,6 @@ const AfterHome = () => {
         alt="Small Image 2"
         className="absolute left-12 top-[22rem] mix-blend-difference dark:mix-blend-exclusion"
       />
-      <img
-        className="absolute -bottom-8 right-12 z-10 h-[10rem] w-[8rem] sm:-bottom-10 sm:right-28 md:bottom-24 md:right-44 2xl:bottom-32 2xl:right-80"
-        src="assets/icons/cursor.svg"
-        alt="cursor"
-      />
     </div>
   );
 };

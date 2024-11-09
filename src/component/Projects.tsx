@@ -313,13 +313,8 @@ export default function ProjectShowcase() {
           <div className="mb-12 mt-12 text-center font-bold">
             <div>
               <h1 className="text-4xl text-black dark:text-white">
-                Our <span className="text-spantext"> Projects </span>
+                My <span className="text-spantext"> Projects </span>
               </h1>
-              <h3 className="mx-10 mt-4 text-xs text-gray-700 sm:-mx-0 md:mx-4 md:text-sm 2xl:mx-80">
-                A real-time multiplayer TicTacToe game where two players can bet
-                ETH and the winner take all. A state channel is created between
-                the two players to enable 'Off-Chain'.
-              </h3>
             </div>
           </div>
           <div className="mx-0 grid grid-cols-1 gap-8 dark:shadow-lg sm:mx-20 md:-mx-4 md:grid-cols-2 lg:mx-16 lg:grid-cols-2 2xl:mx-36">
