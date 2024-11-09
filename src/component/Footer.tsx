@@ -63,13 +63,9 @@ const Footer = () => {
           </div>
           <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto" />
           <span className="block text-xs text-gray-500 dark:text-gray-400 sm:text-center">
-            <div className="flex justify-between">
-              <p>Ashwin Arora Portfolio ©  </p>
-              <ul className="mb-6 flex flex-wrap items-center justify-center gap-1 text-xs font-medium text-gray-500 dark:text-gray-400 sm:mb-0 sm:gap-3 sm:text-sm">
-                <li>Privacy Policy</li>
-                <span className="rounded-full bg-gray-300 p-1 text-xl text-gray-600 dark:bg-[#192127]"></span>
-                <li>Terms Of Service</li>
-              </ul>
+            <div className="flex justify-between items-center gap-x-10">
+              <p className="text-sm">Made with <span className="text-red-600 text-base">❤</span>, in India.</p>
+              <p>No Copyright, feel free to copy my work :)</p>
             </div>
           </span>
         </div>
