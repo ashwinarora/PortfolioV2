@@ -1,4 +1,6 @@
+import { FaClock, FaCode, FaMedal } from "react-icons/fa6";
 import { startDate } from "./constants";
+import { BsCupHotFill } from "react-icons/bs";
 
 const calculateExperience = () => {
   const currentDate = new Date();
@@ -126,22 +128,22 @@ function toHumanReadable(number: number): string {
 const About = () => {
   const statistics = [
     {
-      icon: "assets/icons/reward.svg",
+      icon: FaMedal,
       value: calculateExperience() + " years",
       label: "Years of Experience",
     },
     {
-      icon: "assets/icons/bag.svg",
+      icon: FaCode,
       value: toHumanReadable(calculateLinesOfCode()) + "+",
       label: "Lines of Code",
     },
     {
-      icon: "assets/icons/client.svg",
+      icon: FaClock,
       value: toHumanReadable(calculateHours()) + "+",
       label: "Hours of Coding",
     },
     {
-      icon: "assets/icons/watch.svg",
+      icon: BsCupHotFill,
       value: toHumanReadable(calculateCoffeeCups()) + "+",
       label: "Cups of Coffee",
     },
@@ -183,15 +185,15 @@ const About = () => {
           </div>
         </div>
         <div className="m-auto mt-10 flex justify-center">
-          <div className="grid grid-cols-2 gap-y-10 md:gap-y-0 md:flex md:flex-row md:items-center sm:justify-between  md:justify-around rounded-lg border border-gray-800 bg-gray-200 p-2 dark:bg-[#061116] sm:p-6 w-11/12  lg:w-10/12 xl:w-8/12">
+          <div className="grid w-11/12 grid-cols-2 gap-y-10 rounded-lg border border-gray-800 bg-gray-200 p-2 dark:bg-[#061116] sm:justify-between sm:p-6 md:flex md:flex-row md:items-center md:justify-around md:gap-y-0 lg:w-10/12 xl:w-8/12">
             {statistics
               .map((stat) => (
                 <div
-                  className=" flex flex-col items-center justify-center text-center "
+                  className="flex flex-col items-center justify-center text-center"
                   key={stat.label}
                 >
-                  <div className="h-12 w-12 rounded-full text-black dark:text-white">
-                    <img src={stat.icon} alt="" />
+                  <div className="rounded-full bg-[#00bfff] p-1 ">
+                    <stat.icon className="size-6 text-white" />
                   </div>
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
                     {stat.value}
@@ -203,12 +205,12 @@ const About = () => {
               ))
               .reduce<JSX.Element[]>((acc, val, index) => {
                 acc.push(val);
-                if (index < statistics.length - 1){
-                  console.log(index)
+                if (index < statistics.length - 1) {
+                  console.log(index);
                   acc.push(
                     <div
                       key={`separator-${index}`}
-                      className={`hidden items-center justify-center gap-4 md:block h-7 border-r border-[#373e56]`}
+                      className={`hidden h-7 items-center justify-center gap-4 border-r border-[#373e56] md:block`}
                     />,
                   );
                 }
