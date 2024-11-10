@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import PoolzFinanceWhite from "../../public/assets/images/PoolzFinanceWhite.png";
-import PoolzFinanceBlack from "../../public/assets/images/PoolzFinanceBlack.png";
+import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
+import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
 import { ThemeContext } from "./Context/ThemeContext";
 
 const AfterHome = () => {
