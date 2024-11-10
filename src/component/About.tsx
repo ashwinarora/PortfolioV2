@@ -192,8 +192,8 @@ const About = () => {
                   className="flex flex-col items-center justify-center text-center"
                   key={stat.label}
                 >
-                  <div className="rounded-full bg-[#00bfff] p-1 ">
-                    <stat.icon className="size-6 text-white" />
+                  <div className="rounded-full  p-2 border border-slate-300 dark:border-slate-800 ">
+                    <stat.icon className="size-6 text-[#00bfff]" />
                   </div>
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
                     {stat.value}
