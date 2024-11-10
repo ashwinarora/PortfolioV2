@@ -138,17 +138,17 @@ const About = () => {
     {
       icon: "assets/icons/client.svg",
       value: toHumanReadable(calculateHours()) + "+",
-      label: "Hours of Coding"
+      label: "Hours of Coding",
     },
-    { icon: "assets/icons/watch.svg",
+    {
+      icon: "assets/icons/watch.svg",
       value: toHumanReadable(calculateCoffeeCups()) + "+",
-      label: "Cups of Coffee"
+      label: "Cups of Coffee",
     },
   ];
   return (
     <div>
-      {" "}
-      <section className="w-full bg-lightmode py-12 text-white dark:bg-black dark:text-black md:py-4 lg:py-4">
+      <section className="w-full bg-lightmode py-12 text-white dark:bg-black dark:text-black">
         <div className="mt-20 flex flex-col justify-center sm:flex-row md:gap-5 2xl:gap-10">
           <div className="flex flex-col items-center justify-center">
             <div className="mx:m-auto relative m-[inherit] ml-4 w-full max-w-sm overflow-hidden rounded-full sm:max-w-md">
@@ -182,37 +182,38 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="m-auto mt-10 flex justify-center px-2 sm:mt-0 sm:px-8">
-          <div className="flex flex-wrap items-center justify-center rounded-lg border border-gray-800 bg-lightmode p-2 dark:bg-[#061116] sm:flex-row sm:p-6 lg:gap-28">
-            {statistics.map((stat, index) => (
-              <div
-                className="flex items-center justify-center sm:gap-11"
-                key={index}
-              >
-                <div className="mx-2 text-center sm:mx-4">
-                  <div className="flex items-center justify-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full text-black dark:text-white">
-                      <img src={stat.icon} alt="" />
-                    </div>
+        <div className="m-auto mt-10 flex justify-center">
+          <div className="grid grid-cols-2 gap-y-10 md:gap-y-0 md:flex md:flex-row md:items-center sm:justify-between  md:justify-around rounded-lg border border-gray-800 bg-gray-200 p-2 dark:bg-[#061116] sm:p-6 w-11/12  lg:w-10/12 xl:w-8/12">
+            {statistics
+              .map((stat) => (
+                <div
+                  className=" flex flex-col items-center justify-center text-center "
+                  key={stat.label}
+                >
+                  <div className="h-12 w-12 rounded-full text-black dark:text-white">
+                    <img src={stat.icon} alt="" />
                   </div>
-
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
                     {stat.value}
                   </p>
-                  <p className="text-xs text-gray-600 sm:text-sm">
+                  <p className="text-sm text-gray-500 sm:text-base">
                     {stat.label}
                   </p>
                 </div>
-
-                <div
-                  className={`hidden items-center justify-center gap-4 sm:flex ${
-                    index < statistics.length - 1
-                      ? "h-7 border-r border-[#373e56]"
-                      : ""
-                  }`}
-                />
-              </div>
-            ))}
+              ))
+              .reduce<JSX.Element[]>((acc, val, index) => {
+                acc.push(val);
+                if (index < statistics.length - 1){
+                  console.log(index)
+                  acc.push(
+                    <div
+                      key={`separator-${index}`}
+                      className={`hidden items-center justify-center gap-4 md:block h-7 border-r border-[#373e56]`}
+                    />,
+                  );
+                }
+                return acc;
+              }, [])}
           </div>
         </div>
       </section>
