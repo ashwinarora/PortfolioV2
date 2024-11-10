@@ -82,8 +82,8 @@ const Navbar = ({activeSection}: {activeSection: Sections}) => {
           id="navbar-solid-bg"
         >
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-600 bg-gray-50 font-medium shadow-2xl dark:border-gray-700 dark:bg-black md:mr-0 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent rtl:space-x-reverse">
-            {navLinks.map((link, index) => (
-              <li key={index}>
+            {navLinks.map((link) => (
+              <li key={link.section}>
                 <button
                   onClick={() => {
                     document.getElementById(link.section)?.scrollIntoView({ behavior: "smooth" });
