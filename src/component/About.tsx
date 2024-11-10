@@ -1,17 +1,149 @@
+import { startDate } from "./constants";
+
+const calculateExperience = () => {
+  const currentDate = new Date();
+  const thisStartDate = new Date(startDate);
+  thisStartDate.setFullYear(thisStartDate.getFullYear() + 1); // adding 1 year to the start date
+  thisStartDate.setMonth(thisStartDate.getMonth() + 1); // adding 1 month to the start date
+
+  // Calculate the difference in milliseconds
+  const differenceInMilliseconds =
+    currentDate.getTime() - thisStartDate.getTime();
+
+  // Convert milliseconds to total years and months
+  const years = Math.floor(
+    differenceInMilliseconds / (1000 * 60 * 60 * 24 * 365.25),
+  );
+  const remainingMonths = Math.floor(
+    (differenceInMilliseconds % (1000 * 60 * 60 * 24 * 365.25)) /
+      (1000 * 60 * 60 * 24 * 30.44), // approx. 30.44 days in a month
+  );
+
+  // Convert months to a decimal part and add to years
+  const experience = years + remainingMonths / 12;
+
+  // Format the result to one decimal place for readability
+  return parseFloat(experience.toFixed(1));
+};
+
+function calculateLinesOfCode(): number {
+  const locPerDay = 100; // Average LOC per productive day
+  const codingDaysPerYear = 250; // 50 weeks * 5 days
+  const variationAmplitude = 25; // Amplitude for sine-based variation
+
+  const currentDate = new Date();
+  // currentDate.setDate(currentDate.getDate() + 1); // adding 1 day to the current date
+
+  // Calculate the difference in days between start and current date
+  const differenceInMilliseconds = currentDate.getTime() - startDate.getTime();
+  const totalDays = Math.floor(
+    differenceInMilliseconds / (1000 * 60 * 60 * 24),
+  );
+
+  // Calculate the approximate number of coding days based on productive days per year
+  const yearsOfExperience = totalDays / 365.25;
+  const totalCodingDays = Math.floor(yearsOfExperience * codingDaysPerYear);
+
+  // Calculate LOC with sine wave variation
+  let totalLOC = 0;
+  for (let i = 0; i < totalCodingDays; i++) {
+    // Apply a sine-based variation to the daily LOC
+    let variation = Math.floor(variationAmplitude * Math.sin(i * 0.1));
+    variation = variation < -20 ? 0 : variation;
+    const dailyLOC = locPerDay + variation;
+    totalLOC += dailyLOC;
+  }
+
+  return totalLOC;
+}
+
+function calculateHours(): number {
+  const hourPerDay = 7; // Average LOC per productive day
+  const codingDaysPerYear = 300; // 50 weeks * 5 days
+  const variationAmplitude = 3; // Amplitude for sine-based variation
+
+  const currentDate = new Date();
+  // currentDate.setDate(currentDate.getDate() + 1); // adding 1 day to the current date
+
+  // Calculate the difference in days between start and current date
+  const differenceInMilliseconds = currentDate.getTime() - startDate.getTime();
+  const totalDays = Math.floor(
+    differenceInMilliseconds / (1000 * 60 * 60 * 24),
+  );
+
+  // Calculate the approximate number of coding days based on productive days per year
+  const yearsOfExperience = totalDays / 365.25;
+  const totalCodingDays = Math.floor(yearsOfExperience * codingDaysPerYear);
+
+  // Calculate LOC with sine wave variation
+  let totalLOC = 0;
+  for (let i = 0; i < totalCodingDays; i++) {
+    // Apply a sine-based variation to the daily LOC
+    let variation = Math.floor(variationAmplitude * Math.sin(i * 0.1));
+    variation = variation < -1 ? 0 : variation;
+    const dailyLOC = hourPerDay + variation;
+    totalLOC += dailyLOC;
+  }
+
+  return totalLOC;
+}
+
+function calculateCoffeeCups(): number {
+  const coffeePerDay = 1; // Average LOC per productive day
+  const codingDaysPerYear = 275; // 50 weeks * 5 days
+  const variationAmplitude = 2; // Amplitude for sine-based variation
+
+  const currentDate = new Date();
+  // currentDate.setDate(currentDate.getDate() + 1); // adding 1 day to the current date
+
+  // Calculate the difference in days between start and current date
+  const differenceInMilliseconds = currentDate.getTime() - startDate.getTime();
+  const totalDays = Math.floor(
+    differenceInMilliseconds / (1000 * 60 * 60 * 24),
+  );
+
+  // Calculate the approximate number of coding days based on productive days per year
+  const yearsOfExperience = totalDays / 365.25;
+  const totalCodingDays = Math.floor(yearsOfExperience * codingDaysPerYear);
+
+  // Calculate LOC with sine wave variation
+  let totalLOC = 0;
+  for (let i = 0; i < totalCodingDays; i++) {
+    // Apply a sine-based variation to the daily LOC
+    let variation = Math.floor(variationAmplitude * Math.sin(i * 0.1));
+    variation = variation < 0 ? 0 : variation;
+    const dailyLOC = coffeePerDay + variation;
+    totalLOC += dailyLOC;
+  }
+
+  return totalLOC;
+}
+
+function toHumanReadable(number: number): string {
+  return new Intl.NumberFormat("en-US").format(number);
+}
+
 const About = () => {
   const statistics = [
     {
       icon: "assets/icons/reward.svg",
-      value: "23+",
+      value: calculateExperience() + " years",
       label: "Years of Experience",
     },
     {
       icon: "assets/icons/bag.svg",
-      value: "325+",
-      label: "Completed Projects",
+      value: toHumanReadable(calculateLinesOfCode()) + "+",
+      label: "Lines of Code",
     },
-    { icon: "assets/icons/client.svg", value: "279+", label: "Happy Clients" },
-    { icon: "assets/icons/watch.svg", value: "1,632+", label: "Hours of Work" },
+    {
+      icon: "assets/icons/client.svg",
+      value: toHumanReadable(calculateHours()) + "+",
+      label: "Hours of Coding"
+    },
+    { icon: "assets/icons/watch.svg",
+      value: toHumanReadable(calculateCoffeeCups()) + "+",
+      label: "Cups of Coffee"
+    },
   ];
   return (
     <div>
