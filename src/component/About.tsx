@@ -129,7 +129,7 @@ const About = () => {
   const statistics = [
     {
       icon: FaMedal,
-      value: calculateExperience() + " years",
+      value: calculateExperience() + "+",
       label: "Years of Experience",
     },
     {
@@ -206,7 +206,6 @@ const About = () => {
               .reduce<JSX.Element[]>((acc, val, index) => {
                 acc.push(val);
                 if (index < statistics.length - 1) {
-                  console.log(index);
                   acc.push(
                     <div
                       key={`separator-${index}`}
