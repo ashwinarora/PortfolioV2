@@ -83,7 +83,7 @@ const projects = [
       "State Channel",
       "Off-Chain Gameplay",
     ],
-    liveDemo: "https://www.ethtictactoe.com/",
+    liveDemo: "https://ethtactoe.com/",
     github: "https://github.com/ashwinarora/ethereum-tictactoe",
   },
   {
@@ -160,7 +160,7 @@ const projects = [
       "Image Upload",
       "Search",
     ],
-    liveDemo: "https://socialnetwork-ashwin.herokuapp.com/",
+    liveDemo: "https://socialnetwrk.in/",
     github: "https://github.com/ashwinarora/mern-social-network",
   },
   {
@@ -222,7 +222,7 @@ const projects = [
       "Monitor Game",
     ],
 
-    liveDemo: "https://www.eth-housie.com/",
+    liveDemo: "https://www.ethhousie.com/",
     github: "https://github.com/ashwinarora/ethereum-housie",
   },
 ];
