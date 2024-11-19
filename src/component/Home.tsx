@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Typewriter from "typewriter-effect";
-import { ThemeContext } from "./ThemeContext";
+import { ThemeContext } from "./Context/ThemeContext";
 const Home = () => {
   const themeContext = useContext(ThemeContext);
 
@@ -64,23 +64,7 @@ const Home = () => {
             <br />
             <div className="relative mx-auto grid w-full grid-cols-[1fr_1fr] text-left dark:text-white">
               <div className="flex flex-row-reverse">
-                <div className="
-                  w-[95%] 
-                  min-[400px]:w-[85%]
-                  min-[470px]:w-[70%]
-                  min-[550px]:w-[60%]
-                  min-[640px]:w-[90%]
-                  min-[700px]:w-[80%]
-                  min-[800px]:w-[70%]
-                  min-[900px]:w-[60%]
-                  min-[1024px]:w-[70%]
-                  min-[1110px]:w-[60%]
-                  min-[1280px]:w-[70%]
-                  min-[1340px]:w-[60%]
-                  min-[1440px]:w-[55%]
-                  min-[1500px]:w-[50%]
-                  min-[1550px]:w-[48%]
-                ">
+                <div className="w-[95%] min-[400px]:w-[85%] min-[470px]:w-[70%] min-[550px]:w-[60%] min-[640px]:w-[90%] min-[700px]:w-[80%] min-[800px]:w-[70%] min-[900px]:w-[60%] min-[1024px]:w-[70%] min-[1110px]:w-[60%] min-[1280px]:w-[70%] min-[1340px]:w-[60%] min-[1440px]:w-[55%] min-[1500px]:w-[50%] min-[1550px]:w-[48%]">
                   <Typewriter
                     options={{
                       strings: [
@@ -107,7 +91,14 @@ const Home = () => {
 
           {/* Hire Me Button */}
           <div className="mt-6">
-            <button className="inline-flex cursor-pointer items-center rounded-full bg-[#37b0e0] px-4 py-2 text-sm font-medium text-white transition-colors hover:border hover:shadow-2xl focus:ring-offset-2 sm:text-base lg:text-lg">
+            <button
+              className="inline-flex cursor-pointer items-center rounded-full bg-[#37b0e0] px-4 py-2 text-sm font-medium text-white transition-colors hover:border hover:shadow-2xl focus:ring-offset-2 sm:text-base lg:text-lg"
+              onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
               Hire Me
             </button>
           </div>
