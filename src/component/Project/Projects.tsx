@@ -63,7 +63,7 @@ export default function ProjectShowcase() {
                   project.isBig
                     ? "flex flex-col md:col-span-2 md:flex-row lg:col-span-2"
                     : "col-span-1 gap-8"
-                } transform overflow-hidden rounded-lg border border-gray-900 bg-white shadow-lg duration-200 hover:scale-105 dark:bg-projectbg`}
+                } transform overflow-hidden rounded-lg border border-gray-900 bg-white shadow-lg duration-200 xl:hover:scale-105 dark:bg-projectbg`}
               >
                 <div
                   className={`${
