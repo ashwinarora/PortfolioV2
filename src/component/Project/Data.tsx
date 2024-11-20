@@ -66,6 +66,7 @@ export const allProjects = [
         { name: "Vite", icon: <SiVite />, Img: null },
         { name: "Web3.js", icon: <SiWeb3Dotjs />, Img: null },
         { name: "Tailwind", icon: <SiTailwindcss />, Img: null },
+        { name: "Hardhat", icon: <FaHardHat />, Img: null },
         { name: "Storybook", icon: <SiStorybook />, Img: null },
       ],
       features: [
@@ -126,7 +127,6 @@ export const allProjects = [
       //   },
       // ],
       tools: [
-        // react, vite, typescrpt, web3, tailwind, storybook
         { name: "React", icon: <FaReact />, Img: null },
         { name: "Solidity", icon: <SiSolidity />, Img: null },
         { name: "TypeScript", icon: <SiTypescript />, Img: null },
@@ -138,11 +138,12 @@ export const allProjects = [
         { name: "Node", icon: null, Img: "assets/icons/node.svg" },
       ],
       features: [
-        "Multiplayer",
-        "Real Time",
-        "Instant Payouts",
-        "State Channel",
-        "Off-Chain Gameplay",
+        "Decentralized Services",
+        "Automated Payments",
+        "Creator Freedom",
+        "Subscriber Security",
+        "Complete Transparency",
+        "Immutable Records",
       ],
       liveDemo: "https://ethtactoe.com/",
       github: "https://github.com/ashwinarora/ethereum-tictactoe",

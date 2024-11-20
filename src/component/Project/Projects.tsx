@@ -168,7 +168,7 @@ export default function ProjectShowcase() {
                           </div>
                         )
                       }
-                      <p className="mb-4 text-xs text-gray-800 dark:text-gray-400 lg:text-sm">
+                      <p className="mb-4 text-xs text-gray-800 dark:text-gray-400 lg:text-base">
                         {project.description}
                       </p>
                       <div className="mb-4">
