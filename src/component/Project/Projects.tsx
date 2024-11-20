@@ -249,8 +249,7 @@ export default function ProjectShowcase() {
         </div>
         {showModal && selectedProject && selectedProject.dialog.content === "video" && (
           <VideoModal
-            videoId={selectedProject.dialog.videoId}
-            timestamps={selectedProject.dialog.timestamps}
+            videoProps={selectedProject.dialog}
             onClose={closeModal}
           />
         )}

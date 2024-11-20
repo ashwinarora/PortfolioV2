@@ -24,12 +24,12 @@ type Tool = {
   Img: string | null;
 };
 
-type imageDialog = {
+export type imageDialog = {
   content: "image";
   images: string[];
 }
 
-type videoDialog = {
+export type videoDialog = {
   content: "video";
   youtube: string;
   videoId: string;
