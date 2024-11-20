@@ -1,7 +1,6 @@
-import { IoMdPlayCircle } from "react-icons/io";
 import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import { FaCode } from "react-icons/fa6";
+import { FaCode, FaRegCirclePlay } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
@@ -15,6 +14,8 @@ import { allProjects, Project } from "./Data";
 import { ThemeContext } from "../Context/ThemeContext";
 import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
 import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
+import ImageModal from "./ImageModal";
+import { MdOutlineOpenInNew } from "react-icons/md";
 
 export default function ProjectShowcase() {
   const [showModal, setShowModal] = useState(false);
@@ -135,14 +136,14 @@ export default function ProjectShowcase() {
                       <button className="flex items-center justify-center gap-1">
                         <a
                           target="_parent"
-                          className="z-50 text-xs text-spantext md:text-sm lg:text-xl 2xl:text-2xl"
+                          className="z-50 flex items-center justify-center gap-x-1 text-xs text-spantext md:text-sm lg:text-xl"
                           onClick={() => handleViewVideo(project)}
                         >
-                          {project?.link}
+                          {project.dialog.content === "video" ? "Watch Video" : "Enlarge"}
+                          {project.dialog.content === "video" ? <FaRegCirclePlay /> : <MdOutlineOpenInNew />}
                         </a>
-                        <i className="mt-0 text-sm text-spantext md:text-lg lg:text-xl">
-                          <IoMdPlayCircle />
-                        </i>
+                        {/* <i className="mt-0 text-sm text-spantext md:text-lg lg:text-xl">
+                        </i> */}
                       </button>
                     </div>
                     <div className="p-4">
@@ -250,6 +251,12 @@ export default function ProjectShowcase() {
         {showModal && selectedProject && selectedProject.dialog.content === "video" && (
           <VideoModal
             videoProps={selectedProject.dialog}
+            onClose={closeModal}
+          />
+        )}
+        {showModal && selectedProject && selectedProject.dialog.content === "image" && (
+          <ImageModal
+            imageProps={selectedProject.dialog}
             onClose={closeModal}
           />
         )}

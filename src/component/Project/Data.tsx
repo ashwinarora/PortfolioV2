@@ -39,7 +39,6 @@ export type videoDialog = {
 export type Project = {
   title: string;
   logo?: string;
-  link: string;
   isBig: boolean;
   description: string;
   images: string[];
@@ -54,7 +53,6 @@ export const allProjects: Project[] = [
     {
       title: "DaoSender",
       logo: "assets/projects/DaoSender/dsLogo.svg",
-      link: "details",
       isBig: false,
       description:
         "The most gas-optimized solution for airdropping ERC20 tokens. Designed for efficiency, allowing users to upload unlimited recipient addresses and amounts, automatically calculating and selecting the most cost-effective way to execute transactions. Live on 8 chains.",
@@ -100,7 +98,6 @@ export const allProjects: Project[] = [
 
     {
       title: "SubsCrypt",
-      link: "view video",
       isBig: false,
       description:
         "A subscription management platform on Ethereum, revolutionizing how creators and subscribers interact. Think Patreon, but fully decentralized and powered by blockchain! Empowering creators to monetize their services with complete transparency and giving subscribers unmatched trust and security in every transaction. 🚀",
@@ -147,7 +144,6 @@ export const allProjects: Project[] = [
 
     {
       title: "Ethereum TicTacToe",
-      link: "view video",
       isBig: true,
       description:
         "A real-time multiplayer TicTacToe game where two players bet in ETH and the winner takes all. A state channel is created between the two players to enable Off-Chain exchange of messages. These messages are signed by the player's private key.",
@@ -216,7 +212,6 @@ export const allProjects: Project[] = [
 
     {
       title: "Social Network",
-      link: "view video",
       isBig: false,
       description:
         "A full-fledged social networking platform. Allowing users to follow, post images, comment, like etc. A complete implementation of MERN stack with JWT authentication.A full-fledged social networking platform.",
@@ -299,7 +294,6 @@ export const allProjects: Project[] = [
 
     {
       title: "Ethereum Housie",
-      link: "view video",
       isBig: false,
       description:
         "A real-time multiplayer game inspired by Bingo. There is no limit to the number of players per game. Each player pays in ETH to purchase a ticket and then select 15 numbers(1-90). The server broadcasts random numbers one by one to the players.",
