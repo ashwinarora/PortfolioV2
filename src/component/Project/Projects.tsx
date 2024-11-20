@@ -100,7 +100,7 @@ export default function ProjectShowcase() {
                           <img
                             src={image}
                             alt={project.title}
-                            className={`w-full px-4  ${
+                            className={`w-full px-4 ${
                               project.isBig
                                 ? "h-auto md:h-[20rem] 2xl:h-[22rem]"
                                 : "2xl:h-[20rem]"
@@ -139,36 +139,40 @@ export default function ProjectShowcase() {
                           className="z-50 flex items-center justify-center gap-x-1 text-xs text-spantext md:text-sm lg:text-xl"
                           onClick={() => handleViewVideo(project)}
                         >
-                          {project.dialog.content === "video" ? "Watch Video" : "Enlarge"}
-                          {project.dialog.content === "video" ? <FaRegCirclePlay /> : <MdOutlineOpenInNew />}
+                          {project.dialog.content === "video"
+                            ? "Watch Video"
+                            : "Expand"}
+                          {project.dialog.content === "video" ? (
+                            <FaRegCirclePlay />
+                          ) : (
+                            <MdOutlineOpenInNew />
+                          )}
                         </a>
                         {/* <i className="mt-0 text-sm text-spantext md:text-lg lg:text-xl">
                         </i> */}
                       </button>
                     </div>
                     <div className="p-4">
-                      {
-                        project.title === "DaoSender" && (
-                          <div className="text-black dark:text-white">
-                            developed with
-                            <a href="https://www.poolz.finance/" target="_blank">
-                              {themeContext?.theme === "dark" ? (
-                                <img
-                                  src={PoolzFinanceWhite}
-                                  alt="Poolz Finance"
-                                  className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
-                                />
-                              ) : (
-                                <img
-                                  src={PoolzFinanceBlack}
-                                  alt="Poolz Finance"
-                                  className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
-                                />
-                              )}
-                            </a>
-                          </div>
-                        )
-                      }
+                      {project.title === "DaoSender" && (
+                        <div className="text-black dark:text-white">
+                          developed with
+                          <a href="https://www.poolz.finance/" target="_blank">
+                            {themeContext?.theme === "dark" ? (
+                              <img
+                                src={PoolzFinanceWhite}
+                                alt="Poolz Finance"
+                                className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
+                              />
+                            ) : (
+                              <img
+                                src={PoolzFinanceBlack}
+                                alt="Poolz Finance"
+                                className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
+                              />
+                            )}
+                          </a>
+                        </div>
+                      )}
                       <p className="mb-4 text-xs text-gray-800 dark:text-gray-400 lg:text-base">
                         {project.description}
                       </p>
@@ -220,25 +224,25 @@ export default function ProjectShowcase() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex justify-between p-4">
+                    <div className="flex flex-row gap-4 p-4">
                       <a
                         href={project.liveDemo}
                         target="_blank"
-                        className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-blue-500 px-6 py-2 text-xs font-semibold text-white hover:bg-blue-600 sm:px-2 sm:text-sm md:px-8 lg:px-6"
+                        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-blue-500 px-6 py-2 text-xs font-semibold text-white hover:bg-blue-700 sm:px-2 sm:text-sm md:px-8 lg:px-6"
                       >
-                        <p> Live Demo</p>
+                        <p>Launch App</p>
                         <span className="text-white">
-                          <FiExternalLink />
+                          <FiExternalLink className="size-5" />
                         </span>
                       </a>
                       <a
                         href={project.github}
                         target="_blank"
-                        className="flex cursor-pointer items-center gap-2 rounded-full border border-blue-400 px-6 py-2 text-xs font-semibold text-blue-400 hover:bg-blue-400 hover:text-gray-900 sm:text-sm md:px-8 lg:px-6"
+                        className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full border border-blue-400 px-6 py-2 text-xs font-semibold text-blue-400 hover:bg-blue-600 hover:text-white sm:text-sm md:px-8 lg:px-6"
                       >
                         <p> View Source</p>
                         <span>
-                          <FaCode />
+                          <FaCode className="size-5" />
                         </span>
                       </a>
                     </div>
@@ -248,18 +252,22 @@ export default function ProjectShowcase() {
             ))}
           </div>
         </div>
-        {showModal && selectedProject && selectedProject.dialog.content === "video" && (
-          <VideoModal
-            videoProps={selectedProject.dialog}
-            onClose={closeModal}
-          />
-        )}
-        {showModal && selectedProject && selectedProject.dialog.content === "image" && (
-          <ImageModal
-            imageProps={selectedProject.dialog}
-            onClose={closeModal}
-          />
-        )}
+        {showModal &&
+          selectedProject &&
+          selectedProject.dialog.content === "video" && (
+            <VideoModal
+              videoProps={selectedProject.dialog}
+              onClose={closeModal}
+            />
+          )}
+        {showModal &&
+          selectedProject &&
+          selectedProject.dialog.content === "image" && (
+            <ImageModal
+              imageProps={selectedProject.dialog}
+              onClose={closeModal}
+            />
+          )}
       </div>
     </div>
   );
