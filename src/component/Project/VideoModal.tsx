@@ -1,8 +1,15 @@
 import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
+import { Timestamp } from "./Data";
+
+interface IVideoModalProps {
+  videoId: string;
+  timestamps: Timestamp[];
+  onClose: () => void;
+}
 
 
-const VideoModal = ({ videoId, timestamps, onClose }: any) => {
+const VideoModal = ({ videoId, timestamps, onClose }: IVideoModalProps) => {
     const [currentTime, setCurrentTime] = useState(0);
     const playerRef = useRef<ReactPlayer>(null);
   

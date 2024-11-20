@@ -11,17 +11,17 @@ import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import VideoModal from "./VideoModal";
-import { allProjects } from "./Data";
+import { allProjects, Project } from "./Data";
 import { ThemeContext } from "../Context/ThemeContext";
 import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
 import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
 
 export default function ProjectShowcase() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const themeContext = useContext(ThemeContext);
 
-  const handleViewVideo = (project: any) => {
+  const handleViewVideo = (project: Project) => {
     setSelectedProject(project);
     setShowModal(true);
   };
@@ -247,12 +247,10 @@ export default function ProjectShowcase() {
             ))}
           </div>
         </div>
-        {showModal && selectedProject && (
+        {showModal && selectedProject && selectedProject.dialog.content === "video" && (
           <VideoModal
-            // @ts-ignore
-            videoId={selectedProject.videoId}
-            // @ts-ignore
-            timestamps={selectedProject.timestamps}
+            videoId={selectedProject.dialog.videoId}
+            timestamps={selectedProject.dialog.timestamps}
             onClose={closeModal}
           />
         )}

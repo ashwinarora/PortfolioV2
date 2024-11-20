@@ -10,8 +10,47 @@ import { SiAxios } from "react-icons/si";
 import { FaEthereum } from "react-icons/fa";
 import { SiSolidity } from "react-icons/si";
 import { TbBrandGraphql } from "react-icons/tb";
+import { ReactNode } from "react";
 
-export const allProjects = [
+
+export type Timestamp = {
+  name: string;
+  timestamp: number;
+};
+
+type Tool = {
+  name: string;
+  icon: ReactNode | null;
+  Img: string | null;
+};
+
+type imageDialog = {
+  content: "image";
+  images: string[];
+}
+
+type videoDialog = {
+  content: "video";
+  youtube: string;
+  videoId: string;
+  timestamps: Timestamp[];
+}
+
+export type Project = {
+  title: string;
+  logo?: string;
+  link: string;
+  isBig: boolean;
+  description: string;
+  images: string[];
+  dialog: imageDialog | videoDialog;
+  tools: Tool[];
+  features: string[];
+  liveDemo: string;
+  github: string;
+}
+
+export const allProjects: Project[] = [
     {
       title: "DaoSender",
       logo: "assets/projects/DaoSender/dsLogo.svg",
@@ -26,38 +65,16 @@ export const allProjects = [
         "assets/projects/DaoSender/ds5.JPG",
         "assets/projects/DaoSender/ds7.JPG",
       ],
-      // youtube: "",
-      // videoId: "",
-      // timestamps: [
-      //   {
-      //     name: "Intro",
-      //     timestamp: 0,
-      //   },
-      //   {
-      //     name: "Initial Account Balance",
-      //     timestamp: 5,
-      //   },
-      //   {
-      //     name: "New Game Created",
-      //     timestamp: 13,
-      //   },
-      //   {
-      //     name: "Game Joined",
-      //     timestamp: 26,
-      //   },
-      //   {
-      //     name: "Game Play Started",
-      //     timestamp: 44,
-      //   },
-      //   {
-      //     name: "Game Ended",
-      //     timestamp: 73,
-      //   },
-      //   {
-      //     name: "Final Account Balance",
-      //     timestamp: 79,
-      //   },
-      // ],
+      dialog: {
+        content: "image",
+        images: [
+          "assets/projects/DaoSender/ds1.JPG",
+          "assets/projects/DaoSender/ds2.1.png",
+          "assets/projects/DaoSender/ds3.JPG",
+          "assets/projects/DaoSender/ds5.JPG",
+          "assets/projects/DaoSender/ds7.JPG",
+        ],
+      },
       tools: [
         { name: "React", icon: <FaReact />, Img: null },
         { name: "Solidity", icon: <SiSolidity />, Img: null },
@@ -94,38 +111,16 @@ export const allProjects = [
         "assets/projects/SubsCrypt/sc4.JPG",
         "assets/projects/SubsCrypt/sc5.JPG",
       ],
-      // youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
-      // videoId: "UmSzmoAK5jM",
-      // timestamps: [
-      //   {
-      //     name: "Intro",
-      //     timestamp: 0,
-      //   },
-      //   {
-      //     name: "Initial Account Balance",
-      //     timestamp: 5,
-      //   },
-      //   {
-      //     name: "New Game Created",
-      //     timestamp: 13,
-      //   },
-      //   {
-      //     name: "Game Joined",
-      //     timestamp: 26,
-      //   },
-      //   {
-      //     name: "Game Play Started",
-      //     timestamp: 44,
-      //   },
-      //   {
-      //     name: "Game Ended",
-      //     timestamp: 73,
-      //   },
-      //   {
-      //     name: "Final Account Balance",
-      //     timestamp: 79,
-      //   },
-      // ],
+      dialog: {
+        content: "image",
+        images: [
+          "assets/projects/SubsCrypt/sc1.JPG",
+          "assets/projects/SubsCrypt/sc2.JPG",
+          "assets/projects/SubsCrypt/sc3.JPG",
+          "assets/projects/SubsCrypt/sc4.JPG",
+          "assets/projects/SubsCrypt/sc5.JPG",
+        ],
+      },
       tools: [
         { name: "React", icon: <FaReact />, Img: null },
         { name: "Solidity", icon: <SiSolidity />, Img: null },
@@ -163,38 +158,41 @@ export const allProjects = [
         "assets/projects/et4.jpg",
         "assets/projects/et5.jpg",
       ],
-      youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
-      videoId: "UmSzmoAK5jM",
-      timestamps: [
-        {
-          name: "Intro",
-          timestamp: 0,
-        },
-        {
-          name: "Initial Account Balance",
-          timestamp: 5,
-        },
-        {
-          name: "New Game Created",
-          timestamp: 13,
-        },
-        {
-          name: "Game Joined",
-          timestamp: 26,
-        },
-        {
-          name: "Game Play Started",
-          timestamp: 44,
-        },
-        {
-          name: "Game Ended",
-          timestamp: 73,
-        },
-        {
-          name: "Final Account Balance",
-          timestamp: 79,
-        },
-      ],
+      dialog: {
+        content: "video",
+        youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+        videoId: "UmSzmoAK5jM",
+        timestamps: [
+          {
+            name: "Intro",
+            timestamp: 0,
+          },
+          {
+            name: "Initial Account Balance",
+            timestamp: 5,
+          },
+          {
+            name: "New Game Created",
+            timestamp: 13,
+          },
+          {
+            name: "Game Joined",
+            timestamp: 26,
+          },
+          {
+            name: "Game Play Started",
+            timestamp: 44,
+          },
+          {
+            name: "Game Ended",
+            timestamp: 73,
+          },
+          {
+            name: "Final Account Balance",
+            timestamp: 79,
+          },
+        ],
+      },
       tools: [
         { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
         { name: "Ethers.js", icon: <FaEthereum />, Img: null },
@@ -229,42 +227,45 @@ export const allProjects = [
         "assets/projects/sn-04.jpg",
         "assets/projects/sn-05.jpg",
       ],
-      youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
-      videoId: "yrIb_unPfec",
-      timestamps: [
-        {
-          name: "Sign Up/Sign In",
-          timestamp: 0,
-        },
-        {
-          name: "Sign In Success",
-          timestamp: 18,
-        },
-        {
-          name: "Follow/Unfollow",
-          timestamp: 39,
-        },
-        {
-          name: "Like and Comment",
-          timestamp: 48,
-        },
-        {
-          name: "New Post",
-          timestamp: 56,
-        },
-        {
-          name: "Update Profile Image",
-          timestamp: 74,
-        },
-        {
-          name: "Delete Post",
-          timestamp: 81,
-        },
-        {
-          name: "Password Reset",
-          timestamp: 88,
-        },
-      ],
+      dialog: {
+        content: "video",
+        youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+        videoId: "yrIb_unPfec",
+        timestamps: [
+          {
+            name: "Sign Up/Sign In",
+            timestamp: 0,
+          },
+          {
+            name: "Sign In Success",
+            timestamp: 18,
+          },
+          {
+            name: "Follow/Unfollow",
+            timestamp: 39,
+          },
+          {
+            name: "Like and Comment",
+            timestamp: 48,
+          },
+          {
+            name: "New Post",
+            timestamp: 56,
+          },
+          {
+            name: "Update Profile Image",
+            timestamp: 74,
+          },
+          {
+            name: "Delete Post",
+            timestamp: 81,
+          },
+          {
+            name: "Password Reset",
+            timestamp: 88,
+          },
+        ],
+      },
       tools: [
         { name: "React", icon: <FaReact />, Img: null },
         { name: "MongoDB", icon: <DiMongodb />, Img: null },
@@ -309,30 +310,33 @@ export const allProjects = [
         "assets/projects/hr4.jpg",
         "assets/projects/hr5.jpg",
       ],
-      youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
-      videoId: "aN0AKmAdPjs",
-      timestamps: [
-        {
-          name: "Game Setup",
-          timestamp: 0,
-        },
-        {
-          name: "Ticket Setup",
-          timestamp: 10,
-        },
-        {
-          name: "Ticket Purchase",
-          timestamp: 22,
-        },
-        {
-          name: "Game Started",
-          timestamp: 80,
-        },
-        {
-          name: "Game Ended",
-          timestamp: 136,
-        },
-      ],
+      dialog: {
+        content: "video",
+        youtube: "https://www.youtube.com/embed/zccVz3-4Mho?start=",
+        videoId: "aN0AKmAdPjs",
+        timestamps: [
+          {
+            name: "Game Setup",
+            timestamp: 0,
+          },
+          {
+            name: "Ticket Setup",
+            timestamp: 10,
+          },
+          {
+            name: "Ticket Purchase",
+            timestamp: 22,
+          },
+          {
+            name: "Game Started",
+            timestamp: 80,
+          },
+          {
+            name: "Game Ended",
+            timestamp: 136,
+          },
+        ],
+      },
       tools: [
         { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
         { name: "Web3.js", icon: null, Img: "assets/icons/ether.svg" },
