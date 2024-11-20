@@ -34,8 +34,17 @@ const VideoModal = ({ videoProps, onClose }: IVideoModalProps) => {
     };
   }, [onClose]);
 
+  const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+      onClick={handleClickOutside}
+    >
       <div className="relative max-w-4xl rounded-lg bg-white p-6 dark:bg-gray-800">
         <button
           className="absolute -right-5 -top-5 rounded-full p-1 text-gray-800 dark:text-gray-100"

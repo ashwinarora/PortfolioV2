@@ -98,14 +98,14 @@ export default function ProjectShowcase() {
                       {project.images.map((image, imgIndex) => (
                         <SwiperSlide key={imgIndex}>
                           <img
-                            src={image}
-                            alt={project.title}
-                            className={`w-full px-4 ${
-                              project.isBig
-                                ? "h-auto md:h-[20rem] 2xl:h-[22rem]"
-                                : "2xl:h-[20rem]"
-                            }`}
-                            loading="lazy"
+                          src={image}
+                          alt={project.title}
+                          className={`flex justify-center items-center w-full px-1 h-auto mx-auto object-contain ${
+                            project.isBig
+                            ? "md:h-[20rem] 2xl:h-[22rem]"
+                            : "2xl:h-[20rem]"
+                          }`}
+                          loading="lazy"
                           />
                         </SwiperSlide>
                       ))}
