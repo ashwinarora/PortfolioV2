@@ -95,8 +95,8 @@ export const allProjects: Project[] = [
         "Automated Gas Estimation",
         "8 Chains Supported"
       ],
-      liveDemo: "https://ethtactoe.com/",
-      github: "https://github.com/ashwinarora/ethereum-tictactoe",
+      liveDemo: "https://www.daosender.com/",
+      github: "https://github.com/The-Poolz/MultiSender",
     },
 
 
@@ -129,8 +129,8 @@ export const allProjects: Project[] = [
         "Complete Transparency",
         "Immutable Records",
       ],
-      liveDemo: "https://ethtactoe.com/",
-      github: "https://github.com/ashwinarora/ethereum-tictactoe",
+      liveDemo: "https://www.subscrypt.co/",
+      github: "https://github.com/ashwinarora/SubsCryptDapp",
     },
 
 
