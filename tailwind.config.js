@@ -16,6 +16,7 @@ export default {
       backgroundImage: {
         projectmainbg: " linear-gradient(181deg, #09151d, #061116, #000);",
         testmonila: "linear-gradient(0deg, #000000, #07131b)",
+        lightTestmonila: "linear-gradient(0deg, #f0f0f0, #e4e4e4)",
         homebg: "linear-gradient(197deg, #010101 0%, #040c0f 100%);",
         feature:
           "linear-gradient(175deg, rgb(8 19 30), rgb(6 10 18), #05070d);",

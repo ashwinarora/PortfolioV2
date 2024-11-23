@@ -149,23 +149,21 @@ const About = () => {
     },
   ];
   return (
-    <div>
-      <section className="w-full bg-lightmode py-12 text-white dark:bg-black dark:text-black">
-        <div className="mt-20 flex flex-col justify-center sm:flex-row md:gap-5 2xl:gap-10">
-          <div className="flex flex-col items-center justify-center">
-            <div className="mx:m-auto relative m-[inherit] ml-4 w-full max-w-sm overflow-hidden rounded-full sm:max-w-md">
-              <img
-                src="/assets/images/aboutring.svg"
-                alt="Profile"
-                className="h-auto w-full object-cover"
-                style={{ aspectRatio: "1 / 1" }}
-                loading="lazy"
-              />
-            </div>
+    <div className="flex  items-center justify-center">
+      <section className="w-full  bg-lightmode py-12 text-white dark:bg-black dark:text-black">
+        <div className="mt-20 flex flex-col justify-center sm:flex-row md:gap-5 2xl:gap-x-10">
+          <div className="relative  flex w-full max-w-sm items-center justify-center overflow-hidden rounded-full sm:max-w-md">
+            <img
+              src="/assets/images/aboutring.svg"
+              alt="Profile"
+              className="h-full w-full object-cover"
+              style={{ aspectRatio: "1 / 1" }}
+              loading="lazy"
+            />
           </div>
           <div className="flex flex-col items-center justify-center gap-0 2xl:-mt-16">
             <div className="mx-10 space-y-4 text-center sm:mx-0">
-              <h2 className="-mt-4 flex gap-2 text-3xl font-bold">
+              <h2 className="-mt-4 flex gap-x-4 text-3xl font-bold">
                 <img
                   className="invert dark:invert-0"
                   src="assets/icons/star.svg"
@@ -174,13 +172,30 @@ const About = () => {
                 />
                 <span className="text-black dark:text-white"> About Me</span>
               </h2>
-              <p className="mx-auto max-w-lg text-justify text-sm text-gray-500 md:text-lg 2xl:text-lg">
-                I am a Full Stack Developer with expertise in Blockchain. I can
-                realize the vision of your product. I am proficient with both
-                Front-End and Back-End Development. Using React for Front-End
-                and Node with Express for Back-End. Apart from this, I have
-                experience in Blockchain Development with expertise in Ethereum.
-              </p>
+              <div className="mx-auto max-w-lg space-y-4 text-justify text-sm text-gray-500 md:text-lg 2xl:text-lg">
+                <p>
+                  I started coding in C/C++ in school and later mastered
+                  object-oriented programming with Java in college, building a
+                  strong technical foundation.
+                </p>
+                <p>
+                  A casual conversation with a friend sparked my curiosity about
+                  Bitcoin. He vaguely described it as "software that represents
+                  money," and I thought, "I can code, I should be able to code
+                  Bitcoin and basically print money!"
+                </p>
+                <p>
+                  Naturally, my brilliant plan didn’t work, but it introduced me
+                  to the fascinating world of blockchain. This curiosity led me
+                  to dive deeper and learn Solidity, JavaScript, React, and
+                  more—all while still in college.
+                </p>
+                <p>
+                  Fast forward to today, I have gained industry experience
+                  building software that serves people every day, delivering
+                  value and addressing real-world challenges.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -192,7 +207,7 @@ const About = () => {
                   className="flex flex-col items-center justify-center text-center"
                   key={stat.label}
                 >
-                  <div className="rounded-full  p-2 border border-slate-300 dark:border-slate-800 ">
+                  <div className="rounded-full border border-slate-300 p-2 dark:border-slate-800">
                     <stat.icon className="size-6 text-[#00bfff]" />
                   </div>
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
