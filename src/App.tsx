@@ -5,6 +5,7 @@ import Footer from "./component/Footer";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
 import Project from "./component/Project/Projects";
+import Testimonial from "./component/Testimonial";
 import Whyme from "./component/Whyme";
 import { ThemeProvider } from "./component/Context/ThemeContext";
 import ContactContainer from "./component/Contact/ContactContainer";
@@ -68,9 +69,9 @@ function App() {
       <div id="whyme">
         <Whyme />
       </div>
-      {/* <div id="testimonial">
+      <div id="testimonial">
         <Testimonial />
-      </div> */}
+      </div>
       <div id="about" ref={aboutSection}>
         <About />
       </div>

@@ -49,22 +49,6 @@ export type Project = {
   github: string;
 }
 
-const daoSenderImages = [
-  "assets/projects/DaoSender/ds1.webp",
-  "assets/projects/DaoSender/ds2.1.webp",
-  "assets/projects/DaoSender/ds3.webp",
-  "assets/projects/DaoSender/ds5.webp",
-  "assets/projects/DaoSender/ds7.webp",
-]
-
-const subsCryptImages = [
-  "assets/projects/SubsCrypt/sc1.webp",
-  "assets/projects/SubsCrypt/sc2.webp",
-  "assets/projects/SubsCrypt/sc3.webp",
-  "assets/projects/SubsCrypt/sc4.webp",
-  "assets/projects/SubsCrypt/sc5.webp",
-]
-
 export const allProjects: Project[] = [
     {
       title: "DaoSender",
@@ -72,10 +56,22 @@ export const allProjects: Project[] = [
       isBig: false,
       description:
         "The most gas-optimized solution for airdropping ERC20 tokens. Designed for efficiency, allowing users to upload unlimited recipient addresses and amounts, automatically calculating and selecting the most cost-effective way to execute transactions. Live on 8 chains.",
-      images: daoSenderImages,
+      images: [
+        "assets/projects/DaoSender/ds1.JPG",
+        "assets/projects/DaoSender/ds2.1.png",
+        "assets/projects/DaoSender/ds3.JPG",
+        "assets/projects/DaoSender/ds5.JPG",
+        "assets/projects/DaoSender/ds7.JPG",
+      ],
       dialog: {
         content: "image",
-        images: daoSenderImages,
+        images: [
+          "assets/projects/DaoSender/ds1.JPG",
+          "assets/projects/DaoSender/ds2.1.png",
+          "assets/projects/DaoSender/ds3.JPG",
+          "assets/projects/DaoSender/ds5.JPG",
+          "assets/projects/DaoSender/ds7.JPG",
+        ],
       },
       tools: [
         { name: "React", icon: <FaReact />, Img: null },
@@ -95,8 +91,8 @@ export const allProjects: Project[] = [
         "Automated Gas Estimation",
         "8 Chains Supported"
       ],
-      liveDemo: "https://www.daosender.com/",
-      github: "https://github.com/The-Poolz/MultiSender",
+      liveDemo: "https://ethtactoe.com/",
+      github: "https://github.com/ashwinarora/ethereum-tictactoe",
     },
 
 
@@ -105,10 +101,22 @@ export const allProjects: Project[] = [
       isBig: false,
       description:
         "A subscription management platform on Ethereum, revolutionizing how creators and subscribers interact. Think Patreon, but fully decentralized and powered by blockchain! Empowering creators to monetize their services with complete transparency and giving subscribers unmatched trust and security in every transaction. 🚀",
-      images: subsCryptImages,
+      images: [
+        "assets/projects/SubsCrypt/sc1.JPG",
+        "assets/projects/SubsCrypt/sc2.JPG",
+        "assets/projects/SubsCrypt/sc3.JPG",
+        "assets/projects/SubsCrypt/sc4.JPG",
+        "assets/projects/SubsCrypt/sc5.JPG",
+      ],
       dialog: {
         content: "image",
-        images: subsCryptImages,
+        images: [
+          "assets/projects/SubsCrypt/sc1.JPG",
+          "assets/projects/SubsCrypt/sc2.JPG",
+          "assets/projects/SubsCrypt/sc3.JPG",
+          "assets/projects/SubsCrypt/sc4.JPG",
+          "assets/projects/SubsCrypt/sc5.JPG",
+        ],
       },
       tools: [
         { name: "React", icon: <FaReact />, Img: null },
@@ -129,8 +137,8 @@ export const allProjects: Project[] = [
         "Complete Transparency",
         "Immutable Records",
       ],
-      liveDemo: "https://www.subscrypt.co/",
-      github: "https://github.com/ashwinarora/SubsCryptDapp",
+      liveDemo: "https://ethtactoe.com/",
+      github: "https://github.com/ashwinarora/ethereum-tictactoe",
     },
 
 
