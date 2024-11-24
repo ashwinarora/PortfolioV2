@@ -34,7 +34,6 @@ const Whyme = () => {
 
   return (
     <div>
-      {/* <section className="relative mx-0 -mb-1 mt-28 flex h-[900px] w-auto items-center justify-center bg-lightmode bg-testmonila py-12 dark:bg-black sm:h-[690px] md:mx-0 md:mb-0 md:py-24 lg:gap-6 lg:py-32 xl:gap-0"> */}
       <section className="relative mx-0 flex h-auto w-auto items-center justify-center bg-lightTestmonila dark:bg-testmonila py-12 sm:h-auto md:mx-0 md:py-24 lg:gap-6 lg:py-32 xl:gap-0">
         <img
           src="assets/icons/testimonialrightbg.svg"

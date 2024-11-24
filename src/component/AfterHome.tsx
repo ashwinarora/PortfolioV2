@@ -11,7 +11,7 @@ const AfterHome = () => {
       <div className="moving-border1 dark:moving-border m-8 mb-16 mt-16 w-full sm:m-16 lg:!mx-44 2xl:!mx-52">
         <div className="bg-[#f0f0f0] p-6 dark:bg-[#050811]">
           <div className="trapezoid1 flex items-center justify-center rounded-lg border-2 border-[#2e8fc8] bg-white shadow-[#000000] dark:border-[#28374e] dark:bg-[#10131b]">
-            <p className="2xl:text-md text-center text-sm text-black dark:text-white sm:p-6 md:text-2xl">
+            <p className="2xl:text-md text-center text-lg text-black dark:text-white sm:p-6 md:text-2xl">
               With <span className="text-spantext">over 5 years </span> of
               experience, having{" "}
               <span className="text-spantext">led the tech team</span> at

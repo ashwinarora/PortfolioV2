@@ -156,7 +156,7 @@ html {
 .trapezoid1 {
   position: relative;
   padding: 2rem;
-  clip-path: polygon(0% -2%, 52% 13%, 100% -1%, 100% 100%, 48% 91%, 0% 101%);
+  clip-path: polygon(0% -2%, 52% 7%, 100% -1%, 100% 100%, 48% 91%, 0% 101%);
 }
 
 .customCursor {
