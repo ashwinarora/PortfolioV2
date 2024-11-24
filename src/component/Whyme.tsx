@@ -5,33 +5,37 @@ const Whyme = () => {
     {
       id: "01",
       title: "Expertise",
-      description:
-        "I bring a wealth of experience and expertise to the table With a.",
+      description: "Proficient in modern tools, frameworks, and methodologies.",
     },
     {
       id: "02",
-      title: " Reliability",
-      description:
-        "Meeting deadlines and exceeding expectations is my priority.",
+      title: "Communication",
+      description: "Clear, concise, and proactive in exchanging information.",
     },
     {
       id: "03",
-      title: "Versatility",
-      description:
-        "I excel in [specific skills, e.g., content development, project management, etc.],",
+      title: "Ownership",
+      description: "Takes full responsibility for tasks and outcomes.",
     },
-
     {
       id: "04",
       title: "Professionalism",
-      description:
-        "With a strong work ethic and attention to detail, I approach every project.",
+      description: "A strong work ethic, respect for deadlines, and integrity.",
     },
   ];
+
+  const points = [
+    "Proven expertise in scalable web and blockchain applications with over 5 years of experience.",
+    "Strong sense of ownership—dedicated to taking full responsibility for delivering exceptional outcomes.",
+    "Innovative problem-solver, delivering solutions that save time and eliminate inefficiencies.",
+    "Full-stack proficiency in React, TypeScript, Solidity, and backend integration.",
+    "Committed to professionalism, clear communication, and delivering high-quality results.",
+  ];
+
   return (
     <div>
-      <section className="relative bg-testmonila mx-0 -mb-1 mt-28 flex h-[900px] w-auto items-center justify-center bg-lightmode py-12 dark:bg-black sm:h-[690px] md:mx-0 md:mb-0 md:py-24 lg:gap-6 lg:py-32 xl:gap-0">
-      <img
+      <section className="relative mx-0 flex h-auto w-auto items-center justify-center bg-lightTestmonila dark:bg-testmonila py-12 sm:h-auto md:mx-0 md:py-24 lg:gap-6 lg:py-32 xl:gap-0">
+        <img
           src="assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"
           className="absolute right-3 top-16"
@@ -50,37 +54,13 @@ const Whyme = () => {
               <span className="text-spantext"> Next Project ?</span>
             </h2>
             <ul className="mt-6 space-y-4 text-gray-700 dark:text-gray-300">
-              <li className="flex items-center gap-x-2 text-lg">
-                <FaHandPointRight />
-                <span>Proven track record of delivering high-quality projects on time.</span>
-              </li>
-              <li className="flex items-center gap-x-2 text-lg">
-                <FaHandPointRight />
-                <span>Strong problem-solving skills and attention to detail.</span>
-              </li>
-              <li className="flex items-center gap-x-2 text-lg">
-                <FaHandPointRight />
-                <span>Excellent communication and collaboration abilities.</span>
-              </li>
-              <li className="flex items-center gap-x-2 text-lg">
-                <FaHandPointRight />
-                <span>Adaptable to new technologies and methodologies.</span>
-              </li>
-              <li className="flex items-center gap-x-2 text-lg">
-                <FaHandPointRight />
-                <span>Commitment to continuous learning and professional growth.</span>
-              </li>
+              {points.map((point, index) => (
+                <li key={index} className="flex items-center gap-x-4 text-base">
+                  <FaHandPointRight className="size-5" />
+                  <span>{point}</span>
+                </li>
+              ))}
             </ul>
-            
-            {/* <p className="text-muted-foreground mt-4 max-w-[600px] text-gray-500 md:text-sm lg:text-base xl:text-lg">
-              I am a Full Stack Developer with expertise in Blockchain. I can
-              realize the vision of your product. I am proficient with both
-              Front-End and Back-End Development. Using React for Front-End and
-              Node with Express for Back-End. Apart from this, I have experience
-              in Blockchain Development with expertise in Ethereum. My portfolio
-              demonstrates my ability to meet deadlines, exceed expectations,
-              and deliver outstanding work.
-            </p> */}
           </div>
 
           <div className="sm:-px-10 rounded-2xl bg-feturelg px-2 dark:bg-feature 2xl:mx-16">
