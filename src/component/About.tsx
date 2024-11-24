@@ -149,21 +149,30 @@ const About = () => {
     },
   ];
   return (
-    <div className="flex  items-center justify-center">
-      <section className="w-full  bg-lightmode py-12 text-white dark:bg-black dark:text-black">
-        <div className="mt-20 flex flex-col justify-center sm:flex-row md:gap-5 2xl:gap-x-10">
-          <div className="relative  flex w-full max-w-sm items-center justify-center overflow-hidden rounded-full sm:max-w-md">
+    <div className="flex items-center justify-center">
+      <section className="w-full bg-lightmode py-12 text-white dark:bg-black dark:text-black">
+        <div className="mt-20 flex flex-col justify-center md:gap-x-5 lg:flex-row lg:gap-x-8 xl:gap-x-10 2xl:gap-x-12">
+          <div className="mx-auto flex w-full max-w-xs flex-col items-center justify-center sm:max-w-sm md:max-w-md lg:m-0 lg:max-w-lg xl:max-w-xl">
+            <h2 className="w-full lg:hidden gap-x-4 text-2xl font-bold sm:text-3xl flex lg:text-4xl">
+              <img
+                className="invert dark:invert-0"
+                src="assets/icons/star.svg"
+                alt="Star Icon"
+                loading="lazy"
+              />
+              <span className="text-black dark:text-white"> About Me</span>
+            </h2>
             <img
               src="/assets/images/aboutring.svg"
               alt="Profile"
-              className="h-full w-full object-cover"
+              className="h-full w-full max-w-[300px] object-cover sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]"
               style={{ aspectRatio: "1 / 1" }}
               loading="lazy"
             />
           </div>
-          <div className="flex flex-col items-center justify-center gap-0 2xl:-mt-16">
-            <div className="mx-10 space-y-4 text-center sm:mx-0">
-              <h2 className="-mt-4 flex gap-x-4 text-3xl font-bold">
+          <div className="flex flex-col items-center justify-center gap-0 lg:-mt-8 xl:-mt-12 2xl:-mt-16">
+            <div className="mx-4 space-y-4 text-center sm:mx-6 md:mx-8 lg:mx-10">
+              <h2 className="-mt-4 hidden gap-x-4 text-2xl font-bold sm:text-3xl lg:flex lg:text-4xl">
                 <img
                   className="invert dark:invert-0"
                   src="assets/icons/star.svg"
@@ -172,7 +181,7 @@ const About = () => {
                 />
                 <span className="text-black dark:text-white"> About Me</span>
               </h2>
-              <div className="mx-auto max-w-lg space-y-4 text-justify text-sm text-gray-500 md:text-lg 2xl:text-lg">
+              <div className="mx-auto max-w-xs space-y-4 text-justify text-sm text-gray-500 sm:max-w-sm sm:text-base md:max-w-md md:text-lg lg:max-w-lg lg:text-xl xl:max-w-xl">
                 <p>
                   I started coding in C/C++ in school and later mastered
                   object-oriented programming with Java in college, building a
