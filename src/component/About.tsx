@@ -163,7 +163,7 @@ const About = () => {
               <span className="text-black dark:text-white"> About Me</span>
             </h2>
             <img
-              src="/assets/images/aboutring.svg"
+              src="/assets/images/circles.svg"
               alt="Profile"
               className="h-full w-full max-w-[300px] object-cover sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]"
               style={{ aspectRatio: "1 / 1" }}
