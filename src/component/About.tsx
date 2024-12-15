@@ -163,9 +163,9 @@ const About = () => {
               <span className="text-black dark:text-white"> About Me</span>
             </h2>
             <img
-              src="/assets/images/circles.svg"
+              src="/assets/images/circles.avif"
               alt="Profile"
-              className="h-full w-full max-w-[300px] object-cover sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]"
+              className="h-full w-full max-w-[300px] object-contain sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]"
               style={{ aspectRatio: "1 / 1" }}
               loading="lazy"
             />
@@ -182,24 +182,24 @@ const About = () => {
                 <span className="text-black dark:text-white"> About Me</span>
               </h2>
               <div className="mx-auto max-w-xs space-y-4 text-justify text-sm text-gray-500 sm:max-w-sm sm:text-base md:max-w-md md:text-lg lg:max-w-lg lg:text-xl xl:max-w-xl">
-                <p>
-                  I started coding in C/C++ in school and later mastered
+                <p className="leading-8">
+                  I started coding in C/C++ back in school days and later mastered
                   object-oriented programming with Java in college, building a
                   strong technical foundation.
                 </p>
-                <p>
+                <p className="leading-8">
                   A casual conversation with a friend sparked my curiosity about
                   Bitcoin. He vaguely described it as "software that represents
                   money," and I thought, "I can code, I should be able to code
                   Bitcoin and basically print money!"
                 </p>
-                <p>
+                <p className="leading-8">
                   Naturally, my brilliant plan didn’t work, but it introduced me
                   to the fascinating world of blockchain. This curiosity led me
                   to dive deeper and learn Solidity, JavaScript, React, and
                   more—all while still in college.
                 </p>
-                <p>
+                <p className="leading-8">
                   Fast forward to today, I have gained industry experience
                   building software that serves people every day, delivering
                   value and addressing real-world challenges.
