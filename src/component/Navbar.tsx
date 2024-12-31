@@ -4,8 +4,9 @@ import { ThemeContext } from "./Context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Sections } from "../App";
 import { MdOutlineOpenInNew } from "react-icons/md";
+import Snowfall from "react-snowfall";
 
-const Navbar = ({activeSection}: {activeSection: Sections}) => {
+const Navbar = ({ activeSection }: { activeSection: Sections }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -37,6 +38,21 @@ const Navbar = ({activeSection}: {activeSection: Sections}) => {
 
   const themeContext = useContext(ThemeContext);
 
+  const displaySnowfall = (): boolean => {
+    if (themeContext?.theme === "light") return false;
+
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    const currentDateNumber = currentDate.getDate();
+
+    // Display snowfall only during December 20 and January 5
+    if (currentMonth !== 11 && currentMonth !== 0) return false;
+    if (currentMonth === 11 && currentDateNumber < 20) return false;
+    if (currentMonth === 0 && currentDateNumber > 5) return false;
+
+    return true;
+  };
+
   if (!themeContext) return null;
 
   return (
@@ -47,6 +63,19 @@ const Navbar = ({activeSection}: {activeSection: Sections}) => {
           : "border-gray-350 border-b bg-gray-50 dark:border-[#181818] dark:bg-bgPrimary"
       } sticky top-0 z-50 p-1 transition-all duration-300 sm:p-2`}
     >
+      {
+        // Display snowfall only during December and January
+        displaySnowfall() &&  (
+          <Snowfall
+            color="white"
+            style={{
+              background: "transparent",
+              zIndex: 1,
+            }}
+            snowflakeCount={25}
+          />
+        )
+      }
       <div className="mx-auto flex flex-wrap items-center justify-between p-4 md:px-20">
         <a
           href="/#home"
@@ -82,26 +111,30 @@ const Navbar = ({activeSection}: {activeSection: Sections}) => {
           } md:block md:w-auto`}
           id="navbar-solid-bg"
         >
-          <ul className="mt-4 flex flex-col items-center justify-center rounded-lg gap-y-1 border border-gray-600 bg-gray-50 font-medium shadow-2xl dark:border-gray-700 dark:bg-black md:mr-0 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col items-center justify-center gap-y-1 rounded-lg border border-gray-600 bg-gray-50 font-medium shadow-2xl dark:border-gray-700 dark:bg-black md:mr-0 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-transparent md:dark:bg-transparent rtl:space-x-reverse">
             {navLinks.map((link) => (
               <li key={link.section}>
                 <button
                   onClick={() => {
-                    document.getElementById(link.section)?.scrollIntoView({ behavior: "smooth" });
+                    document
+                      .getElementById(link.section)
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className={`block rounded px-3 py-2 text-sm md:bg-transparent md:p-0 2xl:text-xl cursor-pointer ${
+                  className={`block cursor-pointer rounded px-3 py-2 text-sm md:bg-transparent md:p-0 2xl:text-xl ${
                     activeSection === link.section
                       ? "bg-blue-700 text-white md:text-blue-700 md:dark:text-blue-500"
                       : "text-sm text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-blue-500"
                   }`}
-                  aria-current={activeSection === link.section ? "page" : undefined}
+                  aria-current={
+                    activeSection === link.section ? "page" : undefined
+                  }
                 >
                   {link.name}
                 </button>
               </li>
             ))}
             <a
-              className="flex flex-row justify-center items-center mx-2 mb-2 md:m-0 gap-x-2 rounded-md border border-gray-600 px-6 py-1 text-sm text-gray-900 hover:bg-slate-300 dark:border-gray-600 dark:text-white dark:hover:bg-blue-700 md:bg-transparent 2xl:text-xl cursor-pointer"
+              className="mx-2 mb-2 flex cursor-pointer flex-row items-center justify-center gap-x-2 rounded-md border border-gray-600 px-6 py-1 text-sm text-gray-900 hover:bg-slate-300 dark:border-gray-600 dark:text-white dark:hover:bg-blue-700 md:m-0 md:bg-transparent 2xl:text-xl"
               target="_blank"
               href="https://resume.ashwinarora.com/"
             >
