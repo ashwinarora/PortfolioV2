@@ -17,7 +17,6 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     const thisTheme: Theme = savedTheme ? savedTheme as Theme : "dark"
-    console.log(savedTheme)
     setTheme(thisTheme);
     document.documentElement.classList.add(thisTheme);
   }, []);

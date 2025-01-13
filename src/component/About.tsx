@@ -1,6 +1,7 @@
 import { FaClock, FaCode, FaMedal } from "react-icons/fa6";
 import { startDate } from "./constants";
 import { BsCupHotFill } from "react-icons/bs";
+import CountUp from "react-countup";
 
 const calculateExperience = () => {
   const currentDate = new Date();
@@ -121,33 +122,32 @@ function calculateCoffeeCups(): number {
   return totalLOC;
 }
 
-function toHumanReadable(number: number): string {
-  return new Intl.NumberFormat("en-US").format(number);
-}
 
 const About = () => {
+
   const statistics = [
     {
       icon: FaMedal,
-      value: calculateExperience() + "+",
+      value: calculateExperience(),
       label: "Years of Experience",
     },
     {
       icon: FaCode,
-      value: toHumanReadable(calculateLinesOfCode()) + "+",
+      value: calculateLinesOfCode(),
       label: "Lines of Code",
     },
     {
       icon: FaClock,
-      value: toHumanReadable(calculateHours()) + "+",
+      value: calculateHours(),
       label: "Hours of Coding",
     },
     {
       icon: BsCupHotFill,
-      value: toHumanReadable(calculateCoffeeCups()) + "+",
+      value: calculateCoffeeCups(),
       label: "Cups of Coffee",
     },
   ];
+
   return (
     <div className="flex items-center justify-center">
       <section className="w-full bg-lightmode py-12 text-white dark:bg-black dark:text-black">
@@ -209,7 +209,9 @@ const About = () => {
           </div>
         </div>
         <div className="m-auto mt-10 flex justify-center">
-          <div className="grid w-11/12 grid-cols-2 gap-y-10 rounded-lg border border-gray-800 bg-gray-200 p-2 dark:bg-[#061116] sm:justify-between sm:p-6 md:flex md:flex-row md:items-center md:justify-around md:gap-y-0 lg:w-10/12 xl:w-8/12">
+          <div
+            className="grid w-11/12 grid-cols-2 gap-y-10 rounded-lg border border-gray-800 bg-gray-200 p-2 dark:bg-[#061116] sm:justify-between sm:p-6 md:flex md:flex-row md:items-center md:justify-around md:gap-y-0 lg:w-10/12 xl:w-8/12"
+          >
             {statistics
               .map((stat) => (
                 <div
@@ -220,7 +222,16 @@ const About = () => {
                     <stat.icon className="size-6 text-[#00bfff]" />
                   </div>
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
-                    {stat.value}
+                    <CountUp
+                      start={0}
+                      end={stat.value}
+                      decimals={stat.label === "Years of Experience" ? 1 : 0}
+                      duration={2.5}
+                      delay={5}
+                      enableScrollSpy={true}
+                      scrollSpyDelay={250}
+                      scrollSpyOnce={true}
+                    />+
                   </p>
                   <p className="text-sm text-gray-500 sm:text-base">
                     {stat.label}
