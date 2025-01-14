@@ -130,21 +130,25 @@ const About = () => {
       icon: FaMedal,
       value: calculateExperience(),
       label: "Years of Experience",
+      counterDuration: 1.5
     },
     {
       icon: FaCode,
       value: calculateLinesOfCode(),
       label: "Lines of Code",
+      counterDuration: 4
     },
     {
       icon: FaClock,
       value: calculateHours(),
       label: "Hours of Coding",
+      counterDuration: 3
     },
     {
       icon: BsCupHotFill,
       value: calculateCoffeeCups(),
       label: "Cups of Coffee",
+      counterDuration: 2
     },
   ];
 
@@ -226,8 +230,7 @@ const About = () => {
                       start={0}
                       end={stat.value}
                       decimals={stat.label === "Years of Experience" ? 1 : 0}
-                      duration={2.5}
-                      delay={5}
+                      duration={stat.counterDuration}
                       enableScrollSpy={true}
                       scrollSpyDelay={250}
                       scrollSpyOnce={true}
