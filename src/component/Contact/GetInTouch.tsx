@@ -5,8 +5,16 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
-import { contactEmail, github, linkedIn, telegram } from "../constants";
+import { contactEmail, github, linkedIn, telegram, twitter } from "../constants";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+
+const socialLinks = [
+  { href: linkedIn, icon: FaLinkedin  },
+  { href: twitter, icon: FaXTwitter  },
+  { href: github, icon: FaGithub  },
+  { href: telegram, icon: FaTelegramPlane },
+];
 
 const GetInTouch = () => {
   return (
@@ -28,7 +36,7 @@ const GetInTouch = () => {
           <div className="hidden rounded-full bg-[#00bfff] p-2 sm:block">
             <FaEnvelope className="h-6 w-6 text-white" />
           </div>
-          <p className="flex items-center justify-start gap-x-3 overflow-auto text-black dark:text-white">
+          <p className="flex items-center justify-start gap-x-3 overflow-visible text-black dark:text-white ">
             <a href={"mailto:" + contactEmail} className="hover:underline">
               {contactEmail}
             </a>
@@ -41,27 +49,15 @@ const GetInTouch = () => {
           </p>
         </div>
         <div className="mr-4 flex flex-wrap items-center justify-between">
-          <div className="flex items-center gap-x-4">
-            <div className="rounded-full p-2 hover:scale-125">
-              <a href={linkedIn} target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="h-6 w-6 dark:text-white" />
-              </a>
+          {socialLinks.map((link, index) => (
+            <div key={index} className="flex items-center gap-x-4">
+              <div className="rounded-full p-2 hover:scale-125">
+                <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <link.icon  className="h-6 w-6 dark:text-white" />
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-x-4">
-            <div className="rounded-full p-2 hover:scale-125">
-              <a href={telegram} target="_blank" rel="noopener noreferrer">
-                <FaTelegramPlane className="h-6 w-6 dark:text-white" />
-              </a>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-4">
-            <div className="rounded-full p-2 hover:scale-125">
-              <a href={github} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="h-6 w-6 dark:text-white" />
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="my-8 flex flex-row items-center justify-between">
           <hr className="w-4/12 border-gray-200 dark:border-gray-700" />

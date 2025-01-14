@@ -1,5 +1,13 @@
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
+import { linkedIn, twitter, github } from "./constants";
+
+const socialLinks = [
+  { href: linkedIn, icon: <FaLinkedin /> },
+  { href: twitter, icon: <FaXTwitter /> },
+  { href: github, icon: <BsGithub /> },
+];
+
 const Footer = () => {
   return (
     <div>
@@ -39,26 +47,19 @@ const Footer = () => {
             </ul>
 
             <div className="gap34 -mt-3 flex h-8 w-20 items-center justify-center sm:mt-0">
-              <a
-                className="mr-4 transform transition duration-200 hover:scale-110 active:scale-90"
-                rel="noreferrer"
-                href="https://www.linkedin.com/in/ashwin-arora/"
-                target="_blank"
-              >
-                <i className="text-3xl text-black dark:text-white">
-                  <FaLinkedin />
-                </i>
-              </a>
-              <a
-                href="https://github.com/ashwinarora/"
-                rel="noreferrer"
-                target="_blank"
-                className="transform transition duration-200 hover:scale-110 active:scale-90"
-              >
-                <i className="text-3xl text-black dark:text-white">
-                  <BsGithub />
-                </i>
-              </a>
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  className="mr-4 transform transition duration-200 hover:scale-110 active:scale-90"
+                  rel="noreferrer"
+                  href={link.href}
+                  target="_blank"
+                >
+                  <i className="text-3xl text-black dark:text-white">
+                    {link.icon}
+                  </i>
+                </a>
+              ))}
             </div>
           </div>
           <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto" />
