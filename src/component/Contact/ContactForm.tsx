@@ -56,7 +56,7 @@ export default function ContactForm() {
           <input
             id="name"
             type="text"
-            placeholder="Enter Your Name"
+            placeholder="Richard Hendricks"
             className="w-full rounded-md border border-gray-300 p-2 text-white dark:border-[#162025] dark:bg-[#091419]"
             name="user_name"
             value={name}
@@ -70,7 +70,7 @@ export default function ContactForm() {
           <input
             id="email"
             type="email"
-            placeholder="Enter Your Email"
+            placeholder="richard@piedpiper.com"
             className={`w-full rounded-md border p-2 text-black dark:bg-[#091419] dark:text-white ${isEmailError() ? "border-red-500" : "border-gray-300 dark:border-[#162025]"}`}
             name="user_email"
             value={email}
@@ -83,7 +83,7 @@ export default function ContactForm() {
           </label>
           <textarea
             id="message"
-            placeholder="Enter Your Message"
+            placeholder="Let’s build something even Gavin Belson would envy."
             className="min-h-[100px] w-full rounded-md border border-gray-300 p-2 text-white dark:border-[#162025] dark:bg-[#091419]"
             name="user_message"
             value={message}
