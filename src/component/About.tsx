@@ -2,6 +2,8 @@ import { FaClock, FaCode, FaMedal } from "react-icons/fa6";
 import { startDate } from "./constants";
 import { BsCupHotFill } from "react-icons/bs";
 import CountUp from "react-countup";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const calculateExperience = () => {
   const currentDate = new Date();
@@ -124,6 +126,12 @@ function calculateCoffeeCups(): number {
 
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Set visible after component mounts to ensure DOM is ready
+    setIsVisible(true);
+  }, []);
 
   const statistics = [
     {
@@ -158,29 +166,35 @@ const About = () => {
         <div className="mt-20 flex flex-col justify-center md:gap-x-5 lg:flex-row lg:gap-x-8 xl:gap-x-10 2xl:gap-x-12">
           <div className="mx-auto flex w-full max-w-xs flex-col items-center justify-center sm:max-w-sm md:max-w-md lg:m-0 lg:max-w-lg xl:max-w-xl">
             <h2 className="w-full lg:hidden gap-x-4 text-2xl font-bold sm:text-3xl flex lg:text-4xl">
-              <img
+              <Image
                 className="invert dark:invert-0"
-                src="assets/icons/star.svg"
+                src="/assets/icons/star.svg"
                 alt="Star Icon"
+                width={24}
+                height={24}
                 loading="lazy"
               />
               <span className="text-black dark:text-white"> About Me</span>
             </h2>
-            <img
+            <Image
               src="/assets/images/circles.avif"
               alt="Profile"
               className="h-full w-full max-w-[300px] object-contain sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]"
               style={{ aspectRatio: "1 / 1" }}
+              width={700}
+              height={700}
               loading="lazy"
             />
           </div>
           <div className="flex flex-col items-center justify-center gap-0 lg:-mt-8 xl:-mt-12 2xl:-mt-16">
             <div className="mx-4 space-y-4 text-center sm:mx-6 md:mx-8 lg:mx-10">
               <h2 className="-mt-4 hidden gap-x-4 text-2xl font-bold sm:text-3xl lg:flex lg:text-4xl">
-                <img
+                <Image
                   className="invert dark:invert-0"
-                  src="assets/icons/star.svg"
+                  src="/assets/icons/star.svg"
                   alt="Star Icon"
+                  width={24}
+                  height={24}
                   loading="lazy"
                 />
                 <span className="text-black dark:text-white"> About Me</span>
@@ -198,7 +212,7 @@ const About = () => {
                   Bitcoin and basically print money!"
                 </p>
                 <p className="leading-8">
-                  Naturally, my brilliant plan didn’t work, but it introduced me
+                  Naturally, my brilliant plan didn't work, but it introduced me
                   to the fascinating world of blockchain. This curiosity led me
                   to dive deeper and learn Solidity, JavaScript, React, and
                   more—all while still in college.
@@ -226,15 +240,23 @@ const About = () => {
                     <stat.icon className="size-6 text-[#00bfff]" />
                   </div>
                   <p className="text-lg font-bold text-black dark:text-white sm:text-xl">
-                    <CountUp
-                      start={0}
-                      end={stat.value}
-                      decimals={stat.label === "Years of Experience" ? 1 : 0}
-                      duration={stat.counterDuration}
-                      enableScrollSpy={true}
-                      scrollSpyDelay={250}
-                      scrollSpyOnce={true}
-                    />+
+                    {isVisible ? (
+                      <CountUp
+                        start={0}
+                        end={stat.value}
+                        decimals={stat.label === "Years of Experience" ? 1 : 0}
+                        duration={stat.counterDuration}
+                        enableScrollSpy={true}
+                        scrollSpyDelay={250}
+                        scrollSpyOnce={true}
+                        redraw={false}
+                        suffix="+"
+                      >
+                        {({ countUpRef }) => <span ref={countUpRef} />}
+                      </CountUp>
+                    ) : (
+                      "0"
+                    )}
                   </p>
                   <p className="text-sm text-gray-500 sm:text-base">
                     {stat.label}

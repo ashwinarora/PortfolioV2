@@ -12,8 +12,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import VideoModal from "./VideoModal";
 import { allProjects, Project } from "./Data";
 import { ThemeContext } from "../Context/ThemeContext";
-import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
-import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
+// import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
+// import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
 import ImageModal from "./ImageModal";
 import { MdOutlineOpenInNew } from "react-icons/md";
 
@@ -159,13 +159,13 @@ export default function ProjectShowcase() {
                           <a href="https://www.poolz.finance/" target="_blank">
                             {themeContext?.theme === "dark" ? (
                               <img
-                                src={PoolzFinanceWhite}
+                                src="/assets/images/PoolzFinanceWhite.png"
                                 alt="Poolz Finance"
                                 className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
                               />
                             ) : (
                               <img
-                                src={PoolzFinanceBlack}
+                                src="/assets/images/PoolzFinanceBlack.png"
                                 alt="Poolz Finance"
                                 className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
                               />
@@ -181,7 +181,7 @@ export default function ProjectShowcase() {
                           Tools Used
                         </h3>
                         <div className="flex flex-wrap gap-1 md:gap-2">
-                          {project.tools.map((tool: any, i: any) => (
+                          {project.tools.map((tool, i) => (
                             <span
                               key={i}
                               className="flex items-center gap-1 rounded-full bg-lightmode px-1 py-1 text-sm text-black dark:bg-gray-700 dark:text-blue-300 md:px-1"

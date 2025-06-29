@@ -13,7 +13,7 @@ const VideoModal = ({ videoProps, onClose }: IVideoModalProps) => {
   const playerRef = useRef<ReactPlayer>(null);
   const { videoId, timestamps } = videoProps;
 
-  const handleTimestampClick = (time: any) => {
+  const handleTimestampClick = (time: number) => {
     setCurrentTime(time);
     if (playerRef.current) {
       playerRef.current.seekTo(time);
@@ -68,7 +68,7 @@ const VideoModal = ({ videoProps, onClose }: IVideoModalProps) => {
             Timestamps
           </h2>
           <ul className="flex flex-wrap gap-4">
-            {timestamps.map((stamp: any, index: any) => (
+            {timestamps.map((stamp, index) => (
               <li
                 key={index}
                 className="flex cursor-pointer rounded-full border bg-blue-600 px-4 text-xs text-white hover:underline lg:text-lg"

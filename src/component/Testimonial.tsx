@@ -55,7 +55,7 @@ const Testimonial = () => {
           <div className="grid gap-6 pt-8 sm:grid-cols-2 md:mx-28 lg:mx-16 lg:grid-cols-3 2xl:mx-44">
             {testimonials.map((testimonial, index) => (
               <div key={index}>
-                <Card>
+                <Card className="">
                   <div className="space-y-4">
                     <img
                       className="w-6"
@@ -92,7 +92,7 @@ const Testimonial = () => {
   );
 };
 
-function Card({ children, className }: any) {
+function Card({ children, className }: { children: React.ReactNode, className: string }) {
   return (
     <div
       className={`min-w-fit rounded-lg border border-transparent bg-white p-6 text-white dark:bg-testimonialcard dark:shadow-lg ${className}`}

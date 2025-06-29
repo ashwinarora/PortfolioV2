@@ -25,7 +25,7 @@ const Whyme = () => {
   ];
 
   const points = [
-    "Proven expertise in scalable web and blockchain applications with over 5 years of experience.",
+    "Proven expertise in scalable web and blockchain applications with over 6 years of experience.",
     "Strong sense of ownership—dedicated to taking full responsibility for delivering exceptional outcomes.",
     "Innovative problem-solver, delivering solutions that save time and eliminate inefficiencies.",
     "Full-stack proficiency in React, TypeScript, Solidity, and backend integration.",

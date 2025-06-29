@@ -69,8 +69,9 @@ const Home = () => {
                     options={{
                       strings: [
                         `Full Stack`,
-                        `BlockChain`,
+                        `Web3`,
                         `React`,
+                        `NextJS`,
                         `TypeScript`,
                         `NodeJS`,
                         `Solidity`,
