@@ -5,6 +5,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { Sections } from "../App";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import Snowfall from "react-snowfall";
+import Image from "next/image";
 
 const Navbar = ({ activeSection }: { activeSection: Sections }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -81,11 +82,13 @@ const Navbar = ({ activeSection }: { activeSection: Sections }) => {
           href="/#home"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
-            src="assets/icons/fav.png"
+          <Image
+            src="/assets/icons/fav.png"
             className="h-8"
             alt="Logo"
-            loading="lazy"
+            width={32}
+            height={32}
+            priority
           />
           <p className="text-xl font-semibold text-black dark:text-white">
             ASHWIN ARORA

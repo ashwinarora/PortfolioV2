@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import Typewriter from "typewriter-effect";
 import { ThemeContext } from "./Context/ThemeContext";
+import Image from "next/image";
+
 const Home = () => {
   const themeContext = useContext(ThemeContext);
 
@@ -9,40 +11,58 @@ const Home = () => {
     <div id="home">
       <div className="relative flex min-h-[70vh] flex-col items-center justify-center bg-homebglight px-4 py-12 dark:bg-homebg sm:min-h-[96vh] sm:px-6 lg:px-8">
         {/* Left Background Image */}
-        <img
-          src="assets/icons/homeleftbg.svg"
+        <Image
+          src="/assets/icons/homeleftbg.svg"
           alt="Left Background"
           className="absolute left-0 top-0 h-56 w-56 mix-blend-difference dark:invert-0 sm:h-80 sm:w-80 lg:h-[30rem] lg:w-[30rem] xl:h-[20rem] xl:w-[30rem] 2xl:h-[30rem] 2xl:w-[32rem]"
+          width={512}
+          height={512}
+          priority
         />
         {/* Right Background Image */}
-        <img
-          src="assets/icons/homerightbg.svg"
+        <Image
+          src="/assets/icons/homerightbg.svg"
           alt="Right Background"
           className="absolute right-0 top-0 h-56 w-56 mix-blend-difference dark:invert-0 sm:h-80 sm:w-80 lg:h-[30rem] lg:w-[30rem] xl:h-[20rem] xl:w-[30rem] 2xl:h-[30rem] 2xl:w-[32rem]"
+          width={512}
+          height={512}
+          priority
         />
         {/* Left Ring Image */}
-        <img
-          src="assets/icons/homeringleft.svg"
+        <Image
+          src="/assets/icons/homeringleft.svg"
           alt="Left Ring"
           className="2xl:h-[ 11rem] absolute -left-10 bottom-0 h-36 w-36 sm:bottom-0 sm:h-60 sm:w-60 lg:h-[10rem] lg:w-[10rem] 2xl:w-[20rem]"
+          width={240}
+          height={240}
+          priority
         />
         {/* Small Box Bottom Right */}
-        <img
-          src="assets/icons/homebgbox.svg"
+        <Image
+          src="/assets/icons/homebgbox.svg"
           alt="Bottom Box"
           className="absolute bottom-14 right-20 w-[6rem] mix-blend-difference dark:mix-blend-normal sm:bottom-24 sm:right-80 lg:bottom-[10rem] lg:right-[10rem] 2xl:bottom-32 2xl:right-96"
+          width={96}
+          height={96}
+          priority
         />
 
-        <img
-          src="assets/icons/homebgbox1.svg"
+        <Image
+          src="/assets/icons/homebgbox1.svg"
           alt="Top Box"
           className="absolute left-16 top-32 w-[6rem] mix-blend-difference dark:mix-blend-normal sm:left-96 sm:top-[10rem] lg:left-[20rem] 2xl:left-[32rem] 2xl:top-[8rem]"
+          width={96}
+          height={96}
+          priority
         />
 
-        <img
-          src="assets/icons/homeringright.svg"
+        <Image
+          src="/assets/icons/homeringright.svg"
           alt="Right Ring"
           className="absolute bottom-0 right-0 h-36 w-36 sm:bottom-0 sm:h-60 sm:w-60 lg:h-[10rem] lg:w-[10rem] 2xl:h-[11rem] 2xl:w-[20rem]"
+          width={240}
+          height={240}
+          priority
         />
         <div className="mx-auto flex w-full flex-col items-center justify-center gap-4 text-center">
           <div className="relative">
@@ -52,7 +72,7 @@ const Home = () => {
               </div>
             </div>
             <div className="absolute -right-3 -top-3 h-4 w-4 sm:-right-3 sm:-top-2">
-              <img src="assets/images/hello.svg" alt="Hello Icon" />
+              <Image src="/assets/images/hello.svg" alt="Hello Icon" width={16} height={16} />
             </div>
           </div>
 

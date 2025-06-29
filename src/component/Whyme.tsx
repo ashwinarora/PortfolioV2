@@ -1,4 +1,5 @@
 import { FaHandPointRight } from "react-icons/fa6";
+import Image from "next/image";
 
 const Whyme = () => {
   const features = [
@@ -35,17 +36,19 @@ const Whyme = () => {
   return (
     <div>
       <section className="relative mx-0 flex h-auto w-auto items-center justify-center bg-lightTestmonila dark:bg-testmonila py-12 sm:h-auto md:mx-0 md:py-24 lg:gap-6 lg:py-32 xl:gap-0">
-        <img
-          src="assets/icons/testimonialrightbg.svg"
+        <Image
+          src="/assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"
           className="absolute right-3 top-16"
-          loading="lazy"
+          width={100}
+          height={100}
         />
-        <img
-          src="assets/icons/testimonialleftbg.svg"
+        <Image
+          src="/assets/icons/testimonialleftbg.svg"
           alt="Small Image 2"
           className="absolute bottom-0 left-0 sm:top-52"
-          loading="lazy"
+          width={100}
+          height={100}
         />
         <div className="container relative grid gap-10 px-4 md:grid-cols-2 md:gap-0 md:px-0 lg:px-32">
           <div>

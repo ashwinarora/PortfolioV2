@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useEffect } from "react";
+import Image from "next/image";
 
 interface IImageModalProps {
   imageProps: imageDialog;
@@ -66,11 +67,13 @@ const ImageModal = ({ imageProps, onClose }: IImageModalProps) => {
         >
           {images.map((image, imgIndex) => (
             <SwiperSlide key={imgIndex} className="flex justify-center items-center w-full h-full">
-              <img
+              <Image
                 src={image}
-                alt={""}
+                alt="Project image"
                 className="max-w-full max-h-full object-contain"
-                loading="lazy"
+                width={800}
+                height={600}
+                priority
               />
             </SwiperSlide>
           ))}
