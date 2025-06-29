@@ -1,19 +1,16 @@
+"use client"
 import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaCode, FaRegCirclePlay } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import VideoModal from "./VideoModal";
 import { allProjects, Project } from "./Data";
 import { ThemeContext } from "../Context/ThemeContext";
-// import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
-// import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
 import ImageModal from "./ImageModal";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import Image from "next/image";

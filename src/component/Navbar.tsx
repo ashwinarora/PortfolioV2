@@ -1,3 +1,4 @@
+"use client"
 import { useContext, useEffect, useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { ThemeContext } from "./Context/ThemeContext";

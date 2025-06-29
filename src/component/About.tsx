@@ -1,3 +1,4 @@
+"use client"
 import { FaClock, FaCode, FaMedal } from "react-icons/fa6";
 import { startDate } from "./constants";
 import { BsCupHotFill } from "react-icons/bs";

@@ -6,6 +6,8 @@ import Image from "next/image";
 const Home = () => {
   const themeContext = useContext(ThemeContext);
 
+  console.log(themeContext.theme)
+
   if (!themeContext) return null;
   return (
     <div id="home">

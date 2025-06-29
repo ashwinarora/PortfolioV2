@@ -1,3 +1,4 @@
+"use client"
 import "./App.css";
 import About from "./component/About";
 import AfterHome from "./component/AfterHome";
@@ -21,19 +22,19 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections: {key: Sections, ref: React.RefObject<HTMLDivElement>}[] = [
+      const sections: { key: Sections, ref: React.RefObject<HTMLDivElement> }[] = [
         { key: 'project', ref: projectSection },
         { key: 'about', ref: aboutSection },
         { key: 'contact', ref: contactSection },
       ];
-  
+
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       let foundActiveSection = false;
-  
+
       for (const section of sections) {
         const offsetTop = section.ref.current?.offsetTop ?? 0;
         const offsetBottom = offsetTop + (section.ref.current?.offsetHeight ?? 0);
-  
+
         // Check if the scroll position is within the current section's bounds
         if (scrollPosition >= offsetTop && scrollPosition <= offsetBottom) {
           setActiveSection(section.key);
@@ -41,13 +42,13 @@ function App() {
           break;
         }
       }
-  
+
       // If no section matched, set activeSection to null
       if (!foundActiveSection) {
         setActiveSection("home");
       }
     };
-  
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -69,8 +70,8 @@ function App() {
         <Whyme />
       </div>
       {/* <div id="testimonial">
-        <Testimonial />
-      </div> */}
+          <Testimonial />
+        </div> */}
       <div id="about" ref={aboutSection}>
         <About />
       </div>
