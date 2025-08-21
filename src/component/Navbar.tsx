@@ -8,7 +8,7 @@ import { MdOutlineOpenInNew } from "react-icons/md";
 import Snowfall from "react-snowfall";
 import Image from "next/image";
 
-const Navbar = ({ activeSection }: { activeSection: Sections }) => {
+const Navbar = ({ activeSection, onResumeClick }: { activeSection: Sections; onResumeClick: () => void }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -137,14 +137,13 @@ const Navbar = ({ activeSection }: { activeSection: Sections }) => {
                 </button>
               </li>
             ))}
-            <a
+            <button
+              onClick={onResumeClick}
               className="mx-2 mb-2 flex cursor-pointer flex-row items-center justify-center gap-x-2 rounded-md border border-gray-600 px-6 py-1 text-sm text-gray-900 hover:bg-slate-300 dark:border-gray-600 dark:text-white dark:hover:bg-blue-700 md:m-0 md:bg-transparent 2xl:text-xl"
-              target="_blank"
-              href="https://resume.ashwinarora.com/"
             >
               Resume
               <MdOutlineOpenInNew />
-            </a>
+            </button>
             <label className="inline-flex cursor-pointer items-center">
               <input
                 type="checkbox"

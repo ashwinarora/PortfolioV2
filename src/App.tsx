@@ -10,11 +10,13 @@ import Whyme from "./component/Whyme";
 import { ThemeProvider } from "./component/Context/ThemeContext";
 import ContactContainer from "./component/Contact/ContactContainer";
 import { useEffect, useRef, useState } from "react";
+import ResumeDialog from "./component/ResumeDialog";
 
 export type Sections = "home" | "project" | "about" | "contact";
 
 function App() {
   const [activeSection, setActiveSection] = useState<Sections>("home");
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   const projectSection = useRef<HTMLDivElement>(null);
   const aboutSection = useRef<HTMLDivElement>(null);
@@ -52,11 +54,23 @@ function App() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  })
+  }, []);
+
+  // Check if user is on resume route and open dialog
+  useEffect(() => {
+    if (window.location.pathname === '/resume') {
+      setIsResumeOpen(true);
+      // Update URL to home without page reload
+      window.history.replaceState({}, '', '/');
+    }
+  }, []);
 
   return (
     <ThemeProvider>
-      <Navbar activeSection={activeSection} />
+      <Navbar 
+        activeSection={activeSection} 
+        onResumeClick={() => setIsResumeOpen(true)}
+      />
       <div id="home">
         <Home />
       </div>
@@ -79,6 +93,12 @@ function App() {
         <ContactContainer />
       </div>
       <Footer />
+      
+      {/* Resume Dialog */}
+      <ResumeDialog 
+        isOpen={isResumeOpen} 
+        onClose={() => setIsResumeOpen(false)} 
+      />
     </ThemeProvider>
   );
 }
