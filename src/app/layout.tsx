@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import '../index.css'
  
 export const metadata: Metadata = {
   title: 'Ashwin Arora | Full-Stack & Web3 Developer',

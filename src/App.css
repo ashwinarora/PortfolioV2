@@ -3,3 +3,7 @@
 :root {
   font-family: "Montserrat";
 }
+
+.db {
+  @apply border-2 border-red-600;
+}
