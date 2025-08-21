@@ -1,21 +1,19 @@
+"use client"
 import { useContext, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import { FaCode, FaRegCirclePlay } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import VideoModal from "./VideoModal";
 import { allProjects, Project } from "./Data";
 import { ThemeContext } from "../Context/ThemeContext";
-import PoolzFinanceWhite from "/assets/images/PoolzFinanceWhite.png";
-import PoolzFinanceBlack from "/assets/images/PoolzFinanceBlack.png";
 import ImageModal from "./ImageModal";
 import { MdOutlineOpenInNew } from "react-icons/md";
+import Image from "next/image";
 
 export default function ProjectShowcase() {
   const [showModal, setShowModal] = useState(false);
@@ -36,17 +34,19 @@ export default function ProjectShowcase() {
     <div>
       <div className="relative bg-lightbg py-12 text-gray-100 dark:bg-projectmainbg">
         <div className="container mx-auto px-4">
-          <img
-            src="assets/images/projectleftbg.svg"
+          <Image
+            src="/assets/images/projectleftbg.svg"
             alt="Small Image 2"
             className="absolute right-12 w-72 mix-blend-difference dark:mix-blend-normal 2xl:right-2 2xl:top-0"
-            loading="lazy"
+            width={288}
+            height={288}
           />
-          <img
-            src="assets/images/projectbottombg.svg"
+          <Image
+            src="/assets/images/projectbottombg.svg"
             alt="Small Image 2"
-            loading="lazy"
             className="absolute bottom-28 right-40 z-10"
+            width={100}
+            height={100}
           />
           <div className="mb-12 mt-12 text-center font-bold">
             <div>
@@ -97,7 +97,7 @@ export default function ProjectShowcase() {
                     >
                       {project.images.map((image, imgIndex) => (
                         <SwiperSlide key={imgIndex}>
-                          <img
+                          <Image
                           src={image}
                           alt={project.title}
                           className={`flex justify-center items-center w-full px-1 h-auto mx-auto object-contain ${
@@ -105,7 +105,8 @@ export default function ProjectShowcase() {
                             ? "md:h-[20rem] 2xl:h-[22rem]"
                             : "2xl:h-[20rem]"
                           }`}
-                          loading="lazy"
+                          width={800}
+                          height={600}
                           />
                         </SwiperSlide>
                       ))}
@@ -122,10 +123,12 @@ export default function ProjectShowcase() {
                     <div className="mx-4 mt-3 flex items-center justify-between text-xs font-semibold md:mx-2 md:text-2xl 2xl:mx-4">
                       <h1 className="flex items-center justify-start gap-x-2 text-xs text-black dark:text-white md:text-sm lg:text-xl 2xl:text-2xl">
                         {project.logo && (
-                          <img
+                          <Image
                             src={project.logo}
-                            alt={""}
+                            alt={`${project.title} logo`}
                             className="size-10"
+                            width={40}
+                            height={40}
                             onError={(e) => {
                               e.currentTarget.classList.add("hidden");
                             }}
@@ -158,16 +161,20 @@ export default function ProjectShowcase() {
                           developed with
                           <a href="https://www.poolz.finance/" target="_blank">
                             {themeContext?.theme === "dark" ? (
-                              <img
-                                src={PoolzFinanceWhite}
+                              <Image
+                                src="/assets/images/PoolzFinanceWhite.png"
                                 alt="Poolz Finance"
                                 className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
+                                width={160}
+                                height={36}
                               />
                             ) : (
-                              <img
-                                src={PoolzFinanceBlack}
+                              <Image
+                                src="/assets/images/PoolzFinanceBlack.png"
                                 alt="Poolz Finance"
                                 className="ml-2 inline h-9 w-40 object-scale-down hover:scale-125"
+                                width={160}
+                                height={36}
                               />
                             )}
                           </a>
@@ -181,7 +188,7 @@ export default function ProjectShowcase() {
                           Tools Used
                         </h3>
                         <div className="flex flex-wrap gap-1 md:gap-2">
-                          {project.tools.map((tool: any, i: any) => (
+                          {project.tools.map((tool, i) => (
                             <span
                               key={i}
                               className="flex items-center gap-1 rounded-full bg-lightmode px-1 py-1 text-sm text-black dark:bg-gray-700 dark:text-blue-300 md:px-1"
@@ -194,11 +201,12 @@ export default function ProjectShowcase() {
                                 </div>
                               )}
                               {tool.Img && (
-                                <img
+                                <Image
                                   className="h-4 w-4 md:h-6 md:w-5"
                                   src={tool.Img}
                                   alt="icons"
-                                  loading="lazy"
+                                  width={24}
+                                  height={24}
                                 />
                               )}
                               <p className="text-[9px] md:text-xs lg:pr-2">

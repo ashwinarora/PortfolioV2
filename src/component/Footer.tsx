@@ -1,6 +1,7 @@
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
 import { linkedIn, twitter, github } from "./constants";
+import Image from "next/image";
 
 const socialLinks = [
   { href: linkedIn, icon: <FaLinkedin /> },
@@ -18,11 +19,13 @@ const Footer = () => {
               href="/#home"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img
-                src="assets/icons/fav.png"
+              <Image
+                src="/assets/icons/fav.png"
                 className="h-8"
                 alt="Logo"
-                loading="lazy"
+                width={32}
+                height={32}
+                priority
               />
               <p className="text-xl font-semibold text-black dark:text-white">
                 ASHWIN ARORA

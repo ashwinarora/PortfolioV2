@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Testimonial = () => {
   const testimonials = [
     {
@@ -29,17 +31,19 @@ const Testimonial = () => {
   return (
     <div>
       <section className="relative w-full bg-lightbg py-12 dark:bg-testmonila md:py-16 lg:py-24">
-        <img
-          src="assets/icons/testimonialrightbg.svg"
+        <Image
+          src="/assets/icons/testimonialrightbg.svg"
           alt="Small Image 2"
           className="absolute right-3 top-16"
-          loading="lazy"
+          width={100}
+          height={100}
         />
-        <img
-          src="assets/icons/testimonialleftbg.svg"
+        <Image
+          src="/assets/icons/testimonialleftbg.svg"
           alt="Small Image 2"
           className="absolute bottom-0 left-0 sm:top-52"
-          loading="lazy"
+          width={100}
+          height={100}
         />
         <div className="container mx-auto px-8 md:px-6">
           <div className="space-y-4 text-center">
@@ -55,26 +59,30 @@ const Testimonial = () => {
           <div className="grid gap-6 pt-8 sm:grid-cols-2 md:mx-28 lg:mx-16 lg:grid-cols-3 2xl:mx-44">
             {testimonials.map((testimonial, index) => (
               <div key={index}>
-                <Card>
+                <Card className="">
                   <div className="space-y-4">
-                    <img
+                    <Image
                       className="w-6"
                       src={testimonial.icon}
                       alt="img"
-                      loading="lazy"
+                      width={24}
+                      height={24}
                     />
                     <p className="text-sm font-medium leading-relaxed text-gray-500 md:text-base">
                       "{testimonial.quote}"
                     </p>
                   </div>
                 </Card>
-                <img
-                  src="assets/icons/msgicon.svg "
+                <Image
+                  src="/assets/icons/msgicon.svg "
+                  alt="Message icon"
                   className="-mt-1 ml-8 mix-blend-color-dodge dark:mix-blend-normal"
+                  width={24}
+                  height={24}
                 />
                 <div className="ml-3 flex items-center gap-3">
                   <div className="bg-primary rounded-full p-1 text-white">
-                    <img className="w-10" src={testimonial.img} alt="" />
+                    <Image className="w-10" src={testimonial.img} alt={`${testimonial.name} profile`} width={40} height={40} />
                   </div>
                   <div>
                     <p className="font-medium text-spantext">
@@ -92,7 +100,7 @@ const Testimonial = () => {
   );
 };
 
-function Card({ children, className }: any) {
+function Card({ children, className }: { children: React.ReactNode, className: string }) {
   return (
     <div
       className={`min-w-fit rounded-lg border border-transparent bg-white p-6 text-white dark:bg-testimonialcard dark:shadow-lg ${className}`}

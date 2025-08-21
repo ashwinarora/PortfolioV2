@@ -50,25 +50,25 @@ export type Project = {
 }
 
 const daoSenderImages = [
-  "assets/projects/DaoSender/ds1.webp",
-  "assets/projects/DaoSender/ds2.1.webp",
-  "assets/projects/DaoSender/ds3.webp",
-  "assets/projects/DaoSender/ds5.webp",
-  "assets/projects/DaoSender/ds7.webp",
+  "/assets/projects/DaoSender/ds1.webp",
+  "/assets/projects/DaoSender/ds2.1.webp",
+  "/assets/projects/DaoSender/ds3.webp",
+  "/assets/projects/DaoSender/ds5.webp",
+  "/assets/projects/DaoSender/ds7.webp",
 ]
 
 const subsCryptImages = [
-  "assets/projects/SubsCrypt/sc1.webp",
-  "assets/projects/SubsCrypt/sc2.webp",
-  "assets/projects/SubsCrypt/sc3.webp",
-  "assets/projects/SubsCrypt/sc4.webp",
-  "assets/projects/SubsCrypt/sc5.webp",
+  "/assets/projects/SubsCrypt/sc1.webp",
+  "/assets/projects/SubsCrypt/sc2.webp",
+  "/assets/projects/SubsCrypt/sc3.webp",
+  "/assets/projects/SubsCrypt/sc4.webp",
+  "/assets/projects/SubsCrypt/sc5.webp",
 ]
 
 export const allProjects: Project[] = [
     {
       title: "DaoSender",
-      logo: "assets/projects/DaoSender/dsLogo.svg",
+      logo: "/assets/projects/DaoSender/dsLogo.svg",
       isBig: false,
       description:
         "The most gas-optimized solution for airdropping ERC20 tokens. Designed for efficiency, allowing users to upload unlimited recipient addresses and amounts, automatically calculating and selecting the most cost-effective way to execute transactions. Live on 8 chains.",
@@ -119,7 +119,7 @@ export const allProjects: Project[] = [
         { name: "Tailwind", icon: <SiTailwindcss />, Img: null },
         { name: "Hardhat", icon: <FaHardHat />, Img: null },
         { name: "Cron Job", icon: <ImLoop2 />, Img: null },
-        { name: "Node", icon: null, Img: "assets/icons/node.svg" },
+        { name: "Node", icon: null, Img: "/assets/icons/node.svg" },
       ],
       features: [
         "Decentralized Services",
@@ -140,11 +140,11 @@ export const allProjects: Project[] = [
       description:
         "A real-time multiplayer TicTacToe game where two players bet in ETH and the winner takes all. A state channel is created between the two players to enable Off-Chain exchange of messages. These messages are signed by the player's private key.",
       images: [
-        "assets/projects/et1.jpg",
-        "assets/projects/et2.jpg",
-        "assets/projects/et3.jpg",
-        "assets/projects/et4.jpg",
-        "assets/projects/et5.jpg",
+        "/assets/projects/et1.jpg",
+        "/assets/projects/et2.jpg",
+        "/assets/projects/et3.jpg",
+        "/assets/projects/et4.jpg",
+        "/assets/projects/et5.jpg",
       ],
       dialog: {
         content: "video",
@@ -182,12 +182,12 @@ export const allProjects: Project[] = [
         ],
       },
       tools: [
-        { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
+        { name: "Socket.io", icon: null, Img: "/assets/icons/socket.svg" },
         { name: "Ethers.js", icon: <FaEthereum />, Img: null },
-        { name: "Node", icon: null, Img: "assets/icons/node.svg" },
-        { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+        { name: "Node", icon: null, Img: "/assets/icons/node.svg" },
+        { name: "Express", icon: null, Img: "/assets/icons/express.svg" },
         { name: "DOM", icon: <ImTree />, Img: null },
-        { name: "Bootstrap", icon: null, Img: "assets/icons/bootstrap.svg" },
+        { name: "Bootstrap", icon: null, Img: "/assets/icons/bootstrap.svg" },
         { name: "Solidity", icon: <SiSolidity />, Img: null },
       ],
       features: [
@@ -208,11 +208,11 @@ export const allProjects: Project[] = [
       description:
         "A full-fledged social networking platform. Allowing users to follow, post images, comment, like etc. A complete implementation of MERN stack with JWT authentication.A full-fledged social networking platform.",
       images: [
-        "assets/projects/sn-01.jpg",
-        "assets/projects/sn-02.jpg",
-        "assets/projects/sn-03.jpg",
-        "assets/projects/sn-04.jpg",
-        "assets/projects/sn-05.jpg",
+        "/assets/projects/sn-01.jpg",
+        "/assets/projects/sn-02.jpg",
+        "/assets/projects/sn-03.jpg",
+        "/assets/projects/sn-04.jpg",
+        "/assets/projects/sn-05.jpg",
       ],
       dialog: {
         content: "video",
@@ -261,7 +261,7 @@ export const allProjects: Project[] = [
           icon: <SiJsonwebtokens />,
           Img: null,
         },
-        { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+        { name: "Express", icon: null, Img: "/assets/icons/express.svg" },
         { name: "Fetch Api", icon: <FiSettings />, Img: null },
         {
           name: "Nodemailer",
@@ -290,11 +290,11 @@ export const allProjects: Project[] = [
       description:
         "A real-time multiplayer game inspired by Bingo. There is no limit to the number of players per game. Each player pays in ETH to purchase a ticket and then select 15 numbers(1-90). The server broadcasts random numbers one by one to the players.",
       images: [
-        "assets/projects/hr1.jpg",
-        "assets/projects/hr2.jpg",
-        "assets/projects/hr3.jpg",
-        "assets/projects/hr4.jpg",
-        "assets/projects/hr5.jpg",
+        "/assets/projects/hr1.jpg",
+        "/assets/projects/hr2.jpg",
+        "/assets/projects/hr3.jpg",
+        "/assets/projects/hr4.jpg",
+        "/assets/projects/hr5.jpg",
       ],
       dialog: {
         content: "video",
@@ -324,11 +324,11 @@ export const allProjects: Project[] = [
         ],
       },
       tools: [
-        { name: "Socket.io", icon: null, Img: "assets/icons/socket.svg" },
-        { name: "Web3.js", icon: null, Img: "assets/icons/ether.svg" },
+        { name: "Socket.io", icon: null, Img: "/assets/icons/socket.svg" },
+        { name: "Web3.js", icon: null, Img: "/assets/icons/ether.svg" },
         { name: "React", icon: <FaReact />, Img: null },
-        { name: "Node", icon: null, Img: "assets/icons/node.svg" },
-        { name: "Express", icon: null, Img: "assets/icons/express.svg" },
+        { name: "Node", icon: null, Img: "/assets/icons/node.svg" },
+        { name: "Express", icon: null, Img: "/assets/icons/express.svg" },
         { name: "Axios", icon: <SiAxios />, Img: null },
         {
           name: "Infura",
