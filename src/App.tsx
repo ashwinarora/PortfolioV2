@@ -58,9 +58,18 @@ function App() {
 
   // Check if user is on resume route and open dialog
   useEffect(() => {
+    // Check if user is on resume route
     if (window.location.pathname === '/resume') {
       setIsResumeOpen(true);
       // Update URL to home without page reload
+      window.history.replaceState({}, '', '/');
+    }
+    
+    // Check if redirected from resume route with query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('openResume') === 'true') {
+      setIsResumeOpen(true);
+      // Clean up the URL by removing the query parameter
       window.history.replaceState({}, '', '/');
     }
   }, []);
